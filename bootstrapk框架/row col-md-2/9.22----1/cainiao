@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap页面测试</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Bootstrap页面测试</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>我的第一个 Bootstrap 页面</h1>
+                <p>重置窗口大小，查看响应式效果！</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 col-xs-6">
+                    <h3>第一列</h3>
+                    <p>学的不仅是技术，更是梦想！</p>
+                    <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-xs-6">
+                    <h3>第二列</h3>
+                    <p>学的不仅是技术，更是梦想！</p>
+                    <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-xs-6">
+                    <h3>第三列</h3>
+                    <p>学的不仅是技术，更是梦想！</p>
+                    <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-xs-6">
+                    <h3>第三列</h3>
+                    <p>学的不仅是技术，更是梦想！</p>
+                    <p>再牛逼的梦想,也抵不住你傻逼似的坚持！</p>
+                </div>
+            </div>
+        </div>
+        <small>本行内容是在标签内</small><br>
+        <strong>本行内容是在标签内</strong><br>
+        <em>本行内容是在标签内，并呈现为斜体</em><br>
+        <p class="text-left">向左对齐文本</p>
+        <p class="text-center">居中对齐文本</p>
+        <p class="text-right">向右对齐文本</p>
+        <p class="text-muted">本行内容是减弱的</p>
+        <p class="text-primary">本行内容带有一个 primary class</p>
+        <p class="text-success">本行内容带有一个 success class</p>
+        <p class="text-info">本行内容带有一个 info class</p>
+        <p class="text-warning">本行内容带有一个 warning class</p>
+        <p class="text-danger">本行内容带有一个 danger class</p>
+        <p><code>&lt;header&gt;</code> 作为内联元素被包围。</p>
+        <p>如果需要把代码显示为一个独立的块元素，请使用 &lt;pre&gt; 标签：</p>
+        <pre>
+&lt;article&gt;
+	&lt;h1&gt;Article Heading&lt;/h1&gt;
+&lt;/article&gt;
+</pre>
+        <div class="container">
+            <h2>代码</h2>
+            <p>使用 kbd 元素表示按键输入:</p>
+            <p>使用 <kbd>ctrl + p</kbd> 来打开打印窗口。</p>
+        </div>
+        <div class="container">
+            <h2>代码</h2>
+            <p>使用 pre 元素输出多行:</p>
+            <pre>在 pre 元素中的文本
+    宽度的显示与文本的宽度一样，
+    保留了  空  格 和
+?
+    换行。</pre>
+            <p>如果你添加 .pre-scrollable 类, pre 元素最大的高度 max-height 为 350px ，并生成一个 Y 轴的滚动条:</p>
+            <pre class="pre-scrollable">在 pre 元素中的文本
+    宽度的显示与文本的宽度一样，
+    保留了  空  格 和
+?
+    换行。</pre>
+        </div>
+        <div class="container">
+            <h2>代码</h2>
+            <p>使用 code 元素来表示代码片段:</p>
+            <p>以下是 HTML 元素: <code>span</code>, <code>section</code>, 和 <code>div</code> 。</p>
+        </div>
+        <div class="container">
+            <h2>代码</h2>
+            <p>使用 samp 元素包含电脑输出的内容:</p>
+            <p><samp>This text is output from a computer program....</samp></p>
+        </div>
+        <div class="container">
+            <h2>表格</h2>
+            <p> .table 为任意表格添加基本样式 (只有横向分隔线):</p>
+            <table class="table table-striped table-bordered">
+                <!-- 两种形式
+                table-bordered为所有元素添加单元格
+                table-striped 内添加斑马线形式的条纹
+                table添加基本样式 (只有横向分隔线)
+                active将悬停的颜色应用在行或者单元格上
+             -->
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Firstname</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Debbie</td>
+                    </tr>
+                    <tr class='active'>
+                        <td>3</td>
+                        <td>John</td>
+                    </tr>
+                    <tr class='success'>
+                        <td>4</td>
+                        <td>success</td>
+                    </tr>
+                    <tr class='warning'>
+                        <td>5</td>
+                        <td>warning</td>
+                    </tr>
+                    <tr class='info'>
+                        <td>6</td>
+                        <td>info</td>
+                    </tr>
+                    <tr class='danger'>
+                        <td>6</td>
+                        <td>danger</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form role="form">
+            <div class="form-group">
+                <label for="name">名称</label>
+                <input type="text" class="form-control" id="name" placeholder="请输入名称">
+            </div>
+            <div class="form-group">
+                <label for="inputfile">文件输入</label>
+                <input type="file" id="inputfile">
+                <p class="help-block">这里是块级帮助文本的实例。</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 请打勾
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">提交</button>
+        </form>
+        <!-- <div class="container"></div> -->
+        <h2>Button</h2>
+        <p> .btn 类是按钮的基本样式:</p>
+        <button type="button" class="btn">基本按钮</button>
+        <p> .btn-default 类是默认/标准按钮样式:</p>
+        <button type="button" class="btn btn-default">默认</button>
+        <p> .btn-primary 类可表示为原始按钮样式（未被操作）:</p>
+        <button type="button" class="btn btn-primary">原始按钮</button>
+        <p>.btn-success 表示操作成功后的按钮样式:</p>
+        <button type="button" class="btn btn-success">成功</button>
+        <p> .btn-info 类表示点击按钮后会弹出提示信息:</p>
+        <button type="button" class="btn btn-info">信息</button>
+        <p>.btn-warning 该样式表示需要谨慎操作的按钮:</p>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <p>.btn-warning 该样式表示需要谨慎操作的按钮:</p>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <p>.btn-danger 表示一个危险动作的按钮:</p>
+        <button type="button" class="btn btn-danger">危险</button>
+        <p>.btn-link 类让按钮看起来像个链接（仍然保持按钮的行为） :</p>
+        <button type="button" class="btn btn-link">链接</button>
+        <p>.btn-lg 类制作大按钮：</p>
+        <button type="button" class="btn btn-default btn-lg">大的默认按钮</button>
+        <p>.btn-sm 类制作小按钮:</p>
+        <button type="button" class="btn btn-default btn-sm">小的默认按钮</button>
+        <button type="button" class="btn btn-info btn-sm">小的信息按钮</button>
+        <p> .btn-xs 类制作一个超小的按钮:</p>
+        <button type="button" class="btn btn-default btn-xs">超小默认的按钮</button>
+        <button type="button" class="btn btn-info btn-xs">超小信息按钮</button>
+        <p>.btn-block 类制作一个块级按钮(拉伸至父元素100%的宽度)：</p>
+        <button type="button" class="btn btn-info btn-block">块级按钮</button>
+        <p> .active 类表示按钮被点击:</p>
+        <button type="button" class="btn btn-default">默认按钮</button>
+        <p> .active 类表示按钮被点击:</p>
+        <button type="button" class="btn btn-default">默认按钮</button>
+        <button type="button" class="btn btn-default active">点击激活的默认按钮</button>
+        <br><br>
+        <button type="button" class="btn btn-info">信息按钮</button>
+        <button type="button" class="btn btn-info active">点击激活的信息按钮</button>
+        <p> disabled 属性可制作一个禁用的按钮：</p>
+        <button type="button" class="btn btn-default" disabled="disabled">禁用的默认按钮</button>
+        <br><br>
+        <p> .disabled 类使得链接不可用:</p>
+        <a href="#" class="btn btn-info disabled" role="button">禁用的信息链接</a>
+        <!-- 标准的按钮 -->
+        <button type="button" class="btn btn-default">默认按钮</button>
+        <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+        <button type="button" class="btn btn-primary">原始按钮</button>
+        <!-- 表示一个成功的或积极的动作 -->
+        <button type="button" class="btn btn-success">成功按钮</button>
+        <!-- 信息警告消息的上下文按钮 -->
+        <button type="button" class="btn btn-info">信息按钮</button>
+        <!-- 表示应谨慎采取的动作 -->
+        <button type="button" class="btn btn-warning">警告按钮</button>
+        <!-- 表示一个危险的或潜在的负面动作 -->
+        <button type="button" class="btn btn-danger">危险按钮</button>
+        <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
+        <button type="button" class="btn btn-link">链接按钮</button>
+        <p>
+            <button type="button" class="btn btn-primary btn-lg">大的原始按钮</button>
+            <button type="button" class="btn btn-default btn-lg">大的按钮</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary">默认大小的原始按钮</button>
+            <button type="button" class="btn btn-default">默认大小的按钮</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary btn-sm">小的原始按钮</button>
+            <button type="button" class="btn btn-default btn-sm">小的按钮</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary btn-xs">特别小的原始按钮</button>
+            <button type="button" class="btn btn-default btn-xs">特别小的按钮</button>
+        </p>
+        <p>
+            <button type="button" class="btn btn-primary btn-lg btn-block">块级的原始按钮</button>
+            <button type="button" class="btn btn-default btn-lg btn-block">块级的按钮</button>
+        </p>
+    </body>
+
+    </html>
+    列平移12分平分pull/push
+    col-lg-pull-*
+    从前向后移动
+    col-lg-push-*
+    从后向前移动
+    列嵌套??
+    1.列继续写行写列??
+    栅格化布局就跟表格相似tabale/container无需重复创建
+    不管怎么分区他们都是12份的状态,谁的站屏幕比例大小来决定他们的宽高比lg--md--ms---xs
+    自动换行 响应式重置 ??
+    超12自动换行 重新定制行1以12分来布局
+    primary info warning danger背景颜色
+    响应式工具类??
+    小hidden 超小visible
+    小屏hidden-sm
+    超小屏显示visible-xs
+    打印类??
+    container
+    hidden-print??隐藏的
+    网页排版??
+    small他是一层一层的找大小 vertival-align:inherit
+    <h1> <small class='small'>副标题</small> </h1>
+    class='h1-h9';
+    lorem甲骨文
+    p段落标签??有一个class样式加大加粗'lead'
+    加一个标记<mark>突出文字<mark><del>删除</del><s>删除线</s>
+    着重<strong></strong>
+    倾斜<em>
+  下划线文本<u>
+        着重<small>
+         插入文本<ins>
+      删除<del></del>
+    无用的文本<s>
+      对其方式??
+     text-left text-right text-center text-justify text-nowrap 大小写??小text-lowercase
+大text-uppercase 首字母大写text-capitalize
+缩略语<abbr>下面有小点点两排??
+       title=王正道缩略语句
+  initialism比起他的font-size小一点 字母转换大写
+   地址??<address>标签
+   引用??<blocakquote>有一个左边框线
+   blocakquote-reverse反向
+ <footer blocakquote-reverse>名人名言</footer>
+   来源??
+<cite title='来源地'>会出现倾斜状态
+    有序列表/无序列表??
+ list-unstyled取出点和padding list-inline行内块元素
+ 改变表格格式?? dl-horizontal自动截断变成点
+</body>
+
+</html>

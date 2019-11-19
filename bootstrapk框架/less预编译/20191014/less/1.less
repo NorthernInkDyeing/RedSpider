@@ -1,0 +1,320 @@
+#mixins(@color;@bg-color:white){
+    color:@color;
+    color:@bg-color;
+}
+#mixins(@color){
+color:@color;
+}
+#mixins(@color;@bg-color:green;@margin){
+    color:@color;
+    color:@margin;
+    background-color:@bg-color;
+}
+.p1{
+    #mixins(black);
+}
+.bordered{
+// 这个方法有毒没有括号他就是不一个方法 
+// ./#---class/id都会生成css
+// 但又可以当方法使用 会生成css形成负担
+    border:solid 1px red;
+    border-bottom:solid 2px green;
+}
+.p2{
+    color:green;
+    .bordered;
+}
+.p2{
+    font-size:14px;
+    a{
+        font-size:inherit;
+    }
+    span{
+        color:rgba(200, 250, 200, 2);
+        float:right;
+    }
+    &:after{
+        content:"&---after";
+    }
+}
+.p3{
+    @media screen{
+        color:black;
+        // 默认字体颜色
+        @media (min-width:768px){
+            // Mobile phone/手机 平板/Flat 电脑/Computer
+            color:red;
+        }
+        @media tv{
+            // 媒体电视
+            color:powderblue;
+        }
+    }
+}
+// 得出结论@media/媒体 screen/屏 
+// 在@media screen and (条件符合时执行/不符合时执行@media screen/直接设定的属性值----或者监听媒体屏是电视是展示的颜色@media tv)
+@media screen{
+    .p3>span{
+color:green;
+    }
+}
+@media screen and (min-width:760px){
+    .p3>span{
+        color:blue;
+    }
+}
+@media tv{
+    .p3>span{
+        color:red;
+    }
+}
+@base:5%;
+@filler:@base * 2;
+@other:@base + @filler;
+@addPercentage:@base * @filler - @base / 2 ;
+// 媒体查询支持加减乘除混合运算%/px/pt/rem
+@var : 1rem / 5;
+.p4{
+    @media screen{
+        height:@other;
+        font-size:@var;
+    }
+    @media screen and(min-width:1200px){
+        height:@addPercentage;
+    }
+}
+//我们可以创搭建js的函数调用的设定可以减少大量代码
+// 定义两次变量时，将使用变量的最后一个定义，从当前范围向上搜索。这类似于css本身，定义中的最后一个属性用于确定值。
+.p1{
+    color:@red;
+    span{
+        color:@red;        
+        @red:red;    
+    }
+    @red:black;
+}
+@link-color:#428bca;
+// darken变暗
+@link-color-hover:darken(@link-color,10%);
+.p5{
+    color:@link-color;
+    a{
+        color:red;
+        &:hover{
+            color:@link-color-hover;
+        }
+    }
+}
+// 杨哥随堂练习
+.p6{
+    @media screen and(min-width:768px){
+        background:green;
+    }
+    @media screen and(min-width:996px){
+        background:blue
+    }
+    @media screen and(min-width:1200px){
+    background:red;
+    }
+    background:pink;
+}
+.p7{
+    @media screen{
+        color:green;
+        @media (min-width:1200px){
+            color:orange;
+        }
+        @media (min-width:992px){
+            color:pink;
+        }
+        @media (min-width:768px){
+            color:aliceblue;
+        }
+    }
+    @media tv{
+        color:black;
+    }
+}
+.p7{
+    &:extend(.inline);
+    font-size:20px;
+    span{
+        &:extend(.inline1);
+        
+    }
+}
+.inline1{
+    color:darken(@link-color-hover,20%);
+}
+/*.e&:extend(.g){}
+.e&:extend(.b){}
+.e&:extend(.g,.b){}
+上面和下面做同样的事情
+*/
+.inline{
+    background:red;
+}
+.big-division,
+.big-bag:extend(.bag),
+.big-bucket:extend(.bucket) {
+  background:red;
+}
+.bag,.bucket{
+    background:pink
+}
+// .a:extend(.b) {}
+// .a {
+//   &:extend(.b);
+// }
+.bucket {
+ tr {
+    color: blue;
+  }
+}
+tr {
+ .bucket {
+    color: blue;
+  }
+}
+.some-class:extend(.bucket tr) {color:red} 
+.some2-class:extend(tr .bucket) {color:green} 
+.p7 {
+    span & {
+    color: slateblue;
+  }
+}
+.som1e-class:extend(span .p7){color:red}
+*.p1{
+    font-size:40px;
+}
+.p7:hover:visited{
+    color:navajowhite;
+}
+.selector:exdend(link:visited:hover){color:navajowhite;}
+@a:#ffffff;
+@sss:@a - 222;//18293a;
+// 041526;
+// 18293a;
+.p9{
+    #p9(radius,10px);
+    background:red;
+    color:#fff;
+    text-align:center;
+}
+// 整理方法x轴 上1  右2  下3  左4/y轴上5 右6  下7   左8
+#p9(radius;@left:0;@right:0;@bottom:0;@bottom1:0;){
+    border-radius:@left @right @bottom @bottom1;
+}
+#p9(@2:10px;left1){
+   border-top-left-radius:@2;
+}
+#p9(right1;@2:10px){
+    border-top-right-radius:@2;
+}
+#p9(bottom1;@2:10px){
+    border-bottom-left-radius:@2;
+}
+#p9(bottom2;@2:10px){
+    border-bottom-right-radius:@2;
+}
+@base: #f04615;
+@width: 0.5;
+
+.class {
+  width: percentage(@width); // returns `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
+/*杨哥教育*/
+.p8{
+    height:calc(100%);
+    width:calc(@_w/2 - 2px);
+}
+@_h:50vh;
+@_w:30vw;                   
+@emd :~"(min-width:760px)";
+.med{
+    @media @emd{
+        color:red;
+    }
+}
+.p8{
+    .span{
+        color:red;
+    }
+}
+.p9{
+    .p8>.span;
+}
+@link-color:#428bca; // sea blue
+@link-color-hover:  darken(@link-color, 10%);
+//darken变暗         Usage
+a,
+.link {
+  color: @link-color;
+}
+a:hover {
+  color: @link-color-hover;
+}
+.widget {
+  color: #fff;
+  background: @link-color;
+}
+@style:{background-@{c}:blue;}
+.test{
+    color:red;
+    @style();
+}
+.tootstrap{
+    color:.test[color];
+}
+@c:color;
+// @fnord:  "I am fnord.";
+// @var:    "fnord";
+// content: @@var;
+nav ul{
+    &:extend(.in);
+    background:red;
+}
+.in{
+    color:green;
+}
+.a.b.test,
+.test.c {
+  color: orange;
+}
+.test {
+  &:hover {
+    color: green;
+  }
+}
+// .replacement:extend(.test) {}
+@media print {
+    .p9:extend(.selector){}
+    .selector{
+        color:black;
+    }
+}
+.p9{
+    color:red;
+}
+@media screen {
+    .p9{    
+        color:orange;
+    }
+}  
+@aa:.aaa;
+@{aa}:extend(.in){
+   font-size:10px;
+}
+
+@{bundle}{
+    .button{
+        display:block;
+        background-color:grey;
+        &:hover{
+            background-color:white;
+        }
+    }
+}
+@bundle:.blend;

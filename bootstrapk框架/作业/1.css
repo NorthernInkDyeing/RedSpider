@@ -1,0 +1,187 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+ul,
+ol,
+li,
+a,
+b,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a,
+ins {
+  text-decoration: none;
+}
+.nav1 ul.row {
+  margin-bottom: 0;
+}
+.nav1 ul.row li {
+  float: left;
+}
+.nav1 ul.row li a {
+  display: block;
+  font: 14px/50px "微软雅黑";
+  padding: 0px 10px;
+  color: #463265;
+}
+.nav1 ul.row li a:hover {
+  text-decoration: none;
+}
+.nav1 ul.row li:hover {
+  background-color: #f9f9f9;
+}
+.nav1 ul.row li:last-child {
+  float: right;
+}
+.nav1 ul.row li:first-child a {
+  font-size: 16px;
+  color: #563d7c;
+}
+.nav1 ul.row li:first-child:hover {
+  background-color: #fff;
+}
+.nav1 ul.row li.active {
+  background-color: #f9f9f9;
+}
+.download {
+  background-color: #6f5499;
+  padding: 30px 0px;
+}
+.download div {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+.download div h1 {
+  font-size: 50px;
+}
+.download div p {
+  width: 45%;
+  color: #cdbfe3;
+  font: 20px/30px "微软雅黑";
+}
+.body1 {
+  margin-top: 40px;
+}
+.body1 .fle .alert {
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  width: 100%;
+  padding: 10px;
+  color: #8a6d3b;
+}
+.body1 .fle div:nth-child(2) {
+  padding: 20px;
+  border: dashed 2px #eee;
+  text-align: center;
+}
+.body1 .fle div:nth-child(2) p:nth-child(2) {
+  margin-bottom: 8px;
+}
+.body1 .fle div:nth-child(2) p:last-child {
+  margin-top: 30px;
+}
+.body1 .fle form .a {
+  margin-top: 40px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.body1 .fle form .a button {
+  float: right;
+  margin-top: 20px;
+}
+.body1 .fle form .a h1 {
+  float: left;
+}
+.body1 .fle form .b {
+  border: none;
+  padding: 0;
+}
+.body1 .fle form .b p {
+  font-size: 20px;
+  padding: 0px 10px;
+  text-align: left;
+}
+.body1 .fle form .c div {
+  border: 0px;
+  padding: 0;
+}
+.body1 .fle form .c div div {
+  height: auto;
+}
+.body1 .fle form .c div div label {
+  width: 100%;
+  float: left;
+  text-align: left;
+  line-height: 28px;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 400;
+}
+.body1 .fle form .c div div label input {
+  margin-right: 10px;
+  height: 24px;
+  float: left;
+}
+.body1 .fle form .c blockquote {
+  width: 100%;
+  float: left;
+  border: solid 1px #eee;
+  border-left: solid 4px #eee;
+}
+.body1 .fle form .c blockquote p {
+  font-size: 14px;
+}
+.body1 .fle form .c .blockquote {
+  border-left-color: #1b809e;
+}
+.body1 .fle form .c .blockquote1 {
+  border-left-color: #ce4844;
+}
+.body1 div.col-md-3 div ul li {
+  width: 100%;
+  border-left: solid 1px transparent;
+}
+.body1 div.col-md-3 div ul li a {
+  padding-left: 10px;
+  color: #767676;
+}
+.body1 div.col-md-3 div ul li a:hover {
+  text-decoration: none;
+  color: #563d7c;
+}
+.body1 div.col-md-3 div ul li:hover {
+  border-left: solid 1px black;
+}
+.body1 div.col-md-3 div ul li:last-child:hover {
+  border-left: solid 1px transparent;
+}
+#LESStime2 .color1 div,
+#LESStime2 .cc div {
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+#LESStime2 .color1 div label,
+#LESStime2 .cc div label {
+  width: 100%;
+  text-align: left;
+  color: #555;
+  font-weight: normal;
+}
+#LESStime2 .color1 div label input,
+#LESStime2 .cc div label input {
+  margin: 4px 0px;
+  background-color: #fafafa;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}

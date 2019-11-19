@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>controller控制器中使用过滤</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body ng-app="myMoel">
+    <div ng-controller="myFilter">
+        <h1>框架调用</h1>
+        <p>{{aaa}}</p>
+        <h1>自定义方法</h1>
+        <p>{{bbb}}</p>
+        <h1>地址栏</h1>
+        <p>{{ccc}}</p>
+        <h1> </h1>
+        <p>{{ddd}</p>
+    </div>
+    <script src="../../jsXy/angular.js"></script>
+    <script>
+        var mapp = angular.module("myMoel", []);
+        mapp.controller("myFilter", ["$scope", "$filter", "$location", "$http", function ($scope, b, $location, d) {
+            // webpack打包工具
+            $scope.aaa = b("currency")(12345.123456, "￥");
+            $scope.obj = [
+                {
+                    id: 0,
+                    name: "张三",
+                    age: 45
+                },
+                {
+                    id: 1,
+                    name: "张三",
+                    age: 45
+                },
+                {
+                    id: 2,
+                    name: "张三",
+                    age: 45
+                },
+                {
+                    id: 3,
+                    name: "张三",
+                    age: 45
+                }
+            ];
+            $scope.bbb = b("odditems")($scope.obj);
+            $scope.ccc = $location.absUrl();
+            $scope.ddd = $location.href();
+            d({
+                method: "GET",
+                ulr: "aaa.php",
+            }).then(function success(response) {
+                a.sult = response.data;
+            }), function error(response) {
+                a.sult = response.error;
+            }
+        }])
+        $http.get("aa.php").then(function success(response){
+        	$scope.suit=response.data;
+        })
+        // 全局定义过滤器
+        mapp.filter("odditems", function () {
+            function abc(si) {
+                var arr = [];
+                for (let i = 0; i < si.length; i++) {
+                    if (i % 2 == 0) {
+                        si[i].name += i;
+                        arr.push(si[i]);
+                    }
+                }
+                return arr;
+            }
+            return abc;
+        })
+    </script>
+</body>
+
+
+</html>

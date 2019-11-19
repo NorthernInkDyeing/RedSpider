@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Apple (中国大陆) - 官方网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="jsa/min.1.1.js"></script>
+    <script src="../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <style>
+        body {
+            height: 100%;
+        }
+
+        .black_header {
+            width: 100%;
+            background: black;
+            height: 100%;
+        }
+
+        .black_header .container .list-inline li {
+            float: left;
+            /* display: inline-block; */
+            /* font-family: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: inherit; */
+            /* inherit继承 */
+        }
+
+        .black_header .container .list-inline li a {
+            color: #fff;
+            font: 12px/40px"微软雅黑";
+            padding: 0px 10px;
+        }
+
+        .black_header .container .list-inline li:first-child a {
+            font: 14px/40px"微软雅黑";
+        }
+
+        @media (min-width: 768px) {
+            .black_header .container .list-inline li {
+                margin: 0% 2.2%;
+            }
+        }
+
+        @media (min-width: 500px) {
+            .container-fluid .nav .container {
+                width: 100%;
+                padding: 0;
+            }
+
+            .nav .container .visible-xs {
+                width: 100%;
+                height: 100%;
+            }
+
+            .nav .container .visible-xs .list-inline li {
+                line-height: 44px;
+                float: left;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .black_header .container .list-inline li {
+                margin: 0% 3.2%;
+            }
+        }
+
+        #tar li {
+            border-bottom: 1px solid #504f4f;
+        }
+
+        #tar li:last-child {
+            border-bottom: none;
+        }
+
+        #tar li a {
+            line-height: 44px;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .input-group {
+            width: 100%;
+        }
+
+        .input-group-addon {
+            background-color: #282828;
+            border: none;
+            width: 10%;
+            cursor: text;
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .form-group {
+            float: left;
+            height: 36px;
+            margin: 0px;
+            width: 90%;
+            outline: none;
+            /* 轮廓 */
+            caret-color: #fff;
+            /* 光标 */
+            border-radius: 0px 5px 5px 0px;
+            background: #282828;
+            border: none;
+            color: #a8a8aa;
+        }
+
+        .nav {
+            background: #282828;
+        }
+
+        .fiexd-top1 {
+            height: 80px;
+        }
+
+        .nav>.container1:first-child {
+            width: 100%;
+        }
+
+        .nav>.container1:first-child>p {
+            line-height: 40px;
+            padding: 0px 16px;
+        }
+
+        .glyphicon-search {
+            line-height: 36px;
+            float: left;
+            background: #282828;
+            padding: 0px 5px;
+            color: #a8a8aa;
+            width: 10%;
+            text-align: center;
+        }
+
+        .span {
+            width: 10%;
+            color: #6bf;
+            float: right;
+            text-align: center;
+            line-height: 36px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            opacity: .65;
+            text-decoration: none;
+        }
+
+        .containerW {
+            width: 100%;
+            position: relative;
+        }
+
+        .containerW .Mask {
+            position: absolute;
+            margin-left: -15px;
+            width: 102.15%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .containerW .Mask>a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .containerW>.text-center {
+            padding-top: 30px;
+        }
+
+        .containerW>.text-center>h1.h1 {
+            font-weight: 700;
+            font-size: 52px;
+        }
+
+        .containerW>.text-center>h1:nth-child(2) {
+            font-weight: normal;
+        }
+
+        .containerW>.text-center>span {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .containerW>.text-center>span>a {
+            font-size: 18px;
+            position: absolute;
+            left: 41%;
+            z-index: 3;
+            color: #6bf;
+        }
+
+        .containerW>.text-center>span.visible-xs>a {
+            left: 28%;
+        }
+
+        .containerW>.text-center>span.visible-xs>a:nth-child(2) {
+            left: 60%;
+        }
+
+        .containerW>.text-center>span.hidden-xs>a:nth-child(2) {
+            left: 53%;
+        }
+
+        .containerW>.text-center>span>a:hover {
+            opacity: 1;
+            color: #6bf;
+            text-decoration: underline;
+        }
+
+        .containerW>.text-center>div {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .containerW>.text-center>div>img {
+            margin-left: -950px;
+            margin-top: -285px;
+            width: 230%;
+        }
+
+        .containerW>.text-center>div.visible-xs {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .containerW>.text-center>div.visible-xs>img {
+            margin-left: -115px;
+            margin-top: -210px;
+            width: 150%;
+        }
+
+        .paginan>.text-center>div.visible-xs>img {
+            margin-left: -40px;
+            margin-top: -150px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid black_header" style="margin-bottom:20px">
+        <!-- navbar-fixed-top -->
+        <nav class="nav navbar-fixed-top">
+            <div class="container1">
+                <p role="Advertisement" class="text-right" style="color:#a8a8aa">&lt;广告 &gt;</p>
+            </div>
+            <div class="container" style="max-width: 1000px">
+                <ul class="list-inline hidden-xs">
+                    <li style="padding-left:0px;margin:0;"><a href="#"><span
+                                class="glyphicon glyphicon-apple"></span></a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPone</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">技术支持</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                    <li style="padding-left:0px;margin:0;float:right"><a href="#"><span
+                                class="glyphicon glyphicon-lock"></span></a></li>
+                </ul>
+                <div class="visible-xs">
+                    <ul class="list-inline" style="line-height:44px;height:44px">
+                        <li>
+                            <button class="navbar-toggle pull-left collapsed" type="button" data-toggle="collapse"
+                                data-target="#tar" aria-controls="vivsible-xs" aria-expanded="flase">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar" style="background-color:#fff"></span>
+                                <span class="icon-bar" style="background-color:#fff"></span>
+                            </button>
+                        </li>
+                        <li style="margin-left:40%">
+                            <a href="#" style="color:#fff;">
+                                <span class=" glyphicon glyphicon-apple"></span>
+                            </a>
+                        </li>
+                        <li style="float:right">
+                            <a href="#" style="color:#fff;float:right;line-height:44px">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="tar" class="list-unstyled navbar-collapse collapse " aria-expanded="false"
+                        style="width:100%;padding:0px 20px">
+                        <li>
+                            <div class="input-group">
+                                <span class="glyphicon glyphicon-search" id="aaa"></span>
+                                <input type="text" placeholder="搜索 apple.com" class="form-group" aria-describedby="aaa">
+                            </div>
+                        </li>
+                        <li><a href="">Mac</a></li>
+                        <li><a href="">iPad</a></li>
+                        <li><a href="">iPone</a></li>
+                        <li><a href="">Watch</a></li>
+                        <li><a href="">Music</a></li>
+                        <li><a href="">技术支持</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="fiexd-top1"></div>
+        <div class="containerW">
+            <div class="text-center" style="color:#fff;background:black">
+                <h1 class="h1">iPhone 11 Pro</h1>
+                <h1 class="h3">摄像头、显示屏、性能，样样 Pro 如其名。</h1>
+                <p style="color:#a8a8aa">折抵换购，仅 RMB 258 每月或 RMB 6199 起*。</p>
+                <span class="hidden-xs"><a href="#">进一步了解 &gt;</a><a href="#">购买 &gt;</a></span>
+                <span class="visible-xs">
+                    <a href="#">进一步了解 &gt;</a><a href="#">购买 &gt;</a>
+                </span>
+                <div class="hidden-xs">
+                    <img src="img/ip.jpg" alt="">
+                </div>
+                <div class="visible-xs">
+                    <img src="img/ip1.jpg" alt="">
+                </div>
+            </div>
+            <div class="Mask">
+                <a href="javaScript:;"></a>
+            </div>
+        </div>
+    </div>
+    <div class="containerW paginan" style="background:#fafafa;margin-bottom:20px">
+        <div class="text-center" style="color:#fff;">
+            <h1 class="h1" style="color:black">iPhone 11</h1>
+            <h1 class="h3" style="color:black">一切都刚刚好。</h1>
+            <p style="color:#a8a8aa">折抵换购，仅 RMB 154 每月或 RMB 3699 起*。</p>
+            <span class="hidden-xs"><a href="#">进一步了解 &gt;</a><a href="#">购买 &gt;</a></span>
+            <span class="visible-xs">
+                <a href="#">进一步了解 &gt;</a><a href="#">购买 &gt;</a>
+            </span>
+            <div class="hidden-xs">
+                <img src="img/p1-1.jpg" alt="">
+            </div>
+            <div class="visible-xs">
+                <img src="img/p1-11.jpg" alt="">
+            </div>
+        </div>
+        <div class="Mask">
+            <a href="javaScript:;"></a>
+        </div>
+    </div>
+    <script>
+        function judeg() {
+            if ($("nav .container .visible-xs .list-inline").css("display") == "none") {
+                return "a";
+            } else {
+                return "b";
+            }
+        }
+
+        $("button").click(function () {
+            if ($(this).find($("span")).eq(1).css("display") == "block" || $(this).find($("span")).eq(1).css("display") == "") {
+                $(this).find($("span")).eq(1).css("display", "none");
+                $(this).find($("span")).eq(2).removeClass("icon-bar").addClass("glyphicon glyphicon-remove");
+                $(this).css({ "marginTop": "0", "paddingTop": "0" });
+                $(this).parent().parent().children().eq(2).toggle(300);
+            } else {
+                $(this).find($("span")).eq(1).css("display", "block");
+                $(this).find($("span.glyphicon-remove").removeClass("glyphicon glyphicon-remove").addClass("icon-bar"));
+                $(this).parent().parent().children().eq(2).toggle(300);
+                $(this).attr("style", "");
+            }
+        })
+        $("input[type='text']").click(function () {
+            $("nav .container .visible-xs .list-inline").hide(300);
+            $(this).prev().css("width", "10%");
+            $(this).css("width", "80%");
+            if ($(this).next().length == 0) {
+                $(this).parent().append("<span class='span'onclick=showHideToggle(this)>取消</span>");
+            }
+        });
+        function showHideToggle(ev) {
+            var ev = ev || window.event();
+            $(ev).parent().parent().parent().prev().show(200);
+            if (judeg() == "b") {
+                // empty()移除元素内的子元素
+                $(ev).remove();
+                $("input[type='text']").css("width", "90%");
+            }
+        }
+        //--------------------这是一个替换特殊字符的方法-------------------------------------------------
+        var a="[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]2q34asdcfjvsayubdasyvgdaksyudfvahsbnlij09i=-';./;,/lma.knd jn`12w`321u3y47432t6R$@@!@$%$&*^)((&";
+        console.log(stripscript(a));
+        function stripscript(s)
+		{
+		var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]")
+		var rs = "";
+		for (var i = 0; i < s.length; i++) {
+		rs = rs+s.substr(i, 1).replace(pattern, '');
+		}
+		return rs;
+		} 
+        
+        /*myForm.userName.$error.required 判断form表单
+        	userName 是不是没有填写  填写值是true 没有填写值是false
+        	myForm.userName.$error.minlength
+        	myForm.userName.$error.maxlength
+        	!myForm.userName.$error.required
+        	$scope.regRRRR=true
+        	ng-class="{
+        		'alert-danger':!regRRRR,
+        		'alert-success':regRRRR
+        	}"
+         */
+        
+    </script>
+</body>
+<!--
+	ng-minlength
+	ng-maxlength
+	
+	
+	
+-->
+</html>

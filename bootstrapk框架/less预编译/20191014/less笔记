@@ -1,0 +1,34 @@
+less的变量用@声明
+less的变量只能定义一次
+@blue:@5b83ad;
+@rey:@blue + #111;
+     5   b   8   3   a   d
++    1   1   1   1   1   1
+---------------------------------
+     6   c   9   4   b   e 
+123456789abcdef
+加法运算后为#6c94be
+代码混合使用
+    ./# manyTimes{
+            border-top:solid 1px red;
+            color:pink;
+        }
+    这里就直接可以使用里面的内容
+    body{./#   manyTimes;}
+&表示父元素
+@media screen{
+    .screencolor{
+        color:green;
+        @media (min-width:768px){
+            color:red
+        }
+        @media tv{
+            color:black;
+        }
+    }
+}
+less中一样可以做加减乘除运算    尽量使用一个恒量标准
+precentage可以转小数值换百分比
+staurate可以增加色值
+spin(lighten(,25%),8)背景颜色的亮度增加了 25% 之后又将色相值增加 8
+

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Angular.js教学</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/Normalize.css">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <style>
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        #app1>div {
+            width: 50%;
+            float: left;
+        }
+
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="app" id="app1" ng-cloak>
+        <div ng-controller="mycon1">
+            <p>obj.name==={{obj.name}}</p>
+            <p>obj1==={{obj1[0]}}</p>
+            <div>
+                <form novalidate>
+                    First Name:<br>
+                    <input type="text" ng-model="user.firstName"><br>
+                    Last Name:<br>
+                    <input type="text" ng-model="user.lastName">
+                    <br><br>
+                    <button ng-click="reset()">RESET</button>
+                </form>
+                <p>form = {{user}}</p>
+                <p>master = {{master}}</p>
+            </div>
+            <div>
+                展示1<input type="radio" ng-model="add" value="zhanshi">
+                展示2<input type="radio" ng-model="add" value="zhanshi1">
+                展示3<input type="radio" ng-model="add" value="zhanshi2">
+                <div ng-switch="add">
+                    <div ng-switch-default>
+                        <h1>ng-switch-default</h1>
+                        <p>ng-switch ng-switch-when ng-model</p>
+                    </div>
+                    <div ng-switch-when="zhanshi">
+                        <h1>ng-switch</h1>
+                        <p>ng-switch-when</p>
+                    </div>
+                    <div ng-switch-when="zhanshi1">
+                        <h1>ng-switch1</h1>
+                        <p>ng-switch-when1</p>
+                    </div>
+                    <div ng-switch-when="zhanshi2">
+                        <h1>ng-switch2</h1>
+                        <p>ng-switch-when2</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>novalidate表单不进行验证</h1>
+                <form action="" name="myForm" novalidate>
+                    <input type="text" name="user" required>
+                    <span ng-show="myForm.user.$error.required">必须填写用户名</span>
+                    <p>required进行报错</p>
+                </form>
+            </div>
+        </div>
+        <div ng-controller="my2">
+            <p>my2-------obj1==={{obj1[0]}}</p>
+        </div>
+        <div ng-controller="my3">
+            <input ng-model="greeting">
+            <h1>{{greeting}}</h1>
+            <button ng-click="sayHello()">点我</button>
+        </div>
+        <div ng-controller="repeat">
+            <ul>
+                <li ng-repeat="x in names">{{x}}{{lasname}}</li>
+            </ul>
+        </div>
+        <div ng-controller="module">
+            姓名：<input type="text" ng-module="firstname">
+            年龄：<input type="text" ng-module="lastname">
+            <br />
+            个人小信息：{{firstname()}}
+        </div>
+        <div ng-controller="namesCtrl">
+            <ul>
+                <li ng-repeat="x in names">{{x.name+""+x.country}}</li>
+            </ul>
+        </div>
+        <div ng-controller="uppercase">
+            <p>大写：{{lasname | uppercase}}</p>
+            <p>小写：{{lastname | lowercase}}</p>
+            <p>姓名：{{(pice * Number) | currency}}</p>
+            <ul>
+                <li ng-repeat="x in names | orderBy:'list'">
+                    {{x.name+"-----"+x.list}}
+                </li>
+                <li ng-repeat="x in filter | filter:test | orderBy:'country'">
+                    {{(x.name|uppercase)+"------"+(x.country)}}
+                </li>
+            </ul>
+        </div>
+        <div ng-controller="myCtrl" ng-class="a">
+            <div>
+                <p>当前页面的URL：</p>
+                <h3 ng-bind="myUrl"></h3>
+                <h2 style="text-align: center;">1.点击获取按钮点击的次数</h2>
+                <p ng-bind="count"></p>
+                <input type="button" ng-click="cont()" value="点击获取次数">
+                <h3 style="text-align: center;">只有勾选"我已同意协议"才能提交</h3>
+                <input type="checkbox" ng-model="chek">我已同意不公平协议。
+                <p ng-bind="'button按钮禁用状态ng-disabled ='+chek"></p>
+                <input type="button" value="注册" ng-disabled="!chek">
+                <h1 style="text-align: center;">Ng-Modele的作用域</h1>
+                <label for="">
+                    <input type="radio" name="sex" ng-model="a" value="blue">男士
+                </label>
+                <label for="">
+                    <input type="radio" name="sex" ng-model="a" value="pink">女士
+                </label>
+                <p ng-bind="a"></p>
+                <h1 style="text-align: center;">更换图片的样式</h1>
+                <select ng-model="valuePice">
+                    <option value="../img/1.jpg">头像1</option>
+                    <option value="../img/2.jpg">头像2</option>
+                    <option value="../img/3.jpg">头像3</option>
+                    <option value="../img/4.jpg">头像4</option>
+                    <option value="../img/5.jpg">头像5</option>
+                </select>
+                <img ng-src="{{valuePice}}" alt="" style="width:100%">
+                <p ng-bind="valuePice"></p>
+                <h1 style="text-align: center;">复选框的样式</h1>
+                <label for="Close">
+                    <input type="checkbox" id="Close" ng-model="checkAll">
+                    全选或取消
+                </label>
+                <input type="checkbox" ng-checked="checkAll">
+                <input type="checkbox" ng-checked="checkAll">
+                <input type="checkbox" ng-checked="checkAll">
+                <input type="checkbox" ng-checked="checkAll">
+                <input type="checkbox" ng-checked="checkAll">
+                <input type="checkbox" ng-checked="checkAll">
+            </div>
+            <div>
+                <h2 syle="text-align=center">显示或隐藏</h2>
+                <input type="button" ng-click="Shclick()" value="ShowHidden()">
+                <div style="width:10%;height:30px;background:orange;color:#fff" ng-show="dis">
+                    这是一个测试框体
+                </div>
+                <div style="width:10%;height:30px;background:indigo;color:#fff" ng-show="!dis">
+                    这是一个测试框体
+                </div>
+                <p ng-bind="a"></p>
+                <p ng-bind="a.getTime()"></p>
+                <p ng-bind="a.time()"></p>
+                <p ng-bind="a.getFullYear()"></p>
+                <p ng-bind="a.getMonth()+1"></p>
+                <p ng-bind="a.getDate()"></p>
+                <p
+                    ng-bind="a.getHours()>12? (a.getHours()-12) < 10 ? 0 +''+(a.getHours()-12) : (a.getHours()-12) : f.getHours()">
+                </p>
+            </div>
+            <div>
+                <h1 style="text-align: center;">
+                    购买的商品换算
+                </h1>
+                单价：<span ng-bind="price"></span>
+                数量：<input type="number" ng-model="num">
+                总价：<span ng-bind="price * num "></span>
+                <span ng-bind="price * num | number:'10' "></span>
+                <!-- currency货币 -->
+                <hr />
+                <p>{{arr}}</p>
+                <div ng-repeat="i in arr">
+                    <p>{{i}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-controller="date">
+            <div>
+                <h1 style="text-align:center">
+                    Date的 | yyyy-MM-DD HH:MM:SS
+                </h1>
+                <p>{{birthbay}}</p>
+                <p>{{birthbay | date}}</p>
+                <p>{{birthbay | date:"yyyy" }}</p>
+                <p>{{birthbay | date:"yy"}}</p>
+                <p>{{birthbay | date:"y"}}</p>
+                <p>{{birthbay | date:"MM"}}</p>
+                <p>{{birthbay | date:"yyyy-MM"}}</p>
+                <p>{{birthbay | date:"yyyy-MM-dd"}}</p>
+                <p>{{birthbay | date:"yyyy-MM-dd HH"}}</p>
+                <p>{{birthbay | date:"yyyy-MM-dd HH:mm"}}</p>
+                <p>{{birthbay | date:"yyyy-MM-dd HH:mm:ss"}}</p>
+            </div>
+            <div>
+                <h1 style="text-align:center">
+                    limitTo限制数组,对象的长度
+                </h1>
+                <p>{{ininstr | limitTo}}</p>
+                <p>{{ininstr | limitTo:'3'}}</p>
+                <ul ng-repeat="i in inituser | limitTo:2">
+                    <li>{{i}}</li>
+                    <li ng-repeat="n in i | limitTo:2">
+                        <a href="">{{n}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h1 style="text-align:center">
+                    filter他返回可以是字符串或数组 | 规则
+                </h1>
+                <div>
+                    <p>这是开始filter 匹配子串</p>
+                    <!-- 
+                        filter:字符串数组中的值皆可匹配
+                        filter:{id:1}
+                     -->
+                    <p>把所有的id等于固定值的</p>
+                    <ul ng-repeat="i in filter1 | filter:{id:1}">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                    <p>包含Elk的所有对象</p>
+                    <ul ng-repeat="i in filter1 | filter:Elk">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                    <h2>自定义的匹配ageElk ELk</h2>
+                    <ul ng-repeat="i in filter1 | filter:{id:2}|filter:ageElk">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                    <h2>json字符串</h2>
+                    <p>json可以把对像格式化json的字符串，一般不会在页面中使用json字符串</p>
+                    <p ng-bind="filter1 | json"></p>
+                    <p>orderBy:"-"降序升序</p>
+                    <ul ng-repeat="i in filter1 | orderBy:'-age'">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                    <ul ng-repeat="i in filter1 | orderBy:'age'">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                    <p>根据多字段按id排序相同则按其他排序</p>
+                    <ul ng-repeat="i in filter1 | orderBy:['id','age']">
+                        <li>{{i.id}}</li>
+                        <li>{{i.sex}}</li>
+                        <li>{{i.name}}</li>
+                        <li>{{i.age}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ng-controller="select">
+            <div>
+                <h2 style="text-align: center;">
+                    select元素的循环创建
+                </h2>
+                <select ng-model="selectedSite" ng-options="x.url as x.site for x in sites"></select>
+                <h1>你选择的是: {{selectedSite.site}}</h1>
+                <p>网址为: {{selectedSite.url}}</p>
+                <select>
+                    <option ng-repeat="x in names">{{x}}</option>
+                </select>
+                <h2>杨哥教学</h2>
+                <div ng-bloak>{{selectCity}}</div>
+                <select ng-model="selectCity" ng-options="x.id as x.city for x in item">
+                </select>
+                <div>
+                    <ul>
+                        <li ng-repeat="j in item">
+                            <a href="">{{$index}}</a>
+                            <span>{{j.id}}-------{{j.city}}</span>
+                        </li>
+                        <hr />
+                        <li ng-repeat="(k,j) in item">
+                            <a href="">{{k}}</a>
+                            <span>{{j.id}}-------{{j.city}}</span>
+                        </li>
+                        <hr />
+                        <p>{{arr}}</p>
+                        <p ng-repeat="(k,v) in arr track by k">{{v}}</p>
+                        <hr />
+                        <p>{{selectObj}}</p>
+                        <select ng-model="obj1" ng-options="x  for (x,y) in selectObj"></select>
+                        <select ng-model="obj" ng-options="x as y for (x,y) in selectObj"></select>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <input type="text" ng-model="val" ng-change="count()">
+                <p>{{num}}</p>
+                <p>{{val}}</p>
+            </div>
+        </div>
+        <div ng-controller="error">
+            <div>
+                <h1>验证信息的合法性</h1>
+                <form name="myForm">
+                    <input type="text" name="user" ng-model="user" required>
+                    <span style="color:red" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                        <span ng-show="myForm.user.$error.required">
+                            必须填写的值
+                        </span>
+                    </span>
+                    <button type="button" ng-disabled="myForm.user.$dirty && myForm.user.$invalid">$invalid提交</button>
+                </form>
+            </div>
+            <div ng-view>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../../jsXy/jq.min.js"></script>
+    <script src="../../../jsXy/angular.js"> </script>
+    <script src="ceshi.js"></script>
+    <script>
+        // instanceof
+        var a = new String();
+        var b = new Number();
+        var c = new Object();
+        var d = new Boolean();
+        var e = new Array();
+        var ar = ["a"];
+        var ar1 = {
+            one: ["a"]
+        };
+        console.log(typeof ar);
+        console.log(typeof ar1);
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+
+
+        // ------------------
+        console.log("----------------------");
+        console.log(Object.prototype.toString.call(ar));
+        console.log(Object.prototype.toString.call(ar1));
+        console.log(Object.prototype.toString.call(a));
+        console.log(Object.prototype.toString.call(b));
+        console.log(Object.prototype.toString.call(c));
+        console.log(Object.prototype.toString.call(d));
+        console.log(Object.prototype.toString.call(e));
+        console.log("----------------------");
+        console.log(ar.__proto__);
+        console.log(ar1.__proto__);
+        console.log(a.__proto__);
+        console.log(b.__proto__);
+        console.log(c.__proto__);
+        console.log(d.__proto__);
+        console.log(e.__proto__);
+    </script>
+</body>
+
+</html>

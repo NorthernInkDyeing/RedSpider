@@ -1,0 +1,130 @@
+基本模块
+    Typography      印刷术
+    Tables          桌子
+    Forms           形式
+    Buttons         按钮
+    Responsiveness  响应式布局
+组件
+    Dropdowns       下拉菜单
+    Navigation      导航
+    Modals          情态动词
+    Typehead        打字机
+    Pagination      分页
+    Carousal        狂欢
+    Breadcrumb      面包屑
+    Tab             制表符
+    Thumbbalis      缩略图
+    Headers         标题
+
+caret-color光标
+
+
+
+
+
+
+
+
+模态框关联
+    1.启用模态框：data-toggle="modal"
+    2.启用模态框目标：data-target="#id名称"
+    3.
+        data-original-title数据原始标题
+        aria-labelldby=""指向标题
+        tabindex="-1"
+        data-keyboard="true/false";可以使用esc关闭/不可以
+    4.modal-dialog--->大小lg👇modal-content👇
+        modal-dialog类 modal模态框 dialog对话框   modal-lg/sm/正常
+        modal-header/body/footer👇
+        close关闭&times/×👇
+        data-dismiss="modal";解散模态框
+        modal-title头部标题
+    5.fade淡入淡出的形式
+    6.必须写的属性
+        role="modal" role=作用
+        aria-labelldby=""   用于指向模态框的标题栏
+        aria-hidden="true"  通过辅助性工具忽略模态框的dom元素
+    7.事件触发
+        data-whatever       不管什么数据
+        relatedTarget👉     目标元素
+        shown.bs.modal      在显示后触发
+        show.bs.modal       在show/消失后触发
+        hide.bs.modal       hidden方法调用后触发
+        hidden.bs.modal     在模态框隐藏过渡完后才能后执行
+        hide.bs.modal       当元素发生点击消失时执行
+        loaded.bs.modal     从远端数据源加载完成执行
+        .modal(hide/show)/modal({show:false})
+            ({})show:false,
+            keyboard:true,/data-keyboard
+            backdrop/背景:false
+滚动监听事件
+    说明是什么东西role="navigation"给自己设定一个id
+    navbar-header👇
+        data-toggle="collapse"
+        data-target=""👇图标caret
+        nav-brand在非移动端上显示    
+    collapse navbar-collapse给当前元素设定id给上面的元素使用
+        ul.nav navbar-nav
+        li>a指定元素跳转位置
+    事件盒子
+    overflow:hidden;data-target="上面的大盒子"data-offset="0"
+    sective装元素的盒子
+    对应元素的唯一值
+
+tooltip/工具提示.js插件
+    默认在上面
+        toopltip()
+        data-placement="top/left/right/bottom";
+    打开过度效果
+        data-animation="true/false"
+    是否像用户 提示工具插入html标签 默认是不允许的
+        data-html="true/false"
+    定义以何种方式触发提示工具  可以多种方式
+        data-trigger="click/hover/focus/manual"
+    延迟效果
+        data-delay="{'show':'5000','hide','2000'}"
+    当前元素.toopltip("show/shown/hide/hidden")
+    show.bs.tooltip
+    shown.bs.tooltip
+    hide.bs.toopltip
+    hidden.bs.toopltip
+popover.js弹出框
+    data-content="????"他是一个内容
+    data-trigger="focus"
+data-toggle="button"
+data-loading-text="???"autocomplete="off"要JS配合使用👇
+    $btn.removeClass("btn-primary disabled").removeAttr("disabled").addClass("btn-success").text("成功").dequeue();
+    delay延迟的效果可以配合dequeue()执行循环执行
+折叠面板
+    panel-group
+        panel
+            panel-heading
+                panel-collapse  
+            panel-collapse in
+                panel-body
+    折叠元素最大的盒子设定id role aria-multiselectable="true"👇
+    panel panel-primary👇
+    唯一性的id响应下面的展开项 role="tab"👇
+    a链接 collapse role="button"data-toggle=""data-parent="最大的盒子"aria-expanded="false"aria-controls="展开项的id"href=也要指向当前项id
+    button
+        type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off"
+    js写法
+        .collapse("show/hide/toggle")
+        .collapse({"show/hide/toggle":true/false})
+轮播
+    为最大的盒子设定
+        .carousel .slide data-ride="carousel"👇
+    carousel-indicators👇
+        data-slide-to="??"data-target="最大的盒子"
+    图片的那部分
+        carousel-inner role="listbox"👇
+    time👉img+carousel-caption
+    左右按钮
+        right/left carousel-control href="最大的盒子"role="button"data-slide="prev"👇
+    glyphicon glyphicon-chevron-left/right
+    sr-only Previous/Next
+
+    js触发事件
+        slide.bs.carousel出发时/slide
+        carousel("prev/next/下标");
+

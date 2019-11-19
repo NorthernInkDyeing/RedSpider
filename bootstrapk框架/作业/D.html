@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="1.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="../../jsXy/jq.min.js"></script>
+    <script src="../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container nav1">
+        <ul class="row list-inline">
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">起步</a></li>
+            <li><a href="#">全局CSS样式</a></li>
+            <li><a href="#">组件</a></li>
+            <li><a href="#">JavaScript插件</a></li>
+            <li class="active"><a href="#">定制</a></li>
+            <li><a href="#">网站实例</a></li>
+            <li><a href="#">Bootstrap中文网</a></li>
+        </ul>
+    </div>
+    <div class="contrainer-fluid download">
+        <div>
+            <h1>定制并下载 Bootstrap</h1>
+            <p>通过自定义 Bootstrap 组件、Less 变量和 jQuery 插件，定制一份属于
+                你自己的 Bootstrap 版本吧。</p>
+        </div>
+
+    </div>
+    <div class="container body1">
+        <div class="col-md-9 fle">
+            <div class="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    &times;
+                </button>
+                <strong>注意！</strong> <code>@brand-primary</code> 的默认值在最新版本中已经改变，以提高颜色对比度和内容的可访问性。升级
+                Bootstrap时，请再次检查你所编译的 CSS。
+            </div>
+            <!-- 这一应该有滚动监听事件 -->
+            <div class="col-md-12">
+                <div>
+                    <h1>
+                        <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                    </h1>
+                    <p class="lead">
+                        有现成的配置？上传并导入你的<code>config.json</code>
+                    </p>
+                    <p>
+                        将文件拖拽到这里或
+                        <label for="file1" class="btn-link">
+                            手动上传。
+                            <input type="file" class="hidden" id="file1">
+                        </label>
+                    </p>
+                    <p>
+                        <strong>没有现成的配置文件？</strong>
+                        没关系，从下面开始自定义各字段吧。</p>
+                </div>
+            </div>
+            <form action="" id="LESStime">
+                <div class="col-md-12 a">
+                    <!-- 这里有一个图标 -->
+                    <button type="button" class="btn-default btn toggle">全选/全部取消</button>
+                    <h1>
+                        Less文件
+                        <a href=""></a>
+                    </h1>
+                </div>
+                <div class="col-md-12 b">
+                    <p>
+                        选择将哪些 Less 文件编译到你自己的定制 Bootstrap 版本中。不确定每个文件的用途吗？请先通读此文档中的<a href="#">全局 CSS 样式</a>和<a
+                            href="#">组件</a> 章节。
+                    </p>
+                </div>
+                <div class="col-md-12 c">
+                    <div class="col-md-3">
+                        <h3>通用CSS</h3>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <h3>组件</h3>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <h3>JavaScript组件</h3>
+                    </div>
+                </div>
+            </form>
+            <!-- 2 -->
+            <form action="" id="LESStime1">
+                <div class="col-md-12 a aa">
+                    <!-- 这里有一个图标 -->
+                    <button type="button" class="btn-default btn toggle">全选/全部取消</button>
+                    <h1>
+                        jQuery 插件
+                        <a href=""></a>
+                    </h1>
+                </div>
+                <div class="col-md-12 b bb">
+                    <p>
+                        选择将那些 jQuery 插件包含到你的定制版本中。不确定他们的用途吗？请通读此文档中的<a href=""> JavaScript 插件章节。</a>
+                    </p>
+                </div>
+                <div class="col-md-12 c cc">
+                    <div class="col-md-6">
+                        <h3 title="链接到组件">Linked to components</h3>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <h3 title="魔法">Magic</h3>
+                    </div>
+                    <blockquote class="blockquote">
+                        <h4>
+                            生成的两个文件
+                        </h4>
+                        <p>所有选中的插件都将会编译为一份是和阅读的版本 <code>bootstrap.js</code> 和一份压缩版本
+                            <code>bootstrap.min.js。</code>我们建议将压缩版本用于生产环境。
+                        </p>
+                    </blockquote>
+                    <blockquote class="blockquote1">
+                        <h4>
+                            依赖 jQuery
+                        </h4>
+                        <p>所有插件都依赖最新版本的 jQuery，因此，必须首先将<code>jQuery</code> 引入页面。
+                        </p>
+                    </blockquote>
+                </div>
+            </form>
+            <form action="" id="LESStime2">
+                <div class="col-md-12 a aa">
+                    <!-- 这里有一个图标 -->
+                    <button type="button" class="btn-default btn toggle">全选/全部取消</button>
+                    <h1>
+                        Less 变量
+                        <a href=""></a>
+                    </h1>
+                </div>
+                <div class="col-md-12 b bb">
+                    <p>
+                        通过 Less 变量可以自定义颜色、尺寸等，最终将会反映到你所下载的 CSS 样式表文件中。</a>
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <h2 title="色彩">Colors</h2>
+                    <p title="可在Bootstrap中使用的灰色和品牌颜色。">Gray and brand colors for use across Bootstrap.</p>
+                </div>
+                <div class="col-md-12 color1"></div>
+                <div class="col-md-12 cc">
+                    <h2 title="脚手架">Scaffolding</h2>
+                    <p title="某些最具全局风格的设置。">Settings for some of the most global styles.</p>
+                    <div class="col-md-4">
+                        <label for="">
+                            @body-bg
+                            <input type="text" class="form-control" value="#fff">
+                            <p>Background color for <code>body</code>.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @text-color
+                            <input type="text" class="form-control" value="#fff">
+                            <p>Global text color on <code>body</code>.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @link-color
+                            <input type="text" class="form-control" value="@gray-dark">
+                            <p>Global textual link color.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @link-hover-color
+                            <input type="text" class="form-control" value="darken(@link-color, 15%)">
+                            <p>Link hover color set via <code>darken()</code> function.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @link-hover-decoration
+                            <input type="text" class="form-control" value="underline">
+                            <p>Link hover decoration.</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 cc">
+                    <h2 title="脚手架">Typography</h2>
+                    <p title="某些最具全局风格的设置。">Font, line-height, and color for body text, headings, and more.</p>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-family-sans-serif
+                            <input type="text" class="form-control" value="' Helvetica Neue', Helvetica, Arial,
+                                sans-serif">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @text-color
+                            <input type="text" class="form-control" value="Georgia, 'Times New Roman', Times, serif">
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @link-color
+                            <input type="text" class="form-control" value="@gray-dark">
+                            <p>Default monospace fonts for <code>code</code>, <code>kbd</code>, and <code> pre</code>.
+                            </p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-family-base
+                            <input type="text" class="form-control" value="@font-family-sans-serif">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-base
+                            <input type="text" class="form-control" value="14px">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-large
+                            <input type="text" class="form-control" value="ceil((@font-size-base * 1.25))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-small
+                            <input type="text" class="form-control" value="ceil((@font-size-base * 0.85))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h1
+                            <input type="text" class="form-control" value="floor((@font-size-base * 2.6))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h2
+                            <input type="text" class="form-control" value="floor((@font-size-base * 2.15))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h3
+                            <input type="text" class="form-control" value="ceil((@font-size-base * 1.7))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h4
+                            <input type="text" class="form-control" value="ceil((@font-size-base * 1.25))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h5
+                            <input type="text" class="form-control" value="@font-size-base">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @font-size-h6
+                            <input type="text" class="form-control" value="ceil((@font-size-base * 0.85))">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @line-height-base
+                            <input type="text" class="form-control" value="1.428571429">
+                            <p>Unit-less <code>line-height</code> for use in components like buttons.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @line-height-computed
+                            <input type="text" class="form-control"
+                                value="floor((@font-size-base * @line-height-base))">
+                            <p>Computed "line-height" <code>(font-size * line-height)</code> for use with
+                                <code>margin,  padding</code> , etc.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @line-height-computed
+                            <input type="text" class="form-control"
+                                value="floor((@font-size-base * @line-height-base))">
+                            <p>Computed "line-height" <code>(font-size * line-height)</code> for use with
+                                <code>margin,  padding</code> , etc.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @headings-font-family
+                            <input type="text" class="form-control" value="inherit">
+                            <p>By default, this inherits from the
+                                <code>body</code>.</p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @headings-font-weight
+                            <input type="text" class="form-control" value="500">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @headings-line-height
+                            <input type="text" class="form-control" value="1.1">
+                            <p></p>
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="">
+                            @headings-color
+                            <input type="text" class="form-control" value="inherit">
+                            <p></p>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 cc Lange">
+                    <h2 title="脚手架">Iconography</h2>
+                    <p title="某些最具全局风格的设置。">Specify custom location and filename of the included Glyphicons icon font.
+                        Useful for those including Bootstrap via
+                        Bower.</p>
+                </div>
+                <div class="col-md-12 cc Components">
+                    <h2 title="组件">Components</h2>
+                    <p title="定义通用的填充和边界半径大小以及更多。基于14px文本和1.428行高的值（开始时约为20px）。">Define common padding and border radius
+                        sizes and more. Values based on 14px text and 1.428 line-height (~20px to
+                        start).</p>
+                </div>
+                <div class="col-md-12 cc tabB">
+                    <h2 title="桌子">Components</h2>
+                    <p title="使用基本值自定义.table组件，每个值都用于所有表变体。">Customizes the <code> .table</code>
+                        component with basic values, each used across all table variations.</p>
+                </div>
+                <div class="col-md-12 cc but">
+                    <h2 title="按钮">Buttons</h2>
+                    <p title="对于bootstrap的每个按钮，定义文本、背景和边框颜色。">For each of Bootstrap's buttons, define text, background
+                        and border color.</p>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">import</a></li>
+                    <li><a href="#">Less components</a></li>
+                    <li><a href="#">jQuery plugins</a></li>
+                    <li><a href="#">Less variables</a></li>
+                    <li><a href="#">Dropdown</a></li>
+                    <li><a href="#">返回顶部</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+
+</html>

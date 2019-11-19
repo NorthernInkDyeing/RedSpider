@@ -1,0 +1,215 @@
+.bb {
+  bb: %E9%A9%AC;
+}
+.cc {
+  filter: 50px-2;
+  width: calc(50-2px);
+  height: calc(50-2px);
+  font-family: "Microsoft yaHei";
+  z-index: pear;
+}
+.cc:after {
+  content: "Hello,李四";
+}
+/*
+escape("") 转码形式
+e("target")原
+%a/A/d/D/S
+s不会转义
+ad都会转义
+replace("n1,n2,n3,nn","nn",改变);
+length(traget,index);
+extract(target,index);
+ceil floor 
+percentage转换百分比
+round   四舍五入
+sqrt    计算平方根,原样保留单位
+abs     计算绝对值,原样保留单位
+sin     正弦
+asin    余弦
+acos    反余弦
+tan     正切
+atan    反正切
+pow     乘方
+mod     取余
+pi      返回一个π
+min     取最小值
+max     取最大值
+*/
+p {
+  width: 3.3px;
+  height: 4px;
+  line-height: 3px;
+  z-index: 30%;
+  min-height: 4px;
+  min-width: 4px;
+  max-height: 3.3px;
+  transform: rotate(1deg);
+  transform: 0.84147098;
+  max-width: 3.14159265px;
+  font-size: 4px;
+  font-size: 27px;
+  font-size: 256px;
+  font-weight: 1px;
+  font-weight: 1;
+  background-color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.5);
+  background-color: #80ff0000;
+  background-color: hsl(40, 50%, 50%);
+  background-color: hsla(40, 50%, 50%, 0.4);
+  background-color: #806a40;
+  background-color: rgba(128, 106, 64, 0.4);
+}
+/*
+颜色rgb()
+    通过红绿蓝red green blue 创建不透明的对象
+    rgba创建透明度
+    background-color:rgb(255,0,0,.5)
+    argb创建16进制的颜色
+    background-color:argb(rgb(255,0,0,.5))
+    hsl通过 色相(hue) 亮度(lightness) 饱和度(saturation)
+    hsla通过    alpha   创建透明的对象
+    hsv 创建不透明的颜色对象
+    hsva   创建透明的颜色对象
+    background-color:hsva(40%,50%,50%,.5);
+    hsvbue
+    hsvsaturation
+    hsvvalue
+
+*/
+div {
+  background: black;
+  color: white;
+}
+div .sel-blue {
+  a: b;
+}
+div .sel-green {
+  a: b;
+}
+div .sel-red {
+  a: b;
+}
+.set-2 {
+  one-1: blue;
+  two-2: green;
+  three-3: red;
+}
+.col-1 {
+  height: 50px;
+}
+.col-2 {
+  height: 100px;
+}
+.col-3 {
+  height: 150px;
+}
+.col-4 {
+  height: 200px;
+}
+/*
+逻辑功能
+each( 目标target, (@value,@key,@index){
+    @{k}-@{i}:@v;
+} )
+each(range(4),{
+    .col-@{value}{
+        height:(@value * 50px);
+    }
+});
+ceil(2.4)向上3
+floor(2.6)向下2
+percentage(0.5)百分比50%
+round(1.67)四舍五入1.7
+sqrt(25cm)计算数字的平方根。保持单位不变。5cm
+abs 腹肌abs(25cm)--25cm abs(-18.6%)--18.6%
+计算正弦函数
+    sin(1/弧度)  0.8414709848078965  
+    sin(1deg/度) 0.01745240643728351
+    sin(1grad/梯度); 0.015707317311820675
+计算反正弦（反正弦）函数
+    [-1, 1]间隔中的浮点数。
+    asin(-0.98765)-1rad asin(1deg)0rad  asin(2grad)NaNead
+计算余弦函数。
+    cos(1)  0.5403023058681398
+    cos(1deg)   0.9998476951563913
+    cos(1grad)  0.9998766324816606
+计算反余弦（余弦的倒数）函数。
+    [-1, 1]间隔中的浮点数。
+计算切线函数。
+    tan(1)  1.5574077246549023 
+    tan(1deg)   0.017455064928217585    
+    tan(1grad)  0.015709255323664916
+计算反正切（反正切）函数。
+    -π/2和之间的数字π/2。
+    atan(-1.5574077246549023)   -1rad
+    atan(0)     0rad
+    round(atan(22), 6)  1.525373rad;
+pi()    3.141592653589793
+pow战俘
+    pow(0cm, 0px)   1cm
+    pow(25, -2) 0.0016
+    pow(25, 0.5)    5
+    pow(-25, 0.5)   NaN
+    pow(-25%, -0.5) NaN%
+模mod
+    mod(0cm, 0px)   NaNcm;
+    mod(11cm, 6px); 5cm
+    mod(-26%, -5);  -1%;
+分min
+    min(5,10)5
+高max
+    max(5,10)10
+类型基础
+    isnumber    只要是数字就是true
+    isstring    只要是字符串
+    iscolor     只要是一种颜色
+    iskeyword   只要是关键字
+    isurl       只要是一个url
+    ispixel     只要是一个像素
+    isem        只要是一个em的值
+    ispercentage    只要是一个百分比
+    isunit      只要一个参数和第二个参数的单位一样
+    isruleset   只要是一个规则集
+杂项功能
+    color("#aaa")       #aaa
+    image-width/height(路径)    尺寸大小
+    convert(9s,"ms");   9000ms
+    convert(14cm,"mm"); 140mm
+    convert(4,"mm");    8
+.m(@x) when (iscolor(@x)) and (default())  {default-color: @x}
+    &-m(orange){};
+单元
+    unit：（可选）要更改为的单位，如果省略，将删除该单位
+    get-unit    参数包含带单位的数字,则该函数返回其单位,否则返回空值。
+颜色定义功能
+    rgb     rgb(90,129,32)  #5a8120;
+    rgba    rgba(90,129,32,.5)
+    argb    (rgba(90,23,148,.5));#805a1794
+    hsl     hsl(90, 100%/饱和度, 50%/亮度)#80ff00
+    hsla    hsla(90,100%,50%,.5) rgba(128, 255, 0, 0.5)     
+    hsv     hsv(90, 100%, 50%)  #408000
+    hsva    hsva(90, 100%, 50%, 0.5)rgba(64, 128, 0, 0.5)
+色调
+    hue     hue(hsl(90, 100%, 50%)) 90 返回0-360
+饱和
+    saturation  saturation(hsl(90, 100%, 50%))100%
+亮度
+    lightness   lightness(hsl(90, 100%, 50%))50%
+    hsvhue      hsvhue(hsv(90, 100%, 50%))90
+超饱和  
+    hsvsaturation   hsvsaturation(hsv(90, 100%, 50%))100%
+    hsvvalue        hsvvalue(hsv(90, 100%, 50%))50%
+红色
+    red         red(rgb(10, 20, 30))10
+    green       green(rgb(10, 20, 30))20
+    blue        blue(rgb(10,20,30))30
+提取颜色对象的Alpha通道。
+    alpha   alpha(rgba(10, 20, 30, 0.5))    0.5
+亮度
+    luma    luma(rgb(100, 200, 30))44%
+在不进行伽玛校正的情况下计算亮度值（此函数luma在v1.7.0之前命名）
+    luminance(rgb(100, 200, 30))65%
+色彩操作功能
+    
+*/

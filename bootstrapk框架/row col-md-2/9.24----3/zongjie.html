@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>bootstrap框架分类页面呈现</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="../../jsa/min.1.1.js"></script>
+    <script src="../../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class='h1 text-center bg-info'>与排版页面</h1>
+        <div class='col-lg-12 col-md-8 col-sm-4 col-xs-2 bg-primary'>最大占2/4/8/12</div>
+        <p class='h3 text-center bg-warning'>
+            都是按照十二分的分配
+            <span class='h3'>；所有的元素都可以使用class类写h1-h6的类</span>
+        </p>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <p class="lead">这是p标签用一个lead类写的</p>
+        <span class="lead">这是span标签用一个lead类写的</span>
+        <div class="lead">这是div标签用一个lead类写的</div>
+        <h2>经过测试lead适用于所有标签，<small>有区分块级元素行高大小，行内有下margin值</small></h2>
+        Officia maxime aperiam soluta debitis! Ea aliquam quas quos ex totam aperiam,magni eaque.<br>
+        <mark><code>&lt;mark&gt;</code></mark><br>
+        <del><code>&lt;del&gt;</code></del>
+        <br>
+        <s>被删除的文字 <code>&lt;s&gt;</code> 标签书写</s><br>
+        <ins>插入的文本用<code>&lt;ins&gt;</code>书写</ins><br>
+        <u><code>&lt;u&gt;</code>书写</u><br>
+        <small>对于不需要强调的inline或block类型的文本，使用 small标签包裹，其内的文本将被设置为父容器字体大小的 85%。标题元素中嵌套的 <code>&lt;small&gt;</code>
+            元素被设置不同的 font-size
+            。你还可以为行内元素赋予 .small 类以代替任何 <code>&lt;small&gt;</code> 元素。
+        </small>
+        <br />
+        <strong>这是<code>&lt;Strong&gt;</code></strong></br>
+        <em>这是<code>&lt;em&gt;</code></em>
+        <b>这是<code>&lt;b&gt;</code></b><i>这是<code>&lt;i&gt;</code></i>
+        <p class="text-left">Left aligned text.</p>
+        <p class="text-center">Center aligned text.</p>
+        <p class="text-right">Right aligned text.</p>
+        <p class="text-justify">Justified text.</p>
+        <p class="text-nowrap">No wrap text.</p>
+        <p class="text-lowercase">Lowercased text.</p>
+        <p class="text-uppercase">Uppercased text.</p>
+        <p class="text-capitalize">Capitalized text.</p>
+        <p>An abbreviation of the word <abbr title="attribute">提示语</abbr> is attr.</p>
+        <p>An abbreviation of the word <abbr class=' initialism' title="attribute">initialism会使文字小点</abbr> is attr.
+        </p>
+        <br>
+        <address>
+            <strong>Twitter, Inc.</strong><br>
+            1355 Market Street, Suite 900<br>
+            San Francisco, CA 94103<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+        <address>
+            <strong>Full Name</strong><br>
+            <a href="mailto:#">first.last@example.com</a>
+        </address>
+        <br />
+        <p>让联系信息以最接近日常使用的格式呈现。在每行结尾添加<code>&lt;br&gt;</code> 可以保留需要的样式。</p>
+        <br />
+        <blockquote>
+            <p>神龟虽寿犹有尽时blockquote</p>
+            <footer>曹培</footer>
+        </blockquote>
+        <blockquote class='blockquote-reverse'>
+            <p>枯藤老树昏鸦blockquote-reverse</p>
+            <footer>曹培</footer>
+        </blockquote>
+        <h1 class='text-center text-danger'>有序无序列表</h1>
+        <div>
+            <ul class='pull-left'>
+                <li>0001</li>
+                <li>0002</li>
+                <li>0003</li>
+                <li>0004</li>
+                <li>0005</li>
+            </ul>
+            <ol class='pull-left'>
+                <li>0001</li>
+                <li>0002</li>
+                <li>0003</li>
+                <li>0004</li>
+                <li>0005</li>
+            </ol>
+        </div>
+        <div>
+            <ul class='list-unstyled pull-left'>
+                <li>list-unstyled</li>
+                <li>list-unstyled</li>
+                <li>list-unstyled</li>
+                <li>list-unstyled</li>
+                <li>list-unstyled</li>
+            </ul>
+            <ol class='list-inline pull-left'>
+                <li>list-inline</li>
+                <li>list-inline</li>
+                <li>list-inline</li>
+                <li>list-inline</li>
+                <li>list-inline</li>
+            </ol>
+            <dl class='dl-horizontal pull-left'>
+                <dt>A description list is perfect for defining terms.</dt>
+                <dd>A description list is perfect for defining terms.</dd>
+            </dl>
+            </br>
+            <p class='pull-left'>horizontal把元素变成块在一行展示</p>
+        </div>
+        <p class='pull-left'>通过 <code>&lt;code&gt;</code> 标签包裹内联样式的代码片段。</p>
+        For example, <code>&lt;section&gt;</code> should be wrapped as inline.</br>
+        <span class='pull-left'>按下 <kbd>hift+P</kbd>打印。这是用<code>kbd</code>书写的</span>
+        <pre class='pull-left'>
+                This text is meant to be treated as sample output from a computer program. 
+                &lt;samp&gt;This text is meant to be treated as sample output from a computer program.&lt;/samp&gt;
+            </pre>
+        <pre class='pre-scrollable pull-left'>
+            用的pre-scrollable类书写的This text is meant to be treated as sample output from a computer program. 
+            &lt;samp&gt;This text is meant to be treated as sample output from a computer program.&lt;/samp&gt;
+            </pre>
+        <p>his text is <samp>程序输出用的 <code> &lt;samp&gt;</code></samp> meant to be treated as sample output from a
+            computer program.
+        </p>
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+            <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+        </div>
+    </div>
+    <div class='container'>
+        <p class='h2 text-center'>表格栅格化布局</p>
+        <table class='table table-striped table-bordered table-hover table-dark'>
+            <!-- dark他是bootstrap4中的方法 -->
+            <thead>
+                <tr>
+                    <th>第一阶段</th>
+                    <th>第二阶段</th>
+                    <th>第三阶段</th>
+                    <th>第四阶段</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>安装/配置文件</td>
+                    <td>栅格化布局/class类</td>
+                    <td>Less</td>
+                    <td>Sass</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>$ npm install bootstrap@3</td>
+                    <td>$ composer require twbs/bootstrap</td>
+                    <td>https://v3.bootcss.com/getting-started/</td>
+                    <td>https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+                        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class='container'>
+        <p class='h2 text-center'>黑色条纹表格等方式4</p>
+        <table class='table table-dark table-bordered table-striped table-responsive .table-condensed'>
+            <!-- dark他是bootstrap4中的方法 -->
+            <thead>
+                <tr>
+                    <th>table-responsive</th>
+                    <th>.table-condensed</th>
+                    <th>.table-hover</th>
+                    <th>.table-condensedtable-condensed</th>
+                    <th>.table-striped</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>响应式布局</td>
+                    <td>紧凑表格</td>
+                    <td>table移入事件</td>
+                    <td>表格边框</td>
+                    <td>条纹状表格</td>
+                </tr>
+                <tr class='primary'>
+                    <td>table-primary</td>
+                    <td>table</td>
+                    <td>primary</td>
+                    <td>primary</td>
+                    <td>primary</td>
+                </tr>
+                <tr class='success'>
+                    <td>table-success</td>
+                    <td>success</td>
+                    <td>table</td>
+                    <td>success</td>
+                    <td>success</td>
+                </tr>
+                <tr class='danger'>
+                    <td>table-danger</td>
+                    <td>danger</td>
+                    <td>danger</td>
+                    <td>table</td>
+                    <td>danger</td>
+                </tr>
+                <tr class='warning'>
+                    <td>table-warning</td>
+                    <td>warning</td>
+                    <td>table</td>
+                    <td>table </td>
+                    <td>warning</td>
+                </tr>
+                <tr class='active'>
+                    <td>table-active</td>
+                    <td>active</td>
+                    <td>active</td>
+                    <td>table</td>
+                    <td>active</td>
+                </tr>
+                <tr class='secondary'>
+                    <td>table-active</td>
+                    <td>scondary</td>
+                    <td>scondary</td>
+                    <td>scondary </td>
+                    <td>scondary</td>
+                </tr>
+                <tr class='dark text-dark'>
+                    <td>table-active</td>
+                    <td>scondary</td>
+                    <td>scondary</td>
+                    <td>scondary </td>
+                    <td>scondary</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>通过 <code>&lt;var&gt;</code> 标签标记变量。</td>
+                    <td>通过 <code>&lt;samp&gt</code> 标签来标记程序输出的内容。</td>
+                    <td>还可以使用 .pre-scrollable 类，其作用是设置 max-height 为 350px ，并在垂直方向展示滚动条。</td>
+                    <td>多行代码可以使用
+                        <code>&lt;pre&gt;</code> 标签。为了正确的展示代码，注意将尖括号做转义处理。</td>
+                    <td>通过 <code>&lt;code&gt;</code> 标签包裹内联样式的代码片段。</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div>
+    <div class='container-fluid'>
+        <div>
+            <h1 class='text-center'>我们通过<code>.sr-only</code>类而隐藏的文本 -- 来表达出来。</h1>
+        </div>
+        <div>
+            <p class='h5 text-right'>
+                将任何<code>.table</code> 元素包裹在 <code>.table-responsive</code> 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于
+                768px 宽度时，水平滚动条消失。
+            </p>
+        </div>
+        <div>
+            <span class='h5 text-left'>
+                垂直方向的内容截断
+                响应式表格使用了<code>overflow-y: hidden </code> 属性，这样就能将超出表格底部和顶部的内容截断。特别是，也可以截断下拉菜单和其他第三方组件。
+            </span>
+        </div>
+        <div>
+            <u class='h5 text-justify'>
+                Firefox 和 <code>fieldset</code> 元素
+                Firefox 浏览器对 <code>fieldset</code> 元素设置了一些影响 width 属性的样式，导致响应式表格出现问题。可以使用下面提供的针对 Firefox 的 hack
+                代码解决，但是以下代码并未集成在
+                Bootstrap 中：
+                <code>
+                     @-moz-document url-prefix() {
+                        fieldset { display: table-cell; }
+                    }
+                </code>
+            </u>
+        </div>
+    </div>
+    <div class='container'>
+        <i class='h1 text-justify'>单独的表单控件会被自动赋予一些全局样式。所有设置了<code>.form-control</code>类的<code>input</code>、<code>textarea</code>和<code>select</code>将
+            <code>label</code> 元素和前面提到的控件包裹在 <code>.form-group </code>中可以获得最好的排列。</i>
+        <div class='container-fluid '>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <p class='help-block'><code>.form-control</code></p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <p class='help-block'><code>.form-control</code></p>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block"><code>.help-block</code>的一些提示语 Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ins class='h1 text-center'>
+                按钮类名固定为 <code>.btn</code>关联的其他类名都已<code>.btn-</code>的形式进行拼接使用
+            </ins>
+            <a href="" class='btn btn-large btn-primary disabled' role='button'>这是一个 <code>a</code>链接使用的按钮 </a>
+            <button type='button' class='btn btn-primary active'><code>.active</code>类来激活的</button>
+            <button type='button' class='btn btn-primary'>默认状态</button>
+            <button type='button' class='btn btn-warning btn-link'>link</button>
+            <button type='button' class='btn btn-warning active btn-link '>link</button>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 class='h2 text-center'>图片的的缩放</h2>
+            <div class='row'>
+                <div class='col-sm-3'>
+                    <a href="">
+                        <img class='img-responsive' src="../../img/viewport.jpg" alt="">
+                    </a>
+                </div>
+                <div class='col-sm-3'>
+                    <a href="">
+                        <img class='img-responsive img-rounded' src="../../img/viewport.jpg" alt="">
+                    </a>
+                </div>
+                <div class='col-sm-3'>
+                    <a href="">
+                        <img class='img-responsive img-circle' src="../../img/viewport.jpg" alt="">
+                    </a>
+                </div>
+                <div class='col-sm-3'>
+                    <a href="">
+                        <img class='img-responsive img-thumbnail' src="../../img/viewport.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="#" pointer-events="none" class="text-muted"> .text-muted <code>.bg-muted</code>没有这个</a>
+            <a href=" #" pointer-events="none" class="text-primary">.text-primary</a>
+            <a href="#" pointer-events="none" class="text-success">.text-success</a>
+            <a href="#" pointer-events="none" class="text-danger">.text-danger</a>
+            <a href="#" pointer-events="none" class="text-info"> .text-info</a>
+            <a href="#" pointer-events="none" class="text-warning">.text-warning</a>
+            <br>
+            <br>
+            <div class='clearfix'>
+                <p class='h3'>关闭按钮</p>
+                <button type="button" class='close' aria-label='Colse'>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <button type="button" class='close' aria-label='Colse'>
+                    <span aria-hidden="true" class='glyphicon glyphicon-remove-sign' aria-hidden='true'></span>
+                </button>
+            </div>
+            <button class='btn btn-warning'>
+                这是一个三角形<code>.caret</code>类型书写 <p class='caret'></p>
+            </button>
+        </div>
+    </div>
+    <br>
+    <h1 class='h1 text-center bg-info'>选择组件</h1>
+    <div class="container">
+        <table class="table table-hover table-condensed .table-responsive table-bordered text-center">
+            <thead>
+                <tr>
+                    <th class='text-center'>脚手架</th>
+                    <th class='text-center'>基本CSS样式</th>
+                    <th class='text-center'>组件</th>
+                    <th class='text-center'>JS Components</th>
+                    <th class='text-center'>Miscellaneous</th>
+                    <th class='text-center'>Responsive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Normalize and reset</td>
+                    <td>Headings, body, etc</td>
+                    <td>Button groups and dropdowns</td>
+                    <td>Tooltips</td>
+                    <td>Wells</td>
+                    <td>Visible/hidden classes</td>
+                </tr>
+                <tr>
+                    <td>Body type and links</td>
+                    <td>Code and pre</td>
+                    <td>Navs, tabs, and pills</td>
+                    <td>Popovers</td>
+                    <td>Close icon</td>
+                    <td>Narrow tablets and below (<767px)</td> </tr> <tr>
+                    <td>栅格系统</td>
+                    <td>Labels and badges</td>
+                    <td>导航条</td>
+                    <td>Modals</td>
+                    <td>Utilities</td>
+                    <td>Tablets to desktops (767-979px)</td>
+                </tr>
+                <tr>
+                    <td>布局</td>
+                    <td>表格</td>
+                    <td>面包屑</td>
+                    <td>下拉菜单</td>
+                    <td>Component animations</td>
+                    <td>Large desktops (>1200px)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>表单</td>
+                    <td>分页</td>
+                    <td>Collapse</td>
+                    <td>Responsive navbar</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>按钮</td>
+                    <td>Pager</td>
+                    <td>Carousel</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Icons</td>
+                    <td>缩略图</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>警告对话框</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>进度条</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Hero unit</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Media component</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <h1 class='h1 text-center bg-warning'>jQuery</h1>
+        <table class='table table-hover table-condensed .table-responsive table-bordered text-center'>
+            <tbody>
+                <tr>
+                    <td>Transitions (required for any animation)</td>
+                    <td>Modals</td>
+                    <td>下拉菜单</td>
+                    <td>Scrollspy</td>
+                    <td>Togglable tabs</td>
+                    <td>Tooltips</td>
+                    <td>Popovers (requires Tooltips)</td>
+                    <td>Affix</td>
+                    <td>Alert messages</td>
+                    <td>按钮</td>
+                    <td>Collapse</td>
+                    <td>Carousel</td>
+                    <td>Typeahead</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <div class="row show-grid text-center">
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>1</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>2</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>3</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>4</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>5</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>6</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>7</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>8</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>9</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>10</div>
+            <div class="span1 col-md-1 bg-info" style='margin:0px 3px' data-original-title title>12</div>
+        </div>
+        <br>
+        <div class='row  text-center'>
+            <div class='col-md-2 bg-info '>col-md-2</div>
+            <div class='col-md-3 bg-info col-md-offset-1'>col-md-3</div>
+            <div class='col-md-4 bg-info col-md-offset-1'>col-md-4</div>
+        </div>
+        <br>
+        <div class='row  text-center'>
+            <div class='col-md-4 bg-info '>col-md-4</div>
+            <div class='col-md-5 bg-info col-md-offset-2'>col-md-5</div>
+        </div>
+        <br>
+        <div class='row  text-center'>
+            <div class='col-md-9 bg-info col-md-offset-1 '>col-md-9</div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            <fieldset disabled>
+                <input type="text" class="form-control" placeholder="这是一个from-control类再定一个disabled禁用">
+                <input type="text" class="form-control" placeholder="fieldset标签包含的">
+            </fieldset>
+            <input type="text" class="form-control" placeholder="readonly只读状态" readonly>
+        </form>
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Transfer cash</button>
+            <br />
+            <input class="form-control" type="text" placeholder="type=text">文本框<br />
+            <input class="form-control" type="password" placeholder="text=password">密码框<br />
+            <input class="form-control" type="detetime" placeholder="type=detetime">别移除的属性<br />
+            <input class="form-control" type="detetime-local" placeholder="type=detetime-local">这个type类型有问题<br />
+            <input class="form-control" type="date" placeholder="type=date">年月日<br />
+            <input class="form-control" type="month" placeholder="type=month">年月<br />
+            <input class="form-control" type="time" placeholder="time">时间<br />
+            <input class="form-control" type="week" placeholder="week">年/周<br />
+            <input class="form-control" type="number" placeholder="type=number">数字<br />
+            <input class="form-control" type="email" placeholder="type=email">邮箱只会提示@<br />
+            <input class="form-control" type="url" placeholder="type=url">提交网页地址没有任何提示<br />
+            <input class="form-control" type="search" placeholder="type=search">搜索<br />
+            <input class="form-control" type="tel" palceholder="type=tel">type=tel显示密文的，自身没有任何修饰<br />
+            <input class="form-control" type="color" palceholder="type=color">type=color默认有一条竖线palceholder无效<br /><br />
+            <!-- Standard button -->
+            <button type="button" class="btn btn-default">（默认样式）Default</button>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success">（成功）Success</button>
+
+            <!-- Contextual button for informational alert messages -->
+            <button type="button" class="btn btn-info">（一般信息）Info</button>
+
+            <!-- Indicates caution should be taken with this action -->
+            <button type="button" class="btn btn-warning">（警告）Warning</button>
+
+            <!-- Indicates a dangerous or potentially negative action -->
+            <button type="button" class="btn btn-danger">（危险）Danger</button>
+
+            <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+            <button type="button" class="btn btn-link">（链接）Link</button>
+            <br />
+            <a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a>
+            <a href="#" class="btn btn-default btn-lg active" role="button">Link</a>
+        </form>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" id="dropdownMenu1"
+                    aria-haspopup="ture" aria-expaned="">
+                    张佳乐
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">杨江浩</a></li>
+                    <li><a href="#">王旭瑞</a></li>
+                    <li><a href="#">张亚格</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="alert-info text-center">排列在右边的下拉菜单</h2>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" id="dropdownMen3"
+                        aria-haspopup="true" aria-expaned="true">
+                        66666666
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labellebdy="dropdownMenu3">
+                        <li class="disabled">
+                            <a href="">555555</a>
+                        </li>
+                        <li>
+                            <a href="">444444</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="dropup">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="btn-group" role="group">
+                <button class="btn btn-primary">left</button>
+                <button class="btn btn-info">right</button>
+                <button class="btn btn-warning">center</button>
+            </div>
+            <br />
+            <br />
+            <div class="btn-toolbar" role="toolbar">
+                <div role="group" class="btn-group btn-group-lg">
+                    <button class="btn btn-info">001</button>
+                    <button class="btn btn-info">002</button>
+                    <button class="btn btn-info">003</button>
+                </div>
+                <div role="group" class="btn-group btn-group-md">
+                    <button class="btn btn-info">001</button>
+                    <button class="btn btn-info">002</button>
+                    <button class="btn btn-info">003</button>
+                </div>
+                <div role="group" class="btn-group btn-group-sm">
+                    <button class="btn btn-info">001</button>
+                    <button class="btn btn-info">002</button>
+                    <button class="btn btn-info">003</button>
+                </div>
+                <div role="group" class="btn-group btn-group-xs">
+                    <button class="btn btn-info">001</button>
+                    <button class="btn btn-info">002</button>
+                    <button class="btn btn-info">003</button>
+                </div>
+            </div>
+            <br />
+            <div class="btn-grounp-vertical" role="group">
+                <button class=" btn btn-info dropdown-toggle">
+                    垂直按钮组
+                    <i class="caret"></i>
+                </button>
+                <button class=" btn btn-info dropdown-toggle">
+                    垂直按钮组
+                    <i class="caret"></i>
+                </button>
+                <button class=" btn btn-info dropdown-toggle">
+                    垂直按钮组
+                    <i class="caret"></i>
+                </button>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="btn-group">
+                    <button class="btn btn-danger">测试</button>
+                    <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span class="caret"></span>
+                        <sapn class="sr-only">Toggle dropdown</sapn>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">1211</a></li>
+                        <li><a href="">2222</a></li>
+                        <li class="disabled"><a href="#">3333</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="">separator</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="btn-group dropdown btn-group-justified" role="group" aria-label="">
+                    <!-- div.btn-group*3>button.btn.btn-default{$$} -->
+                    <div class="btn-group"><button class="btn btn-default">01</button></div>
+                    <div class="btn-group"><button class="btn btn-default">02</button></div>
+                    <div class="btn-group"><button class="btn btn-default">03</button></div>
+                    <div class="btn-group">
+                        <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            插入
+                            <span class=" caret"></span>
+                            <span class="sr-only">Sr-only</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="">1211</a></li>
+                            <li><a href="">2222</a></li>
+                            <li class="disabled"><a href="#">3333</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">separator</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group dropup btn-group-justified" role="group" aria-label="">
+                        <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            插入
+                            <span class=" caret"></span>
+                            <span class="sr-only">Sr-only</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="">1211</a></li>
+                            <li><a href="">2222</a></li>
+                            <li class="disabled"><a href="#">3333</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">separator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="row">
+            <div class="btn-group-vertical" role="group" aria-label="Colse">
+                <div class="btn-group dropup">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        第$个
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">aaaa</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropup">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        第$个
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">aaaa</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        第$个
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">aaaa</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        第$个
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">aaaa</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <form class="bs-example bs-example-form" data-example-id="input-group-segmented-buttons">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default">Action</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+                    </div><!-- /.input-group -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" aria-label="Text input with segmented button dropdown">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default">Action</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </form>
+        <br><br><br><br><br><br>
+    </div>
+    <script>
+        $(".dropdown-toggle").dropdown();
+        // $(".dropdown-toggle").dropdown("toggle");
+    </script>
+</body>
+
+</html>

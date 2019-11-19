@@ -1,0 +1,146 @@
+maximum-scale=1, user-scalable=no   -------用户的缩放级别
+container/container-fluid   ------  栅格化布局
+col-sm-offset-4 ------  列偏移
+small   ------  小标题
+<mark>   ------  内联文本
+<del>   ------  删除文本
+<s>   ------  无用文本
+<ins>   ------  插入文本
+capiatlize   ------  首字母大写
+lowercase   ------  小写
+uppercase   ------  大写
+<abbr>   ------  缩略语 .initialism
+<address>   ------  地址
+<blockquote>   ------  类似名人名言blockquote.reverse<footer>
+list-unstyled   ------  清除类表样式
+list-inline   ------  内联表单
+<dl><dt><dd>   ------  描述 dl-horizontal
+<code>   ------  代码片段
+<kbd>   ------  快捷内容
+<pre>   ------  为了展示代码pre.scrollable amx-height=350
+<var>   ------  标记变量
+<samp>   ------  程序输出
+<table>   ------  table
+table-hover   ------  移入
+table-bordered   ------  边框
+table-striped   ------  条纹
+table-condensed   ------  紧凑
+table-responsive   ------  响应式表格
+form-group   ------ 包含控件lable textarea select
+checkbox/radio   ------  包含lable 控件
+checkbox/raido-inline
+form-inline   ------  变成航
+input-group-addon   ------  插入提示语
+form-hoarizontal   ------  水平排列的表单
+multiple   ------  属性
+form-control-static   ------  静态控件
+<fieldset>   ------  字段级
+disabled   ------  可以起到禁用的效果
+readonly   ------  只读状态
+help-block   ------  提示文本
+has-success/warning/error   ------  效验状态
+form-control-feedback   ------  表单控制反馈
+glyphicon-ok/warning-sign/remove   ------  对/警告/错误
+input-group-addon   ------  插入的图标
+btn-block   ------  拉伸至父元素的百分百
+img-rounded/circle/thumbnail   ------  圆角/圆/缩进
+text lable alert list-group-item panel
+meted/primary/success/info/warning/danger
+灰色    深蓝    绿  浅蓝    黄  红
+bg-没有meted   ------  背景
+&times;Close   ------  查号
+&caret   ------  三角形
+pull nav media
+left/right   ------  左右浮动
+center-block   ------  文本居中
+clearfix   ------  清除浮动
+show/hidden   ------  显示或隐藏
+sr-only和sr-only-focusable   ------  再有焦点的时候消失
+.text-hide 类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图。
+visible-print-block   ------  打印机可见
+visible-print-inline   ------  打印机可见
+visible-print-inline-block   ------  打印机可见
+hidden-print   ------  打印机不可见
+dropdown/dropup   ------  向下向上的下拉菜单
+dropdown-menu   ------  展示的内容
+separator+divider   ------  一条线
+btn-group   ------  按钮组
+btn-toolbar   ------  按钮工具栏btn-group
+btn-group btn   input-group  form-control input form-group  btn pagination  bs-example-modal
+        -lg/sm/xs------  尺寸
+btn-group-vertical   ------  垂直按钮组
+btn-group.btn-group-justified   ------  平局分布
+input-group   ------  输入框组
+inputgroup-addon   ------  提示文字
+checkbox/radio checkbox-inline   ------  多选和复选
+input-group-btn btn   ------  插入额外的内容
+nav-tabs   ------  带线的
+nav-pills   ------  没有线
+nav-stacked   ------  垂直的
+nav-justified   ------  两端对其的
+navbar   ------  导航条
+navbar-default   ------  正常
+container-fluid   ------  百分百
+navbar-header   ------  导航头
+narvbar-brand   ------  brand图
+navbar-collapse   ------  折叠导航
+narbar-form   ------  导航表单
+nav-btn   ------  导航按钮
+navbar-text   ------  导航文本
+navbar-link   ------  导航链接
+navbar-fixed-top/bottom   ------  固定导航
+navbar-static-top   ------  静止的导航
+navbar-inverse   ------  反色导航
+breadcrumb   ------  路径导航
+page navigation   ------  分页导航ul.pagination
+previous/next
+page previous/next   ------  上一个下一个
+badge   ------  徽章role=presentation
+jumbotton   ------  巨幕
+page-header   ------  页头
+small   ------  副标题
+thumbnail   ------  缩略图
+data-dismiss=alert   ------  可关闭的警告框
+alert-link   ------  提示的链接
+progress   ------  进度条
+aria-valuenow   aria-valuemin aria-valuemax="100" style="100%"
+media   ------  媒体对象
+media-object   ------  媒体图片
+media-body media-hedaer   ------  主体 头部
+media-middle   ------  对齐方式顶部、中部或底部对齐。默认是顶部对齐。
+list-group   ------  列表组
+list-group-item   ------  li写的 可以是链接也可以是按钮
+list-group-item-heading/text   ------  列表里可以定制任何内容
+panel   ------  面板
+panel   modal
+body/heading/fotter   ------  面板头主底
+iframe embed video object    ------  响应式嵌套规则.embed-responsive
+Well   ------  有镶嵌样式
+modal   ------  模态框  tabindex=-1 role aria-labelledby
+fade   ------  延迟效果
+modal-dialog   ------  模态框对话框
+keyboard=true   ------  键盘上的 esc 键被按下时关闭模态框。
+show.bs.modal/dropdown/tab/tooltip/popover/collapse
+shown.bs.modal
+hide.bs.modal
+hidden.bs.modal
+loaded.bs.modal
+tootip   ------  工具提示data-placemnet="left/right/top/bottom
+inserted.bs.tootip/popover          插入的.bs.tooltip当工具提示模板添加到dom中时，此事件在show.bs.tooltip事件之后触发。
+title data-conter   ------  弹出框事件
+data-trigger=focus   ------  点击除按钮外就消失
+aria-dismiss=alert   ------  可关闭的按钮
+close.bs.alert
+closed.bs.alert
+autocomplete="off"
+radio name=options
+collapse data-toggle data-target aria-expanded=false aria-control=展开的元素
+panel-default paenl-header panel-title
+panel-collaspe in collapse   ------  未展开项书写
+carousel slide   ------  轮播图的
+carousel-indicators   ------  下面的小妞
+data-target=最大的盒子 data-slide-to
+carousel-inner   ------  内容图片
+carousel-caption   ------  这是给图片设置文字
+slide.bs.carousel
+slid.bs.carousel

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>提示工具</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="../jsa/min.1.1.js"></script>
+    <script src="../../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <style>
+        h2[class='text-center'] {
+            margin-bottom: 100px;
+        }
+
+        .item img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="he text-center">提示工具<small>tooltip</small></h2>
+        <div class="row">
+            <div class="col-md-6" role="tooltip">
+                <!-- 工具提示tooltip -->
+                <a href="javaScript:;" class="tooltip-test" data-toggle="tooltip" title="tooltip-test"
+                    data-placement="left" data-container="body" data-animation="true"
+                    data-delay="{'show':1000,'hide':1000}" data-trigger="click">
+                    这是一个默认的tooltip-test
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-fluid" role="popover">
+            <h1 class="text-center">弹出框<small>popover.js</small></h1>
+            <div class="col-sm-6">
+                <a href="javaScript:;" title="title变成标题popover.js" data-trigger="focus" data-toggle="popover"
+                    data-content="内容data-content">
+                    一行文字
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="col-sm-12" role="alertdialog">
+                <h2 class="text-center">
+                    警告框<small>alertDialog</small>
+                </h2>
+                <input type="text" placeholder="请输入用户名">
+                <div class=" alert alert-danger">
+                    <span class="close">
+                        <!-- data-dismiss="alert"> -->
+                        <span aria-hidden="true">&times;</span>
+                    </span>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis quidem accusantium similique earum
+                        nihil molestias vel sit, minus natus voluptate, sunt perferendis nostrum, alias dolor veritatis
+                        adipisci corrupti commodi ea!
+                    </p>
+                    <button type="button" class="btn btn-danger">消失</button>
+                    <button type="button" class="btn btn-success">关闭</button>
+                </div>
+            </div>
+            <div class="panel-group" id="multiselectable" aria-multiselectable="true" role="tablist">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="panel-heading" role="tab">
+                        <h4 class="panel-title">
+                            <a href="#collapseOne" aria-controles="collapseOne" data-toggle="collapse"
+                                data-parnet="#multiselectable" aria-expanded="true"></a>
+                            panel-title
+                        </h4>
+                    </div>
+                    <div class="panel-collapse colaspe in" id="collapseOne" role="tabpanel"
+                        aria-labelledby="panel-heading">
+                        <div class="panel-body">
+                            panel-group panel-default panel-heading panel-collapse in
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="text-center">按钮<small>button.js</small></h2>
+        <button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Single toggle
+        </button>
+    </div>
+    <div class="container">
+        <h2 class="text-center">
+            Collapse <small>Collapse.js</small>
+        </h2>
+        <div class="col-md-12" id="noe">
+            <a role="button" data-toggle="collapse" href="#collapseExample" class=" btn btn-primary"
+                aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Button with data-target
+            </button>
+            <div class="collapse in" id="collapseExample" aria-labelledby="">
+                <div class="well">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas eum voluptate fuga eveniet? Nam
+                    tempore quasi, explicabo cupiditate voluptates hic adipisci eius recusandae libero suscipit corporis
+                    ex cumque molestias nihil.
+                </div>
+            </div>
+        </div>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        1Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body">
+                        2Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body">
+                        3Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../img/4.jpg" alt="...">
+                    <div class="carousel-caption">
+                        <h3>我是一个carousel-caption</h3>
+                        <p>
+                            我是文字内容carousel-caption
+                            carousel-caption carousel-caption carousel-caption
+                            carousel-caption carousel-caption carousel-caption
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/5.jpg" alt="...">
+                    <div class="carousel-caption">
+                        <h3>carousel-caption carousel-inner Item</h3>
+                        <p>
+                            carousel-acption carousel-inner item active carousel-caption carousel-inner itme sctive
+                            carousel-caption carousel-inner lisebox
+                            carousel-inner carousel-caption item active carousel-inner/caption
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/3.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/6.jpeg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/1.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/2.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/3.jpg" alt="...">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/binghuo.jpg" alt="...">
+                    <div class="carousel-caption">
+                        凤凰
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="bs-example">
+        <button type="button" data-toggle="button" id="loading-example-btn" data-loading-text="Loading..."
+            class="btn btn-primary" autocomplete="off">
+            Loading state
+        </button>
+    </div>
+    <script>
+        $(function () {
+            $(".alert").show();
+            $("[data-toggle='tooltip']").tooltip();
+            $("[data-toggle='popover']").popover();
+            $("#carousel-example-generic").carousel({
+                cycle: true,
+                interval: 2000
+            });
+        });
+        $('#loading-example-btn').on('click', function () {
+            // business logic...
+            var $btn = $(this).button('loading').delay(2000).queue(function () {
+                $btn.removeClass("btn-primary disabled").removeAttr("disabled").addClass("btn-success").text("成功").dequeue();
+            })
+        });
+        $(".close>span").click(function () {
+            $(".alert").hide();
+        });
+        $("#btn1").on("click", function () {
+            $(this).button("loading");
+            $(this).button("reset");
+        });
+    </script>
+</body>
+
+</html>
+<!-- 
+
+.carousel('cycle')
+Cycles through the carousel items from left to right.
+
+.carousel('pause')
+Stops the carousel from cycling through items.
+
+.carousel(number)
+Cycles the carousel to a particular frame (0 based, similar to an array).
+
+.carousel('prev')
+Cycles to the previous item.
+
+.carousel('next')
+Cycles to the next item.
+
+ -->

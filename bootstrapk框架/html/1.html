@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/dist/css/bootstrap.css"/>
+		<script src="../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+		<script type="text/javascript"src="../jsa/min.1.1.js"></script>
+		<style type="text/css">
+			.box>ul {
+            clear: both;
+            overflow: hidden;
+            margin-left: 20px;
+        }
+
+        .box>ul>li {
+            width: 4px;
+            height: 40px;
+            margin: 20px 5px 0 0px;
+            background: skyblue;
+            float: left;
+            position: relative;
+        }
+		</style>
+	</head>
+	<body>
+		<div class="container"style="height:10px">
+			<h1>这是一个响应式布局bootstrap<h1/>
+		</div>
+		<div class="box" style="width:500px;height:500px;margin:100px auto;border:solid 2px red ">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> 　　
+        </ul>
+    </div>
+     <script>
+        $(function () {
+            big($(".box>ul>li"));
+        })
+        var i = -1;
+        function big(obj) {
+            var li_len = obj.length;
+            var li_h = obj.height();
+            var a_h = li_h + 40;
+            setInterval(function () {
+                i++;
+                if (i == li_len) {
+                    i = 0;
+                }
+                obj.eq(i).animate({
+                    "height": a_h,
+                    "top": -20 + "px"
+                }, 800);
+                obj.eq(i - 1).animate({
+                    "height": li_h,
+                    "top": 0
+                }, 800)
+            }, 200)
+        }
+    </script>
+	</body>
+</html>

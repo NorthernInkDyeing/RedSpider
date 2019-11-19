@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>media测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="jsa/min.1.1.js"></script>
+    <script src="../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <style>
+        .row>div:first-child {
+            text-align: center;
+            color: #fff;
+        }
+
+        .scrollspy-example {
+            position: relative;
+            height: 200px;
+            margin-top: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <h3 class="text-center">栅格化系统bootstrap</h3>
+        <div class="row">
+            <div class="col-lg-12" style="background:red;color:#fff">col-lg-12</div>
+            <div class="col-md-6" style="background:pink;">col-lg-12</div>
+            <div class="col-lg-6" style="background:plum">col-lg-12</div>
+            <div class="col-sm-4" style="background:powderblue">col-sm-4</div>
+            <div class="col-sm-4" style="background:red">col-sm-4</div>
+            <div class="col-sm-4" style="background:green">col-sm-4</div>
+            <div class="col-xs-3" style="background:green">col-xs-3</div>
+            <div class="col-xs-3" style="background:powderblue">col-xs-3</div>
+            <div class="col-xs-3" style="background:darkorange">col-xs-3</div>
+            <div class="col-xs-3" style="background:deeppink">col-xs-3</div>
+            <div style="background:rebeccapurple" class="col-xs-3 col-xs-offset-2">col-xs-offset-2</div>
+            <div style="background:saddlebrown" class="col-xs-3 col-xs-offset-4">col-xs-offset-4</div>
+        </div>
+        <div class="row">
+            <h1 class="h1">Semibold 36px</h1>
+            <h1 class="h2">Semibold 30px</h1>
+            <h1 class="h3">Semibold 24px</h1>
+            <h1 class="h4">Semibold 18px</h1>
+            <h1 class="h5">Semibold 14px</h1>
+            <h1 class="h6">Semibold 12px</h1>
+            <div style="color:black">
+                <p class="h2">所有文字的大小默认14px</p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis commodi aperiam nesciunt
+                architecto fugit ullam pariatur obcaecati placeat voluptatibus provident ex repellendus eaque ipsa ipsam
+                hic ipsum, delectus vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod facere
+                consectetur veniam enim error fuga fugit ex minima a nemo velit officiis aliquid natus delectus
+                dignissimos commodi, deserunt dolorum?
+                <div class="lead">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas explicabo ullam assumenda aliquam
+                    officiis nulla similique praesentium, amet nihil voluptatibus nisi ipsa iste! Debitis,
+                    <mark>mark这是一个内联元素</mark> necessitatibus quae officiis amet error soluta!
+                    <br><del>这是一个del删除文本</del><br>
+                    <s>这是一个s无用文本</s><br>
+                    <ins>这是一个ins的插入文本</ins><br>
+                    <u>这是一个u的下划线文本</u><br>
+                    <small>小号文本</small><br>
+                    <strong>这是个strong的加粗文本</strong><br>
+                    <em>这是一个em的一个斜体</em>
+                    <p class="text-left">text-left左边</p>
+                    <p class="text-right">text-right右边</p>
+                    <p class="text-center">text-center居中</p>
+                    <p class="text-justify">text-justify左右平均分布</p>
+                    <p class="text-nowrap">text-nowrap正常状态</p>
+                    <p class="text-lowercase">lowercase小写</p>
+                    <p class="text-uppercase">uppercase大写</p>
+                    <p class="text-capitalize">capitalize首字母大写</p>
+                    <div>
+                        <abbr class="initialism" title="这是一个inintialism首个字母缩略语">
+                            initialism单词变成大写字体会小一点 </abbr>is the best thing since
+                        slicedbread initialism
+                        <abbr title="abbr这是一个缩略语">abbr</abbr>
+                    </div>
+                </div>
+            </div>
+            <span>
+                <address>
+                    <strong>这是一个address的元素</strong><br>
+                    1355 Market Street, Suite 900<br>
+                    San Francisco, CA 94103<br>
+                    <abbr title="这是一个abbr提示phone">P:</abbr>(123)456-7890
+                </address>
+                <address>
+                    <strong>这是一个address的提示地址的一个标签</strong><br>
+                    <a href="mailto:#">>first.last@example.com</a>
+
+                </address>
+                <blockquote>
+                    <h1 class="h2">这是一个blockquote的标签</h1>
+                    <p>这里面的blockquote的border-left会有边框</p>
+                </blockquote>
+                <blockquote class="blockquote-reverse">
+                    <p>这是一个footer的标签书写的一个元素加一个cite</p>
+                    <footer>blockqute-reverse<cite>cite的标签书写的</cite></footer>
+                </blockquote>
+            </span>
+            <cite>
+                <h2 class="h2">这是一个cite的标签包含的默认带有斜体</h2>
+                <ul class="list-unstyled">
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Consectetur adipiscing elit
+                        <ul>
+                            <li>112311123111231112311123111231</li>
+                            <li>21231</li>
+                            <li>31231</li>
+                            <li>41231</li>
+                            <li>51231</li>
+                        </ul>
+                    </li>
+                    <li>Consectetur adipiscing elit</li>
+                </ul>
+                <ol class="list-inline">
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                    <li>list-inline这是ol---li的样式</li>
+                </ol>
+                <dl class="dl-horizontal ">
+                    <dt>
+                        dl---dt-/-/-dd dl-horizontal超出会变小点
+                    </dt>
+                    <dd>
+                        dl-horizontaldl-horizontal
+                    </dd>
+                    <dt>
+                        这是一个类名叫：dl-horizontal
+                    </dt>
+                    <dd>
+                        dl-horizontal
+                    </dd>
+                    <dt>
+                        这是一个类名叫：dl-horizontal
+                    </dt>
+                    <dd>
+                        dl-horizontal
+                    </dd>
+                    <dt>
+                        这是一个类名叫：dl-horizontal
+                    </dt>
+                    <dd>
+                        dl-horizontal
+                    </dd>
+                </dl>
+                <p>Lorem <code>这是一个code</code> ipsum, dolor sit amet consectetur <kbd>这是一个kbd</kbd> adipisicing elit.
+                    <var>10</var><var>=</var><var>2</var><var>✖</var><var>5</var>
+                    eveniet
+                    doloremque fuga natus animi
+                    laudantium laboriosam quod nihil cum ea, illo iste saepe aperiam omnis et dolorem officia
+                    <samp>这是一个程序输出的一个标签samp</samp>
+                    quas.
+                </p>
+            </cite>
+            <div class="container" style="color:black">
+                <table
+                    class="table table-responsive table-hover table-condensed overflow-y-hidden table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>last name</th>
+                            <th>username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="danger">
+                            <td>1</td>
+                            <td>danger</td>
+                            <td>striped</td>
+                            <td>mdo</td>
+                        </tr>
+                        <tr class="info">
+                            <td>2</td>
+                            <td>info</td>
+                            <td>1striped</td>
+                            <td>1mdo</td>
+                        </tr>
+                        <tr class="warning">
+                            <td>3</td>
+                            <td>warning</td>
+                            <td>3striped</td>
+                            <td>3mdo</td>
+                        </tr>
+                        <tr class="success">
+                            <td>3</td>
+                            <td>success</td>
+                            <td>3striped</td>
+                            <td>3mdo</td>
+                        </tr>
+                        <tr class="active">
+                            <td>3</td>
+                            <td>active</td>
+                            <td>3striped</td>
+                            <td>3mdo</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>danger</td>
+                            <td>info</td>
+                            <td>warning</td>
+                            <td>success</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p>
+                    解决火狐的版本兼容问题
+                    @-moz-document url-prefix() {
+                    fieldset { display: table-cell; }
+                    }
+                </p>
+            </div>
+            <div class="container">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">form-group</label>
+                        <input type="email" id="exampleInputEmail1" class="form-control"
+                            placeholder="form-group form-inline form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">form-inline</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="form-inline">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile"></label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <div class="checkbox">
+                        <label for="">
+                            <input type="checkbox">Check me out
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-dafault">Submit</button>
+                </form>
+                <input type="text" placeholder="Text input" class="form-control">
+                <textarea class="form-control" rows="3"></textarea>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="checkbox">
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="checkbox">
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="checkbox">
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="radio" value="radio">
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="radio" value="radio">
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="radio" value="radio">
+                </label>
+                <h1 class="h3" style="color:black">select multiple form-control</h1>
+                <select multiple class="form-control">
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                    <option value="">multiple form-control</option>
+                </select>
+                <form class="form-horizontal" style="background:#ccc">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-lable">control-lable</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">form-contarol-static</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword1" class="col-sm-2">form-group</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-conrol" id="inputPassword1" style="color:black">
+                        </div>
+                    </div>
+                </form>
+                <fieldset disabled>
+                    <input type="text" placeholder="fieldset元素">
+                    <p>这是一个fieldset 写上一个disabled可以禁止里面所有的input</p>
+                    <div class="form-group" data-example-id="readonly-text-form-control">
+                        <input type="text" value="这是一个div下面的input disabled">
+                        <div class="form-group">
+                            <input type="text" value="这是一个div下面的input disabled">
+                            <div class="form-group">
+                                <input type="text" value="这是一个div下面的input disabled">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group" data-example-id="readonly-text-form-control">
+                    <input type="text" value="readonly只能读取 " readonly>
+                </div>
+                <div class="container has-warning" style="color:balck">
+                    <lable class="sr-only" for="inputHelpBlock">aira-invalid=true</lable>
+                    <input type="text" id="inputHelpBlock" class="form-control" aria-describedby="heplblock"
+                        placeholder="has-warning">
+                    <span id="helpBlock" class="help-block">aria-describedby描述着无效表单aria-invalid=true help-block</span>
+                    <!-- aira-describedby这是个描述者 -->
+                    <div class="form-group has-success">
+                        <label for="inputSuccess1" class="control-label"></label>
+                        <input type="text" class="form-control" id="inputSuccess1" aria-descibedby="helpBlock2"
+                            placeholder="has-success">
+                        <span class="help-block" id="helpBlock2">
+                            has-warning/success/error aria-descibedby=当前元素</span>
+                    </div>
+                    <div class="form-group has-error">
+                        <label for="inputSuccess2" class="control-label"></label>
+                        <input type="text" class="form-control" id="inputSuccess2" aria-descibedby="helpBlock3"
+                            placeholder="has-error">
+                        <span class="help-block" id="helpBlock3">A has-error/success/warning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="text-center">内联表单</h2>
+                <div class="form-group has-success has-feedback">
+                    <label for="inputGroupSuccess1" class="control-lable">Input with success has-feedback</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" id="inputGroupSuccess1"
+                            aria-descibedby="inputGrounpSuccess1">
+                    </div>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                    <span class="sr-only" id="inputGroupSuccessStatus">(Success)</span>
+                </div>
+                <div>
+                    <input type="text" value="form-control input-lg" class="form-control input-lg">
+                    <input type="text" value="input" class="form-control">
+                    <input type="text" value="input-sm" class="form-control input-sm">
+                    <select name="" id="" class="form-control input-lg">
+                        <option value="form-controlinput-lg">input-lg</option>
+                    </select>
+                    <select name="" id="" class="form-control">
+                        <option value="">input-lg/norwamp/sm</option>
+                    </select>
+                    <select name="" id="" class="form-control input-sm">
+                        <option value="input-sm">input-sm</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="container" data-example-id="embedded-scrollspy">
+            <nav id="navbar-example2" class="navbar navbar-default navbar-static">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                            data-target=".bs-example-js-navbar-scrollspy">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Project Name</a>
+                    </div>
+                    <div class="navbar-collapse bs-example-js-navbar-scrollspy collapse" aria-expanded="false"
+                        style="height: 0.989583px;">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="#fat">@fat</a></li>
+                            <li class=""><a href="#mdo">@mdo</a></li>
+                            <li class="dropdown">
+                                <a href="#" id="navbarDrop1" class="dropdown-toggle" data-toggle="dropdown"
+                                    role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDrop1">
+                                    <li class=""><a href="#one">one</a></li>
+                                    <li class=""><a href="#two">two</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class=""><a href="#three">three</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0" class="scrollspy-example">
+                <h4 id="fat">@fat</h4>
+                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                    qui.
+                    Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                    mcsweeney's photo
+                    booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably
+                    haven't
+                    heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+                    accusamus, cred
+                    irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                <h4 id="mdo">@mdo</h4>
+                <p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua
+                    cupidatat
+                    mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food
+                    truck,
+                    mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic
+                    exercitation quis
+                    gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
+                <h4 id="one">one</h4>
+                <p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights
+                    adipisicing banh
+                    mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo
+                    park
+                    consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim
+                    messenger
+                    bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
+                <h4 id="two">two</h4>
+                <p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente
+                    veniam.
+                    Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee
+                    wayfarers
+                    irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of
+                    them art
+                    party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu
+                    banh mi
+                    sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim
+                    nostrud
+                    mlkshk brooklyn nesciunt.</p>
+                <h4 id="three">three</h4>
+                <p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out
+                    qui.
+                    Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan
+                    mcsweeney's photo
+                    booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably
+                    haven't
+                    heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed
+                    accusamus, cred
+                    irony biodiesel keffiyeh artisan ullamco consequat.</p>
+                <p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id
+                    assumenda.
+                    Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie
+                    gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident
+                    brunch
+                    nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan
+                    readymade
+                    velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
+                </p>
+            </div>
+        </div>
+        <div class="row" style="margin:20px auto;width:80%">
+            <ul class="nav nav-tabs" role="tablist">
+                <!-- presentation表象 -->
+                <li role="presentation" class="active">
+                    <a href="#presentation1" aria-controls="presentation1" role="tab"
+                        data-toggle="tab">presentation1</a>
+                </li>
+                <li role="presentation">
+                    <a href="#presentation2" aria-controls="presentation2" data-toggle="tab"
+                        role="tab">presentation2</a>
+                </li>
+                <li role="presentation">
+                    <a href="#presentation3" aria-controls="presentation3" data-toggle="tab"
+                        role="tab">presentation3</a>
+                </li>
+                <li role="presentation">
+                    <a href="#presentation4" aria-controls="presentation4" data-toggle="tab"
+                        role="tab">presentation4</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="presentation1">
+                    Presentation1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae minus architecto
+                    blanditiis. Quidem
+                    molestias culpa corrupti incidunt voluptatum placeat provident ea laboriosam, reprehenderit natus
+                    inventore soluta nobis ducimus tenetur dolorum!
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="presentation2">
+                    Presentation2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio nihil necessitatibus
+                    eos nulla
+                    maxime fugiat nam explicabo reiciendis illum, sequi officiis iusto, quibusdam omnis animi atque
+                    ducimus est assumenda quisquam?
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="presentation3">
+                    Presentation3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quis sed, optio totam
+                    asperiores
+                    tempora! Eveniet perspiciatis, animi doloribus distinctio obcaecati odio dolorem unde natus fuga
+                    repudiandae eos provident minima.
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="presentation4">
+                    Presentation4 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis praesentium
+                    aliquid nihil
+                    temporibus, id sint voluptatum! Alias unde eum voluptatum. Aperiam nulla accusantium laudantium
+                    nobis impedit totam ex distinctio provident?
+                </div>
+            </div>
+            <div>
+                <h1 class="h1 text-center">
+                    这是一个提示类tooltip
+                </h1>
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left"
+                    title="Tooltip on left">Tooltip on left</button>
+
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top"
+                    title="Tooltip on top">Tooltip
+                    on top</button>
+
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                    title="Tooltip on bottom">Tooltip on bottom</button>
+
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                    title="Tooltip on right">Tooltip on right</button>
+                <!-- HTML to write -->
+                <a href="#" data-toggle="tooltip" title="Some tooltip text!">Hover over me</a>
+                <button type="button" data-toggle="tooltip" title="Some tooltip text!">Hover over me</button>
+                <!-- Generated markup by the plugin -->
+                <div class="tooltip top" role="tooltip">
+                    <!--  tooltip-arrow 工具箭头 -->
+                    <div class="tooltip-arrow"></div>
+                    <!-- tooltip-inner工具内部提示 -->
+                    <div class="tooltip-inner">Some tooltip text!</div>
+                </div>
+                <div>
+                    <h1 class="h1 text-justify">弹出框popover</h1>
+                    <a href="javascript:;" class="btn btn-lg btn-danger" data-toggle="popover" data-trigger="focus"
+                        title="这是个头" data-content="内容" data-placement="right">
+                        一行文字</a>
+                    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title"
+                        data-content="And here's some amazing content. It's very engaging. Right?">点我弹出/隐藏弹出框</button>
+                </div>
+                <div>
+                    <h1 class="h1 text-center">
+                        警告框为了动画效果请写fade in
+                    </h1>
+                    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">×</span></button>
+                        <h4>Oh snap! You got an error!</h4>
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor
+                            ligula, eget lacinia
+                            odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                        <p>
+                            <button type="button" class="btn btn-danger">Take this action</button>
+                            <button type="button" class="btn btn-default">Or do this</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <ul class="pager">
+                <li class="previous">
+                    <a href="">
+                        <span aria-hidden="true">&larr;</span> previous larr;
+                    </a>
+
+                </li>
+                <li class="next">
+                    <a href="">
+                        previous rarr
+                        <span aria-hidden="true">&rarr;</span>
+
+                    </a>
+                </li>
+            </ul>
+
+
+
+
+        </div>
+    </div>
+    <!-- <div data-spy="affix" data-offset-top="60" data-offset-bottom="1000">
+        <h1 class="h1">这是 data-spy=affix data-offset-top=60
+            data-offset-bottom=200</h1>
+    </div> -->
+    <br>
+    <br>
+    <div class="container">
+        <h2 class="h2 text-center">这是一个单词总会</h2>
+        <p>包括大部分表单控件、文本输入域控件，还支持所有 HTML5 类型的输入控件：
+            text、password、datetime、datetime-local、date、month、time、week、number、email、url、search、tel 和 color。</p>
+        <ul class="col-xs-6 list-unstyled">
+            <li>viewport----视口</li>
+            <li>User-scalabel=no-----用户是否可以伸缩</li>
+            <li>container-/-conatainer-fluid-百分百或90</li>
+            <li>bootstrap是基于css3中的@media来测试的</li>
+            <li>col-lg/md/sm/xs大中小超小</li>
+            <li>row行column列</li>
+            <li>col-lg/sm/xs/md-offset</li>
+            <li>h1-6/36-30-24-18-14-12---默认字体大小12px行高默认1.428</li>
+            <li>文本对齐方式
+                <ol>
+                    <li>.lead--段落突出</li>
+                    <li>文本
+                        <ol>
+                            <li>text-left/right/center/justify/nowrap</li>
+                            <li>text-lowercase/uppercase/captilize</li>
+                            <li>pull/navbar-left/right</li>
+                            <li>清除浮动clearfix</li>
+                        </ol>
+                    </li>
+                    <li>文本和背景
+                        <ol>
+                            <li>text/bg-primary/success/info/warning/wanger</li>
+                            <li>
+                                text-hide类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        屏幕阅读器
+                        <ol>
+                            <li>联合使用的话可以在元素有焦点的时候再次显示出来（例如，使用键盘导航的用户）</li>
+                            <li>sr-only sr-only-focusable</li>
+                        </ol>
+                    </li>
+                    <li>
+                        关闭按钮
+                        <ol>
+                            <li>close删除 caret三角</li>
+                        </ol>
+                    </li>
+                    <li>list-unstyled/inline--列表样式</li>
+                    <li>table--表格table-striped--斑马线bordered/hover/condensed</li>
+                    <li>表格颜色类active/success/info/warning/danger</li>
+                    <li>reponsive响应式表格里面写table</li>
+                    <li>from--group--input.form-control</li>
+                    <li>radio/checkbox--raido/checkbox-inline</li>
+                    <li>提示式的form-inline---form-group--lable在这里面因该申明标签作用</li>
+                    <li>为插入的元素使用input-group-addon的类</li>
+                    <li>垂直表单可使用form-control</li>
+                    <li>textarea</li>
+                    <li>想样表单和纯文本在一行form-control-static</li>
+                    <li>readonly只读取只适用于控件</li>
+                    <li>
+                        has column glyphicon feedback
+                        <ul>
+                            <li>has-success/warning/error为大盒子设定 添加图标has-feedback</li>
+                            <li>control-lable---form-control\\\aria-descrbedby只想下面的文字</li>
+                            <li>glyphicon</li>
+                            <li>
+                                select/input-lg/sm来调整大小
+                            </li>
+                            <li>
+                                column列的宽度给最大的盒子写row--input.form-control
+                            </li>
+                            <li>为图标元素设定aria-hidden=true 给其元素设定sr-only</li>
+                            <li>Help text---提示文本</li>
+                        </ul>
+                    </li>
+                    <li>
+                        button按钮类的使用
+                        <ul>
+                            <li>btn btn-default/primary/success/info/warning/Danger--白深蓝绿浅蓝黄色红色btn-link</li>
+                            <li>
+                                btn-lg/sm/xs btn-block跟父元素一般大小
+                            </li>
+                            <li>
+                                如果给a写成按钮用role="button"
+                            </li>
+                            <li>
+                                禁用状态使用opacity透明disabled
+                            </li>
+                        </ul>
+                        <ol>
+                            <li>
+                                <h2 class="h2 text-center">按钮组</h2>
+                            </li>
+                            <li>最大的盒子btn-group role=group aira-label=说明作用</li>
+                            <li>button.btn.btn-deafult type="button"</li>
+                            <li>最大的盒子.btn-boobar role=toolbar</li>
+                            <li>button.btn-group role=group</li>
+                            <li>尺寸btn-group-lg/sm/xs</li>
+                            <li>让一组按钮垂直堆叠排列显示而不是水平排列。分列式按钮下拉菜单不支持这种方式。</li>
+                            <li>btn-group-vertical role=group aria-lable=</li>
+                            <li>两端对齐的按钮btn-group.btn-group-justified</li>
+                            <li>分列式下拉菜单</li>
+                            <li>
+                                .btn-group button写两个一个做展开按钮dropdown-toggle
+                            </li>
+                            <li>
+                                data-toggle=dropdown aria-haspopup=true aria-expanded=false
+                            </li>
+                            <li>
+                                ul.dropdown-menu
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        input的插入按钮的aria-describedby=描述
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                        图片img-responsive响应式图片Pesponsive image
+                        <ol>
+                            <li>SVG中 IE8-10之间有问题写width:100%\9</li>
+                            <li>
+                                img-rounded/cicle/thumbnail圆角/圆/缩略图
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                响应式布局
+                <ol>
+                    <li>
+                        1200px不可见hidden-lg可见visible-lg
+                    </li>
+                    <li>
+                        992px不可见hidden-md可见visible-md
+                    </li>
+                    <li>
+                        768px不可见hidden-sm可见visible-sm
+                    </li>
+                    <li>
+                        小于768不可见hidden-xs可见visible-xs
+                    </li>
+                </ol>
+            </li>
+            <li>
+                这是一个下拉菜单dropdown/drpup上拉菜单
+                <ol>
+                    <li>dropdown最大的盒子</li>
+                    <li>button.btn-default.dropdown-toogle type=button id值data-toggle=最大的盒子aria-haspopup=true
+                        aria-expanded=true</li>
+                    <li>在span里面写span.caret</li>
+                    <li>ul.dropdown-menu aria-labelledby=button的id</li>
+                    <li>role=separator li.divder这是一条分割线</li>
+                    <li>dorpdown-menu-right/left</li>
+                    <li>dropdown-header是标题</li>
+                    <li>.disabled禁用的</li>
+                </ol>
+            </li>
+        </ul>
+        <ul class="col-sx-6">
+            <li>这是一个标签集合
+                <ol>
+                    <li>strong着重em斜体</li>
+                    <li>ins/u插入/下划线</li>
+                    <li>del/s/删除/无用</li>
+                    <li>mark内联文本</li>
+                    <li>small---是父元素的字体大小85%</li>
+                    <li>abbr缩略语class--initialism小点的文字字母变成大写</li>
+                    <li>address--地址</li>
+                    <li>blockquote多种引用样式class--blockquote-reverse</li>
+                    <li>dl--描述短语class--horizontal</li>
+                    <li>code--代码片段kbd--快捷键</li>
+                    <li>pre--多行代码执行的可以使用转义class--pre-scrollbale/-max-height350px</li>
+                    <li>var变迁标记变量samp程序输出</li>
+                    <li>textarea可以使用rows来调整行数</li>
+                    <li>select 类form-contal multiple默认的显示多少行</li>
+                    <li>fieldset可以设置disabled可以禁用所有的控件</li>
+                </ol>
+            </li>
+            <li>
+                <h1 class="h1 text-center">胶囊式标签页</h1>
+                <ol>
+                    <li>
+                        导航nav nav.pils nav.stached--可以垂直排列nav.justified两端对齐nav-tabs会出现线
+                    </li>
+                    <li>用role=说明.disabled可以禁用</li>
+                    <li>collapse nav-collapse导航折叠</li>
+                    <li>反色的导航条navbar-inverse</li>
+                    <li>navbar-static-top/bottom这是一个定位系统</li>
+                </ol>
+            </li>
+            <li>
+                路径导航
+                <ol>
+                    <li>page navgation这是写给大盒子</li>
+                    <li>第二个盒子--pagination</li>
+                    <li>给a写的aria-label=Previous/Next</li>
+                    <li>a里面的span写aria-hidden</li>
+                </ol>
+            </li>
+            <li>
+                翻页
+                <ol>
+                    <li>nav标签下ul.pager--li.Previous/Next</li>
+                    <li>下面a下面的span写aria-hidde=true--&larr;/&rarr;</li>
+                    <li>
+                        page-header的类small小一点的文字
+                    </li>
+                </ol>
+            </li>
+            <li>
+                徽章badge的一个class
+            </li>
+            <li>巨幕
+                jumbotron的一个class
+            </li>
+            <li>
+                <ol>
+                    <li>thumbnail缩略图 caption定制内容</li>
+                    <li>alert-success/info/warning/danger</li>
+                    <li>alert-link</li>
+                </ol>
+                <ul>
+                    <li>进度条progress progress-bar-striped条纹 acitve就动啦</li>
+                    <li>progress-bar role= aria-valuenow= aria-valuemin= aria-valuemax="100"style=10%</li>
+                </ul>
+            </li>
+            <li>
+                媒体对象media
+                <ol>
+                    <li>media-right/left</li>
+                    <li>media ----media-left--a--img.media-object</li>
+                    <li>media-body----media-heading</li>
+                    <li>media-middle</li>
+                </ol>
+            </li>
+            <li>列表组
+                <ol>
+                    <li>list-group ist-group-item</li>
+                    <li>panel面板panel-body--panel-heading-----panel-title--panel-footer</li>
+                </ol>
+            </li>
+            <li>
+                well像inset的
+            </li>
+            <li>
+                js的时间过渡
+                <ol>
+                    <li>
+                        显示的button.btn data-toggle="modal"data-target="展示的id"
+                    </li>
+                    <li>
+                        $('#myModal').on('shown.bs.modal', function () {
+                        $('#myInput').focus()
+                        })
+                    </li>
+                    <li>
+                        modal fade激活tansition的函数
+                    </li>
+                    <li>tabindex="-1"role='dialog'</li>
+                    <li>button.close data-dismiss="modal" aria-label="Close"</li>
+                    <li>
+                        aria-labelledby=指向里面的文字
+                    </li>
+                    <li>modal-content--modal-headar/body.footer</li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li>show.bs.modal show 方法调用之后立即触发该事件。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget 属性进行访问。
+                        shown.bs.modal 此事件在模态框已经显示出来（并且同时在 CSS 过渡效果完成）之后被触发。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的
+                        relatedTarget
+                        属性进行访问。
+                        hide.bs.modal hide 方法调用之后立即触发该事件。
+                        hidden.bs.modal 此事件在模态框被隐藏（并且同时在 CSS 过渡效果完成）之后被触发。
+                        loaded.bs.modal 从远端的数据源加载完数据之后触发该事件。</li>
+                </ol>
+            </li>
+            <li>
+                模态框
+                <ol>
+                    <li>第一步我们应该创建button</li>
+                    <li>.btn data-toggle= data-target= data-whatever发送数据达指定的东西</li>
+                    <li>呈现的div.modal fade 设定id值 tabindex="-1"role="dialog/对话的意思aria-labelebdy=指向header里面的标题</li>
+                    <li>div.modal-dialog role=作用.doucment</li>
+                    <li>div.modal-content</li>
+                    <li>
+                        modal-header/body/footer
+                    </li>
+                    <li>
+                        关闭按钮close data-dismiss=最大的盒子的class aria-label=作用Close
+                    </li>
+                    <li>
+                        标题modal-title 设定id值
+                    </li>
+                    <li>
+                        内容form```div.form-group
+                    </li>
+                    <li>label.control-lable for=input的id值</li>
+                    <li>input.form-control id值 这样的结构可以读写几个</li>
+                    <li>
+                        底部按钮button.btn-default data-dismiss=最大的盒子
+                    </li>
+                    <li>一个正常的按钮btn btn-frimary</li>
+                    <li>接下我们就jq插件开始使用数据传递效果</li>
+                    <li>
+                        $('#exampleModal').on('show.bs.modal',function (event) {
+                        var button = $(event.relatedTarget)
+                        // Button that triggered the modal
+                        var recipient = button.data('whatever')
+                        // Extract info from data-* attributes
+                        // If necessary, you could initiate an AJAX request here (and then do the updating in a
+                        callback).
+                        // Update the modal's content. We'll use jQuery here, but you could use a data binding
+                        library
+                        or other methods instead.
+                        var modal = $(this)
+                        modal.find('.modal-title').text('New message to ' + recipient)
+                        modal.find('.modal-body input').val(recipient)
+                        })</li>
+                    <li>
+                        不需写 JavaScript 代码也可激活模态框。通过在一个起控制器作用的元素（例如：按钮）上添加data-toggle="modal"
+                        属性，或者data-target="#foo"属性，再或者 href="#foo"属性，用于指向被控制的模态框。
+                        button type="button" data-toggle="modal" data-target="#myModal" Launch modal /button
+                        $('#myModal').modal(options)
+                    </li>
+                    <li>Includes a modal-backdrop element. Alternatively, specify static for a backdrop which
+                        doesn't
+                        close the modal on click.</li>
+                    <li>包括模态背景元素。或者，为单击时不关闭模式的背景指定static。</li>
+                    <li>
+                        keyboard = true 键盘上的 esc 键被按下时关闭模态框。
+                    </li>
+                    <li>show boolean true 模态框初始化之后就立即显示出来。</li>
+                </ol>
+            </li>
+            <li>
+                事件类型
+                <ol>
+                    <li>show.bs.modal/dropdown show 方法调用之后立即触发该事件。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的 relatedTarget
+                        属性进行访问。
+                    </li>
+                    <li>shown.bs.modal/dropdown 此事件在模态框已经显示出来（并且同时在 CSS 过渡效果完成）之后被触发。如果是通过点击某个作为触发器的元素，则此元素可以通过事件的
+                        relatedTarget
+                        属性进行访问。</li>
+                    <li>hide.bs.modal/dropdown hide 方法调用之后立即触发该事件。</li>
+                    <li>hidden.bs.modal/dropdown 此事件在模态框被隐藏（并且同时在 CSS 过渡效果完成）之后被触发。</li>
+                    <li>loaded.bs.modal/dropdown 从远端的数据源加载完数据之后触发该事件。</li>
+                </ol>
+            </li>
+        </ul>
+        <ul class="col-xs-12">
+            <h1 class="h1 text-center">滚动监听事件</h1>
+            <ol class="col-xs-12">
+                <li>
+                    通过data-spy="scroll"data-target="目标的设定g"
+                </li>
+                <li>
+                    div.navbar-example data-example-id=embedded-scrollspy
+                </li>
+                <li>
+                    导航nabar navbar-default navbar-static设定一个id
+                </li>
+                <li>
+                    ul.nav.nav-tabs role="tablist"
+                </li>
+                <li>
+                    当使用滚动监听插件的同时在 DOM 中添加或删除元素后，你需要像下面这样调用此刷新（ refresh） 方法：
+                    $('[data-spy="scroll"]').each(function () {
+                    var $spy = $(this).scrollspy('refresh')
+                    })
+                </li>
+            </ol>
+            <ol class="col-xs-6">
+                <li>
+                    <h1 class="h1 text-center">标签页</h1>
+                </li>
+                <li>nav nav-tabs role=tablist</li>
+                <li>li.active role="presentation"</li>
+                <li>a aria-controls=跳转的id role=tab data-toggle=tab href=跳转的id</li>
+                <li>
+                    div.tab-content
+                </li>
+                <li>div.tab-pane.active.fade.active.in id= role=tabpenl</li>
+                <li>内容。。。。。。</li>
+            </ol>
+            <ol class="col-xs-6">
+                <li>
+                    <h1 class="h1 text-center">工具提示tooltip</h1>
+                </li>
+                <li>
+                    button type=button .btn-default data-toggle=tooltip data-placement=left/right/top/bottom
+                    title=..
+                </li>
+                <li>
+                    $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                    })
+                </li>
+                <li>
+                    a/button另一种写法data-toggle=提示盒子
+                </li>
+                <li>div.tooltip 方向 role=tooltip</li>
+                <li>生成箭头div.tooltip-arrow</li>
+                <li>
+                    工具提示div.tooltip-inner 文本
+                </li>
+                <li>
+                    show.bs.tooltip
+                    shown.bs.tooltip
+                    hide.bs.tooltip
+                    hidden.bs.tooltip
+                    inserted.bs.tooltip
+                </li>
+                <li>
+                    弹出框
+                    <ol>
+                        <li>
+                            popover.js
+                            title="弹出框的标题"
+                            data-placement=''调整弹出框的方向
+                            data-content="弹出框的内容"
+                            data-trigger='focus' 设置点击弹出框让弹出框消失
+                            弹出框的属性和提示工具的属性基本相同
+                        </li>
+                        <li>
+                            $(function () {
+                            $("[data-toggle='popover']").popover();
+                            })
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    breadcrumb面包屑
+                    <ol>
+                        <li>为里面的每一个span元素添加divder</li>
+                        <li>
+                            需要更大或更小的分页吗？添加.pagination-large、.pagination-small 或 .pagination-mini就可以改变分页尺寸。
+                        </li>
+                        <li>
+                            后面列出的两个类可以改变分页的对齐方式：.pagination-centered 和 .pagination-right。
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $("[data-toggle='popover']").popover();
+        })
+        // array
+        var arr = ['w', 'y', 'k', 'o', 'p'];
+        var eArr = arr[Symbol.iterator]();
+        // arr[Symbol.iterator]()符号迭代器
+        // your browser must support for..of loop您的浏览器必须支持..of循环
+        // and let-scoped variables in for loops让作用域变量进入for循环
+        for (let letter of eArr) {
+            console.log(letter);
+            //w,y,k,o,p
+        }
+        var fu = ["apple", "bander"];
+        console.log(fu.length);//2
+        console.log(fu[0]);//apple
+        console.log(fu[fu.length - 1]);//bander
+        fu.forEach(function (item, index, array) {
+            console.log(item, index);
+        })
+        // 便利数组 forEach
+        var new1 = fu.push("Orange");//末尾添加
+        var less1 = fu.pop();//删除末尾
+        var hed = fu.unshift("unshift");//头部
+        var pos = fu.indexOf("apple");//找出某个元素在数组中的索引
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Angular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.staticfile.org/angular.js/1.7.8/angular.min.js"></script>
+    <!-- <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script> -->
+</head>
+
+<body ng-app="myApp">
+    <div ng-app="" ng-init="quantity=5;cost=20;name='join';lastname='lala';obj={name:'Mazhaoguo',sex:'Nan'};arr=[1,2,3,4,5,6,7,8,9];age='21';num='1';Pice='12';names=['ma','zhao','guo','cui','zhi','qing'];namess=[
+{name:'Jani',country:'Norway'},
+{name:'Hege',country:'Sweden'},
+{name:'Kai',country:'Denmark'}]">
+        <p>quantity*cost：{{ quantity*cost}}</p>
+        <p>ng-bind：<span ng-bind="quantity+cost"></span></p>
+        <p>就像JavaScript的字符串：{{name + "" + lastname}}</p>
+        <p>像js中的对象：{{obj.name}}</p>
+        <p>像js中的数组：{{arr[2]}}</p>
+        <p>第2个值是：<span ng-bind="arr[2]"></span></p>
+        <p>年龄：<input type="text" ng-model="age"></p>
+        <p>我输入的年龄为：{{age}}</p>
+        <p>计算价格</p>
+        数量：<input type="text" ng-model="num">
+        价格：<input type="text" ng-model="Pice">
+        <b>总价：</b>{{num*Pice}}
+        <p>循环HTML</p>
+        <p>使用ng-repeat来循环数组</p>
+        <ul>
+            <li ng-repeat="x in names">
+                {{x}}
+            </li>
+        </ul>
+        <p>使用ng-repeat来循环对象数组上</p>
+        <ul>
+            <li ng-repeat="x in namess">
+                {{x.name+','+x.country}}
+            </li>
+        </ul>
+    </div>
+    <runoob-directive></runoob-directive>
+    <!-- directive:a -->
+    <div run></div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive("run", function () {
+            return {
+                restrict: "EA",//M时必填项
+                replace: true,//显示为true
+                template: "<h1>自定义指令!</h1>"
+            };
+        });
+    </script>
+</body>
+
+</html>
+<!-- break打破 as作为 any任何 Switch开关 case案例 if如果 throw扔
+Else其他 var风险价值 number数 string一串 Get得到 module模块
+type类型 instanceof运算符 Typeof类型 finally最后 for对于
+enum枚举 Export出口 while虽然 void无效 this这 New新的
+null无效的 super超级的 Catch捕获 let让 static静止的
+return返回 True真的 False假 -->

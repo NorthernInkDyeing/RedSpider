@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>angular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.staticfile.org/angular.js/1.7.8/angular.min.js"></script>
+</head>
+
+<body>
+    <!-- <div ng-app="s" ng-controller="a">
+        <h1>{{carname}}</h1>
+    </div> -->
+    <!-- <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+        Email:
+        <input type="email" name="myAddress" ng-model="myText" required>
+        <p>编辑邮箱地址，查看状态的改变。</p>
+        <h1>状态</h1>
+        <p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+        <p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+        <p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+    </form> -->
+    <!-- <div ng-app="myApp" ng-controller="MY">
+        <input ng-model="nmae">
+        <h1>{{greeting}}</h1>
+        <button ng-click="sayHello()">点我</button>
+    </div> -->
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <ul>
+            <li ng-repeat="x in names">{{x}} {{lastname}}</li>
+        </ul>
+    </div> -->
+    <div ng-app="myApp" ng-controller="namesCtrl">
+        <p><input type="text" ng-model="test"></p>
+        <ul>
+            <li ng-repeat="x in names | filter:test | orderBy:'country'">
+                {{ (x.name | uppercase) + ', ' + x.country }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        // var app = angular.module('myApp', []);
+        angular.module('myApp', []).controller('namesCtrl', function ($scope) {
+            $scope.names = [
+                { name: 'Jani', country: 'Norway' },
+                { name: 'Hege', country: 'Sweden' },
+                { name: 'Kai', country: 'Denmark' }
+            ];
+        });
+        // app.controller('myCtrl', function ($scope, $rootScope) {
+        //     $scope.names = ["Emil", "Tobias", "Linus"];
+        //     $rootScope.lastname = "Refsnes";
+        // });
+        // app.controller('myCtrl', function ($scope) {
+        //     $scope.names = ["Emil", "Tobias", "Linus"];
+        // });
+
+
+        // 如果你修改了视图，模型和控制器也会相应更新：
+        // app.controller('MY', function ($scope) {
+        //     $scope.name = "Wife";
+        //     $scope.sayHello = function () {
+        //         $scope.greeting = 'Hello' + $scope.name + '!';
+        //     }
+        // });
+
+
+        // 控制器中的属性对应了视图上的属性：
+        // app.controller('a', function ($scope) {
+        //     $scope.carname = "Volvo";
+        // });
+    </script>
+</body>
+
+</html>

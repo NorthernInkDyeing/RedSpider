@@ -1,0 +1,40 @@
+[ng-cloak]{display:none}
+ng-repeat="x in 方法名"
+$index下标
+ng-repeat=(key,value x in 方法名 );
+ng-options="x.id as x.city for x in item";
+track by key 
+    x    as     y   for     (x,y) in 方法
+            下标 
+directive   创建元素
+ng-switch ng-switch-when 显示隐藏部分内容
+ng-switch-default默认的显示的东西
+$location $location.absUrl();
+angualr.copy()复制
+
+$dirty 有填写记录
+$valid 合法的
+$invalid    非法的
+$pristine    没有填写记录
+
+
+
+异步请求 在加载页面时候加载的其他页面
+Single Page Application
+S   P   A
+SPA应用实现的原理
+    1.客户端浏览器首先请求整个应用中唯一完整的DOM数 HTML页面 index。html
+    2.ngRoute模块需要解析当前的网站地址URl
+        Htpp://location:8080/www/index.html#/loading
+
+ng-view 加载路由器
+配置路由字典config();
+    $routeProvider/开发者/供应商
+    $routeProvider.when("路由",templateUrl/模块的地址 controller/该模块使用哪个控制器);
+    myApp.config(function($routeProvider){
+        $routeProvider.when("/st",{
+            templateUrl:"./templateUrl/start.html",
+            controller:"模块器"
+        })
+    })
+filter() 过滤模块

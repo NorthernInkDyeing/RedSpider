@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>展开项</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <style>
+        .media-left img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body ng-app="myModel">
+    <div class="container" ng-controller="picList" ng-cloak>
+        <h1>数据展测试一</h1>
+        <p>{{dishList}}</p>
+        <div class="list-group">
+            <a href="#" class="list-group-item" ng-repeat="i in dishList">
+                <div class="media">
+                    <div class="media-left">
+                        <img ng-src="{{i.img}}" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-title">{{i.dName}}</h3>
+                        <p>{{i.Price}}</p>
+                        <p>{{i.material}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <a href="" ng-click="loadMore()" class="btn btn-success btn-block">加载更多</a>
+    </div>
+    <script src="../../../jsXy/angular.js"></script>
+    <script>
+        var my = angular.module("myModel", []);
+        my.controller("picList", ["$scope", function ($scope) {
+            $scope.dishList = [];
+            $scope.dishList.push({
+                dNmae: "女装狂欢1",
+                Price: 200,
+                material: "肉，香精，葱，大蒜，豆油",
+                img: "../img/1.jpg"
+            }, {
+                dNmae: "女装狂欢2",
+                Price: 300,
+                material: "肉，香精，葱，大蒜，豆油",
+                img: "../img/2.jpg"
+            });
+            $scope.loadMore = function (event) {
+                var event = event || window.event;
+                event.preventDefault();
+                $scope.dishList.push({
+                    dNmae: "女装狂欢5",
+                    Price: 600,
+                    material: "肉，香精，葱，大蒜，豆油",
+                    img: "../img/5.jpg"
+                }, {
+                    dNmae: "女装狂欢6",
+                    Price: 700,
+                    material: "肉，香精，葱，大蒜，豆油",
+                    img: "../img/6.jpg"
+                })
+            }
+        }])
+    </script>
+</body>
+
+</html>

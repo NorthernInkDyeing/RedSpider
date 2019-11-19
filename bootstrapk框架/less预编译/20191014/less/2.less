@@ -1,0 +1,584 @@
+#bundle{
+    .button{
+        display: inline;
+        background:grey;
+        &:hover{
+            background:orange;
+        }
+    }
+}
+#header a{
+    color:orchid;
+    #bundle > .button;
+}
+//+_=="空格"    +==,
+.qq{
+    .mixins(#dddddd);
+}
+.mixins(@color1)when(lightness(@color1)>=50%){
+    background-color:black;
+}
+.mixins(@color1)when(lightness(@color1)<50%){
+    background-color:@color1;
+}
+.mixins2(@qq)when(iscolor(@qq)){
+    color:@qq;
+}
+.ww{
+.mixins2(green);
+}
+.ee{
+    .mixins3(asda);
+}
+.mixins3(asda)when(iskeyword(asda)){
+    border:solid 2px red;
+}
+
+.mixins5(@qr1)when(isruleset(@qr1)){
+    color:@qr[background-color];
+}
+@qr:{background-color:red};
+.ee{
+    .mixins4(10%);
+    .mixins5(@qr);
+}
+.mixins4(@ee)when(isunit(@ee,"%")){
+    font-size:@ee;
+};
+.box{
+    color:@aaa[color];
+    background-color:@aaa[background-color];
+}
+@aaa:{
+    color:red;
+    background-color:orange;
+}
+ul.box{
+    .loop(1);
+}
+@number:5;
+.loop(@count)when(@count <= @number){
+    li:nth-child(@{count}){
+        width:@count*20px;
+    }
+    .loop(@count + 1);
+}
+
+/*
+> >= < <= = true
+    iscolor
+    isnumber
+    isstring
+    iskeyword
+    isurl()
+    ispixel
+    isem
+    ispercentage
+    isunit(a,b)
+    isruleset(true/false)
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 概括Overview 
+/*
+作为一种 CSS 扩展, Less 不仅向后兼容 CSS, 它还使用现有的 CSS 语法新增了额外的特性. 这使得学习 Less 更轻松, 一旦有任何问题，可以随时退回使用标准的 CSS
+variables变量
+*/
+@Variables:#5b83ad;
+@Overview-variables:@Variables + #111;
+// 6c94be           结构 每一个变量只能声明一次像常量
+#variables{
+    color:@Overview-variables;
+}
+.bordered{
+    border-top:20px red solid;
+    border-bottom:20px green dotted;
+    border-left:20px pink double;
+    border-right:20px orange ridge;
+}
+#menu{
+    .bordered;
+}
+// Nested rules （嵌套规则）Media query bubbling and nested media queries （媒体查询合嵌套媒体查询）Operations(运算)Namespaces and Accessors （命名空间和访问器）Scope(作用域)Import statements （导入语句）Properties （属性）Variable Names （变量名）Lazy Loading （延迟加载）default variables （默认变量）Extend(扩展)Extend syntax （扩展语法）Extend attached to selector （为选择器附加扩展）Duplication Detection （检测重复）
+.NestedRules,#NestedRules{
+    color:orange;
+    &:hover{
+        color:slateblue;
+    }
+}
+.mixin-class{
+    .NestedRules;
+}
+.mixin-id{
+    #NestedRules;
+}
+#out{
+    .inner(){
+color:red;
+    }
+}
+.mmm{
+    // #out>.inner  #out>.inner()    #out.inner
+    #out.inner;
+}
+// !important

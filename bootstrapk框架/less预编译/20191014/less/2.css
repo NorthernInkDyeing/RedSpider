@@ -1,0 +1,102 @@
+#bundle .button {
+  display: inline;
+  background: grey;
+}
+#bundle .button:hover {
+  background: orange;
+}
+#header a {
+  color: orchid;
+  display: inline;
+  background: grey;
+}
+#header a:hover {
+  background: orange;
+}
+.qq {
+  background-color: black;
+}
+.ww {
+  color: green;
+}
+.ee {
+  border: solid 2px red;
+}
+.ee {
+  font-size: 10%;
+  color: red;
+}
+.box {
+  color: red;
+  background-color: orange;
+}
+ul.box li:nth-child(1) {
+  width: 20px;
+}
+ul.box li:nth-child(2) {
+  width: 40px;
+}
+ul.box li:nth-child(3) {
+  width: 60px;
+}
+ul.box li:nth-child(4) {
+  width: 80px;
+}
+ul.box li:nth-child(5) {
+  width: 100px;
+}
+/*
+> >= < <= = true
+    iscolor
+    isnumber
+    isstring
+    iskeyword
+    isurl()
+    ispixel
+    isem
+    ispercentage
+    isunit(a,b)
+    isruleset(true/false)
+*/
+/*
+作为一种 CSS 扩展, Less 不仅向后兼容 CSS, 它还使用现有的 CSS 语法新增了额外的特性. 这使得学习 Less 更轻松, 一旦有任何问题，可以随时退回使用标准的 CSS
+variables变量
+*/
+#variables {
+  color: #6c94be;
+}
+.bordered {
+  border-top: 20px red solid;
+  border-bottom: 20px green dotted;
+  border-left: 20px pink double;
+  border-right: 20px orange ridge;
+}
+#menu {
+  border-top: 20px red solid;
+  border-bottom: 20px green dotted;
+  border-left: 20px pink double;
+  border-right: 20px orange ridge;
+}
+.NestedRules,
+#NestedRules {
+  color: orange;
+}
+.NestedRules:hover,
+#NestedRules:hover {
+  color: slateblue;
+}
+.mixin-class {
+  color: orange;
+}
+.mixin-class:hover {
+  color: slateblue;
+}
+.mixin-id {
+  color: orange;
+}
+.mixin-id:hover {
+  color: slateblue;
+}
+.mmm {
+  color: red;
+}

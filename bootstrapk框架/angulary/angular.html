@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>angular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.staticfile.org/angular.js/1.7.8/angular.min.js"></script>
+</head>
+
+<body>
+    <h1>这是一个angular.js验证的email的方法</h1>
+    <form ng-app="" name="myForm">
+        <input type="email" name="myAdderss" ng-model="text">
+        <span ng-show="myForm.myAdderss.$error.email">不是一个合法的邮箱地址</span>
+    </form>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h1>{{carname}}</h1>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('myCtrl', function ($scope) {
+            $scope.carname = "Volvo";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <div class="container-fluid">
+        <h1>平板、桌面、大桌面显示器、超大桌面显示器</h1>
+        <p>以下实例在平板、桌面、大桌面显示器、超大桌面显示器的宽度比例为分别为：25%/75%、50%/50%、33.33%/66.67%、16.67/83.33%, 在移动手机等小型设备上会堆叠显示。</p>
+        <p>重置浏览器窗口大小，查看效果。</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-*-* bg-success">
+                    RUNOOB
+                </div>
+                <div class="col-lg-3 col-xl-2 col-sm-3 col-md-6 bg-success">
+                    RUNOOB
+                </div>
+                <div class="col-lg-8 col-xl-10 col-sm-9 col-md-6 bg-warning">
+                    菜鸟教程
+                </div>
+                <!-- <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 bg-warning">
+                    菜鸟教程
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+                <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+            </div>
+            <div class="container">
+                <h1>h1 Bootstrap 标题 (2.5rem = 40px)</h1>
+                <h2>h2 Bootstrap 标题 (2rem = 32px)</h2>
+                <h3>h3 Bootstrap 标题 (1.75rem = 28px)</h3>
+                <h4>h4 Bootstrap 标题 (1.5rem = 24px)</h4>
+                <h5>h5 Bootstrap 标题 (1.25rem = 20px)</h5>
+                <h6>h6 Bootstrap 标题 (1rem = 16px)</h6>
+            </div>
+            <div class="container">
+                <h1>Display 标题</h1>
+                <p>Display 标题可以输出更大更粗的字体样式。默认设置font-size:16px</p>
+                <h1 class="display-1">Display 1 6rem</h1>
+                <h1 class="display-2">Display 2 5.5rem</h1>
+                <h1 class="display-3">Display 3 4.5rem</h1>
+                <h1 class="display-4">Display 4 3.5rem</h1>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Country</th>
+                        <th>Sex</th>
+                        <th>Example</th>
+                        <th>Example</th>
+                        <th>Example</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna</td>
+                        <td>Pitt</td>
+                        <td>35</td>
+                        <td>New York</td>
+                        <td>USA</td>
+                        <td>Female</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">Apple</button>
+                <button type="button" class="btn btn-primary">Samsung</button>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Sony
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tablet</a>
+                        <a class="dropdown-item" href="#">Smartphone</a>
+                    </div>
+                </div>
+            </div>
+            <!--在 Bootstrap 4 中 HTML <small> 元素用于创建字号更小的颜色更浅的文本
+            mark默认有内边距3.200的四面padding
+            <abbr>元素的样式为显示在文本底部的一条虚线边框
+            blockquote有一个类型blockquote
+            code标签包含的元素都会有一个浅色的粉色变化
+            kbd会启动当前浏览器的快捷键并有背景色的变化
+class类名
+    .font-weight-bold加粗文本
+    .font-weight-normal普通文本
+    .font-weight-light更细的文字
+    .font-italic斜体文字
+    .lead让段落更突出
+    .samll制定更小文本(为父元素的85%)
+    .text-left左/content居中/right右/justity设定文本对齐,段落超出屏幕不分文文字自动换行
+    .text-nowrap段落中超出屏幕部分不换行
+    .text-lowercase设置文字小写
+    .text-uppercase设置文字大写
+    .text-capitalize设置单词首字母大写
+    .initialism显示在abbr元素中的文字以小号文字展示,且把小写字母转换成大写字母
+    .list-unstyled移除默认的列表样式，列表项中左对齐 ( <ul> 和 <ol> 中)。 这个类仅适用于直接子列表项 (如果需要移除嵌套的列表项，你需要在嵌套的列表中使用该样式)
+    .list-inline将所有列表放置同一行
+    .pre-scrollable
+    <pre> 元素可滚动，代码块区域最大高度为340px,一旦超出这个高度,就会在Y轴出现滚动条
+    通过添加 .table-striped 类，您将在 <tbody> 内的行上看到条纹
+    .table-bordered 类可以为表格添加边框
+    .table-hover 类可以为表格的每一行添加鼠标悬停效果（灰色背景）：
+    .table-dark 类可以为表格添加黑色背景：
+    联合使用 .table-dark 和 .table-striped 类可以创建黑色的条纹表格：
+    联合使用 .table-dark 和 .table-hover 类可以设置黑色背景表格的鼠标悬停效果：
+    .table-primary 蓝色: 指定这是一个重要的操作
+    .table-success 绿色: 指定这是一个允许执行的操作
+    .table-danger 红色: 指定这是可以危险的操作
+    .table-info 浅蓝色: 表示内容已变更
+    .table-warning 橘色: 表示需要注意的操作
+    .table-active 灰色: 用于鼠标悬停效果
+    .table-secondary 灰色: 表示内容不怎么重要
+    .table-light 浅灰色，可以是表格行的背景
+    .table-dark 深灰色，可以是表格行的背景
+    在 Bootstrap v4.0.0-beta.2 中.thead-dark 类用于给表头添加黑色背景， .thead-light 类用于给表头添加灰色背景:
+    在 Bootstrap v4.0.0-beta 这个版本中，.thead-inverse 类用于给表头添加黑色背景，.thead-default 类用于给表头添加灰色背景。
+    .table-sm 类用于通过减少内边距来设置较小的表格:
+    .table-responsive 类用于创建响应式表格：在屏幕宽度小于 992px 时会创建水平滚动条，如果可视区域宽度大于 992px 则显示不同效果（没有滚动条）:
+    .table-responsive-sm < 576px .table-responsive-md < 768px .table-responsive-lg < 992px .table-responsive-xl < 1200px
+    类可以让图片显示
+     .rounded圆角效果
+     .rounded-circle椭圆
+     .img-thumbnail设置图片的缩略图(图片有边框)
+     .float-right .float-left左右对齐
+     .img-fluid设置了宽度百分百高度自动
+     .Jumbotron会出现灰色的背景可以随意添加标签(有圆角)
+     .Jumbotron-fluid/在子元素的div内添加.container/.container-fluid
+     提示框可以使用 .alert 类, 后面加上 .alert-success, .alert-info, .alert-warning, .alert-danger, .alert-primary, .alert-secondary, .alert-light 或 .alert-dark 类来实现:
+     按钮类可用于 <a>, <button>, 或 <input> 元素上:btn-primary??
+    我们可以使用 .btn-group-lg|sm|xs 类来设置按钮组的大小。
+    可以使用 .btn-group-vertical 类来创建垂直的按钮组：
+    dropdown类??dropdown-menu; dropdown-item类配合使用创建按钮下拉菜单
+    <input class='btn btn-primary'>
+    badge-pill圆角行徽章
+    <span class="badge badge-primary">主要</span>
+    <span class="badge badge-secondary">次要</span>
+    <span class="badge badge-success">成功</span>
+    <span class="badge badge-danger">危险</span>
+    <span class="badge badge-warning">警告</span>
+    <span class="badge badge-info">信息</span>
+    <span class="badge badge-light">浅色</span>
+    <span class="badge badge-dark">深色</span>
+    <button type="button" class="btn btn-primary">
+        Messages <span class="badge badge-light">4</span>
+    </button>
+    .progress配合.progress-bar展示进度条
+    progress-bar-striped条纹进度条
+    progress-bar-animated动画进度条
+    .active类来高亮显示：
+    .disabled 类可以设置分页链接不可点击
+    .pagination-lg 类设置大字体的分页条目，.pagination-sm 类设置小字体的分页条目
+    .breadcrumb 和 .breadcrumb-item 类用于设置面包屑导航
+    要创建列表组，可以在 <ul> 元素上添加 .list-group 类, 在 <li> 元素上添加 .list-group-item 类
+    通过添加 .active 类来设置激活状态的列表项有一个蓝色背景
+    disabled禁用列表项
+    要创建一个链接的列表项，可以将 <ul> 替换为 <div> ， <a> 替换 <li>。如果你想鼠标悬停显示灰色背景就添加.list-group-item-action 类
+    <ul class="list-group">
+  <li class="list-group-item list-group-item-success">成功列表项</li>
+  <li class="list-group-item list-group-item-secondary">次要列表项</li>
+  <li class="list-group-item list-group-item-info">信息列表项</li>
+  <li class="list-group-item list-group-item-warning">警告列表项</li>
+  <li class="list-group-item list-group-item-danger">危险列表项</li>
+  <li class="list-group-item list-group-item-primary">主要列表项</li>
+  <li class="list-group-item list-group-item-dark">深灰色列表项</li>
+  <li class="list-group-item list-group-item-light">浅色列表项</li>
+</ul>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">激活列表项</a>
+    <a href="#" class="list-group-item list-group-item-success">成功列表项</a>
+    <a href="#" class="list-group-item list-group-item-secondary">次要列表项</a>
+    <a href="#" class="list-group-item list-group-item-info">信息列表项</a>
+    <a href="#" class="list-group-item list-group-item-warning">警告列表项</a>
+    <a href="#" class="list-group-item list-group-item-danger">危险列表项</a>
+    <a href="#" class="list-group-item list-group-item-primary">主要列表项</a>
+    <a href="#" class="list-group-item list-group-item-dark">深灰色列表项</a>
+    <a href="#" class="list-group-item list-group-item-light">浅色列表项</a>
+</div>
+    我们可以通过 Bootstrap4 的 .card 与 .card-body 类来创建一个简单的卡片
+    .card-header类用于创建卡片的头部样式， .card-footer 类用于创建卡片的底部样式
+    Bootstrap 4 提供了多种卡片的背景颜色类： .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-secondary, .bg-dark 和 .bg-light
+    我们可以在头部元素上使用 .card-title 类来设置卡片的标题 。 .card-text 类用于设置卡片正文的内容。 .card-link 类用于给链接设置颜色
+    我们可以给 <img> 添加 .card-img-top（图片在文字上方） 或 .card-img-bottom（图片在文字下方 来设置图片卡片
+    如果图片要设置为背景，可以使用 .card-img-overlay 类
+    Bootstrap4 下拉菜单依赖于 popper.min.js。
+    .dropdown 类用来指定一个下拉菜单。
+
+我们可以使用一个按钮或链接来打开下拉菜单， 按钮或链接需要添加 .dropdown-toggle 和 data-toggle="dropdown" 属性。
+<div> 元素上添加 .dropdown-menu 类来设置实际下拉菜单，然后在下拉菜单的选项中添加 .dropdown-item 类。也可以在 <a> 标签中使用
+    
+
+
+
+2019、09、23--------------------------------------------
+    striped条纹进度条 
+    condensed
+    .active行或单元格
+    responsive这个一个格式化布局
+    form 
+        form-inline将所有列表放置同一行
+        form-group表单元素大盒子的左对齐
+        form-control对于input控件的操作
+        help-block提示语句
+        checkbox复选框类名
+        btn-default 颜色的改变
+      水平排列的表单
+      内联表单
+        input-group
+        input-group-addon配合input使用的类名
+        ***sr-only残疾人设备
+      from-horizontal
+      control-lable
+      offset位移
+      horizontal 
+      textrea form-control
+      inlineRadioOptions选框不可重复选取
+      .disabled禁用  
+      form-control下拉菜单option
+      对于标记了 multiple 属性的 <select> 控件来说，默认显示多选项。
+      form-control-static
+    效验状态
+        help-block提示语句
+        has-success边框颜色改变色
+        has-error红色的
+        glyphicon glyphicon-ok form-control-feedback对号的标识符号
+        aria-hidden='true'
+        aria-discribedat=''
+        has-feedback空出图标的位置
+        control-lable
+        aria-describedby描述图形和其他的进行关联
+        form-proup-lg/md/sm
+        input-lg/md(默认大小)/sm
+2019、9、24------------------------button按钮类型
+    a👉.role='button'
+    button👉变成链接btn-link
+    alert-(color)
+    btn-(lg/sm/xs)
+    btn-block激活按钮active  link没有激活状态
+    禁用按钮disabled
+响应式图片IE8有兼容问题
+    img-responsive随着父元素的大小变化
+    img-rounded圆角
+    img-circle椭圆
+    img-thumbnail边框
+情景文本辅助类
+    alert-primary
+    text-muted灰色
+    text-primary蓝色
+    text-success绿色
+    text-danger黄色
+    text-info淡蓝色的
+    text-warning橙色有点偏黑
+关闭按钮
+    close关闭 aria-label='Colse';&times✖的形状 
+    aria-hidden='true'
+    glyphicon glyphicon-remover-sign
+三角符号.caret
+浮动类型 pull-left/right
+    clearfix清除浮动给父元素添加即可---清除了伪类元素的浮动
+    !important;默认改变了优先级别为最高
+显示或隐藏css中定义display的显示方式，这种显示方式只针对于块级元素
+显示show隐藏hidden
+    3.0.1时使用hide类，对残障人士不支持
+    之后版本改为hidden类来完善使用
+invisible隐形的-------他是占位置的
+使用图标不是为了装饰可以使用.sr-only视觉隐藏效果，如果你创建的组件不包含任何内容应当提供文字表达你的用途 aria-label
+    glyphicon-thumbs-down aria-hidden='true'
+
+
+1200>=lg
+960>=md
+768>=sm
+768<xs
+responsive
+如果你没有为每个输入控件设置 label 标签，
+屏幕阅读器将无法正确识别。对于这些内联表单，你可以通过为 label 设置 .sr-only 类将其隐藏。还有一些辅助技术提供label标签的替代方案，比如 aria-label、aria-labelledby 或 title 属性。如果这些都不存在，屏幕阅读器可能会采取使用 placeholder 属性，
+如果存在的话，
+使用占位符来替代其他的标记，但要注意，这种方法是不妥当的。
+.aria-invalid="true"
+.aria-describedby
+.sr-only
+.help-block
+.has-warning绿色/error红/success棕
+包含关系has-feedback>label+input+
+    glyphicon glyphicon-ok from-control-feedback aria-hidden="true"
+.form-control-static表单中我们可以为纯文本添加
+.aria-describedby="helpBlock"
+a-href👉role="button"
+button👉btn-link成为a
+pointer-events: none禁止a链接的跳转         红色警告     浏览器兼容有问题
+img-rounded圆角
+img-circle圆形
+img-thumbnail边框回缩
+.sr-only 类可以对屏幕阅读器以外的设备隐藏内容。
+.sr-only 和 .sr-only-focusable 联合使用的话可以在元素有焦点的时候再次显示出来（例如，使用键盘导航的用户）。
+对于遵循 可访问性的最佳实践 很有必要。这个类也可以作为 mixin 使用。
+使用 .text-hide 类或对应的 mixin 可以用来将元素的文本内容替换为一张背景图。
+
+类组	CSS display
+.visible-*-block	display: block;
+.visible-*-inline	display: inline;
+.visible-*-inline-block	display: inline-block;
+因此，以超小屏幕（xs）为例，
+可用的 .visible-*-* 类是：
+.visible-xs-block、.visible-xs-inline 和 .visible-xs-inline-block。
+
+.visible-xs、.visible-sm、.visible-md 和 .visible-lg 类也同时存在。
+但是从 v3.2.0 版本开始不再建议使用。
+除了 <table> 相关的元素的特殊情况外，它们与 .visible-*-block 大体相同。
+
+.visible-print-block👉
+.visible-print-inline👉     打印机可见
+.visible-print-inline-block👉
+
+.hidden-print👉 浏览器可见
+
+
+
+----------------自己的理解-----------
+
+dropdown👇dropup👆
+dropdown-toggle👉下拉菜单
+aria-haspopup="true"
+aria-expaned="false"
+对哪个元素产生事件对其绑定👇
+    btn btn-default dropdown-toggle
+    type="button"
+    id="dropdownMenu2"
+    data-toggle="dropdown"👉数据触发器
+    aria-haspopup="true"👉
+    aria-expanded="false"👉咏叹调(展开/收起)
+展示数据对其绑定事件
+    class="dropdown-menu" 
+    aria-labelledby="#id名"
+.caret下三角图标
+role/角色="separator/分离器" class="divider/除法器"👇
+分割出来一条分割线
+.dropdown-menu-right可以进行右对齐
+.dropdown-header下拉式标题
+当为 .btn-group 中的元素应用工具提示或弹出框时，必须指定 container: 'body' 选项，这样可以避免不必要的副作用（例如工具提示或弹出框触发时，会让页面元素变宽和/或失去圆角）。
+为了向使用辅助技术 - 如屏幕阅读器 - 的用户正确传达一正确的按钮分组，需要提供一个合适的 role 属性。对于按钮组合，应该是 role="group"，对于toolbar（工具栏）应该是 role="toolbar"。
+此外，按钮组和工具栏应给定一个明确的label标签，尽管设置了正确的 role 属性，但是大多数辅助技术将不会正确的识读他们。在这里提供的实例中，我们使用 aria-label，但是， aria-labelledby 也可以使用。
+btn-group-vertical垂直排列按钮组
+.btn-group-justified中可以起到平均分布宽度的
+
+
+
+
+
+一组.btn-group元素放进.btn-toolbar就可以写复杂的组件
+嵌套下拉菜单的结合按钮组把.btn-group放进.btn-group里面去
+为了将 <button> 元素用于两端对齐的按钮组中，必须将每个按钮包裹进一个按钮组中you must wrap each button in a button group。大部分的浏览器不能将我们的 CSS 应用到对齐的 <button> 元素上，但是，由于我们支持按钮式下拉菜单，我们可以解决这个问题。
+class="btn-group btn-group-justified" role="group" aria-label="Clos"
+btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"
+----------------------2019/9/25---------------------------
+aria-haspopup="true"aria-expaned="true"
+aria-labelledby👉切换按钮的id用于把下拉单关联到按钮上
+dropdown/dropup----用于下拉
+dropdown-toggle切换按钮
+dropdown-header转换成标题
+dropdown-menu-right浮动的
+data-toggle="dropdown"调用事件的js
+role="separator" class="divider"下横线
+disabled禁止a标签的点击有漏洞/兼容问题尽量js书写
+<link href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="../../jsa/min.1.1.js"></script>
+<script src="../../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+<script src=" ../../../bootstrap-3.3.7/js/button.js"> </script>
+role="group"
+btn-toolbar按钮工具栏
+    是由多个按钮组成
+btn-group-vertical
+sr-only👉dropdown 会被屏幕识别抓取到
+按钮是下拉单锁定下拉元素不用id 和aria-labelledby
+--------------------------2019、9、26------------------------------
+input/input-group-lg/md/sm
+input混合使用组
+导航
+    ul👉.nav nav-tabs/胶囊.nav-pills/两端对齐.nav-tabs.nav-justified
+    li👉rol='presentation'/选中.active
+下拉标签页导航
+    li👉.dropdown
+    切换dropdown-toggle data-toggle="dropdown"role="button"aria-haspopup=true aria-expanded=false id='???
+navbar导航条navbar-info
+navbar-header
+button👉navbar-toggle .collapsed data-toggle=collapse/折叠👇
+data-toggle="唯一识别" aria-expanded=false
+navbar-brand表示品牌left边
+div👉折叠物.collapse navbar-collapse 唯一识别id👇
+ul👉navbar-nav nav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
+        </div>
+    </div>

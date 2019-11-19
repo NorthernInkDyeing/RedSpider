@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span~span {
+				background: black;
+				color: white;
+			}
+			ul{
+				width:50%;
+				float:left;
+			}
+			a:link {
+				color: red;
+				text-decoration: none;
+			}
+			
+			a:visited {
+				color: yellow;
+			}
+			
+			a:hover,
+			a:focus {
+				color: blue;
+				text-decoration: underline;
+			}
+			
+			a:active {
+				color: black;
+			}
+			
+			div {
+				width: 50%;
+				height: 50px;
+				float: left;
+			}
+			
+			div:target p {
+				width: 220px;
+				visibility: visible;
+			}
+			
+			div p {
+				font-size: 16px;
+				line-height: 20px;
+				width: 0;
+				height: 20px;
+				overflow: hidden;
+				-moz-transition: width 2s ease-in-out;
+				-webkit-transition: width 2s ease-in-out;
+				transition: width 2s ease-in-out;
+				position: absolute;
+				visibility: hidden;
+			}
+			/*被禁用的表单元素显示轮廓*/
+			
+			input:disabled {
+				outline: 1px solid red;
+			}
+			.div li:nth-child(even){
+				 list-style-type:circle;
+			}
+			.div li:nth-child(){
+				background:pink;
+			}
+			a[class~="xty"]{
+				color:orange;
+			}
+			.ng-of-type li:nth-child(2){
+				background:pink;
+			}
+			.ng-of-type li:nth-of-type(2){
+				color:orange;
+			}
+			.ng-of-type li:nth-last-child(2n-1){
+			    background:red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="ng-of-type">
+			<li>杨肃观</li>
+		    <span>王一通</span>
+		    <li>秦仲海</li>
+		    <li>卢云</li>
+		    <li>伍定远</li>
+		    <li>杨肃观</li>
+		    <span>王一通</span>
+		    <li>秦仲海</li>
+		    <li>卢云</li>
+		    <li>伍定远</li>
+		    <li>杨肃观</li>
+		    <span>王一通</span>
+		    <li>秦仲海</li>
+		    <li>卢云</li>
+		    <li>伍定远</li>
+		    <li>杨肃观</li>
+		    <span>王一通</span>
+		    <li>秦仲海</li>
+		    <li>卢云</li>
+		    <li>伍定远</li>
+		</ul>
+		<a href=""class="add xty ss">空开的类</a>
+		<ul class="div">
+			<li>odd1</li>
+			<li>odd2</li>
+			<li>odd3</li>
+			<li>odd4</li>
+			<li>odd5</li>
+			<li>odd6</li>
+			<li>odd7</li>
+			<li>odd8</li>
+			<li>odd9</li>
+			<li>odd10</li>
+		</ul>
+		<form>
+			<fieldset>
+				<legend>观海云远</legend>
+				<label for="ysg">杨肃观</label>
+				<input type="checkbox" name="yxz" id="ysg" />
+				<label for="qzh">秦仲海</label>
+				<input type="checkbox" name="yxz" id="qzh" disabled="disabled" />
+				<label for="ly">卢云</label>
+				<input type="checkbox" name="yxz" id="ly" />
+				<label for="wdy">伍定远</label>
+				<input type="checkbox" name="yxz" id="wdy" />
+			</fieldset>
+		</form>
+		<a href="#add">胸无大志者，必受制于人</a>
+		<!--链接目标分别指向两个div-->
+		<a href="#yxz">点我</a>
+		<a href="#sx">点我</a>
+		<div id="yxz">
+			<p>胸无大志者，必受制于人</p>
+		</div>
+		<div id="sx">
+			<p>丈夫生不五鼎食，死则五鼎烹耳</p>
+		</div>
+		<div id="">
+			<span>胸无大志者，必受制于人</span>
+			<span>丈夫生不五鼎食，死则五鼎烹耳</span>
+			<span>胸无大志者，必受制于人</span>
+			<span>丈夫生不五鼎食，死则五鼎烹耳</span>
+		</div>
+	</body>
+
+</html>
+
+属性选择器
+		a[href]------选择a元素中具有href属性的元素
+		a[href="123"]选择a元素中的href属性且属性值为[href=123]
+		a[id|="yxz"]选择a元素中的id属性且属性值以yxz或以yxz-开头的元素
+		a[class~="yxz"]选择a元素中的class属性且属性值yxz是被空格隔开的
+		a[class*="yxz"]选择a元素中的class属性且属性值yxz在字符串的任意处
+		a[href^="http"]选择a元素中的href属性，且值以http开头
+		a[href$="com"]选择a元素中的href属性，且值以com结尾
+伪元素
+	　		伪元素可用于定位文档中包含的文本，但无法在文档树中定位。伪元素早在css中就存在了，“:first-letter”，“:first-line”，“:before”，“:after”。在css3中对伪元素进行了一定的调整，在以前的基础上增加了一个冒号，相应的变成了“::first-letter”，“::first-line”，“::before”，“::after”，还增加了一个“::selection”。
+		::selection
+		匹配突出显示的文本。伪元素::selection仅接受两个参数，一个是background，一个是color。浏览器默认情况下，选择突出的网站文本是深蓝色背景，白色的字体。兼容问题::moz-selection
+		::before和::after
+		可以在文本块之前(::before)或文本块之后(::after)插入额外的内容(content)或样式，生成的内容不会成为DOM的一部分。
+		::first-line
+		与::first-letter类似，也是用来选择文本，不同的是，::first-line选择文本块的第一行。
+		::first-line选择文本块中的第一个字母。
+否定伪类选择器
+		否定伪类选择器“:not()”主要用来定位不匹配该选择器的元素。
+		 /*匹配所有div元素中除了id名为yxz的所有元素*/   
+    			div:not([id="yxz"]){color:red;}
+结构伪类选择器
+		:empty　用来选择没有任何内容的元素。
+		:only-of-type
+		　　用来选择一个元素是它父元素唯一一个指定类型的子元素。
+					ul span:only-of-type{color:red;}
+		:only-child
+		　　表示一个元素是它父元素的唯一子元素。换句话说，匹配元素的父元素中仅有一个子元素。
+		:nth-of-type能够从指定类型的子元素开始计数，第2个元素span不是li，所以被忽略。
+		:nth-last-of-type(n)
+		　　与nth-of-type一样，都是用来选择指定某种类型的子元素，但它的计数方向却是从最后一个指定类型的子元素开始，使用方法与之前提到的nth-last-child一样。
+		:nth-last-child(odd/n/1-10)与:nth-child类似，但却是从倒数选择子元素。
+		:nth-child :nth-first-child :nth-last-child

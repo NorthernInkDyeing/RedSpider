@@ -1,0 +1,258 @@
+.p1 {
+  color: white;
+  color: black;
+}
+.bordered {
+  border: solid 1px red;
+  border-bottom: solid 2px green;
+}
+.p2 {
+  color: green;
+  border: solid 1px red;
+  border-bottom: solid 2px green;
+}
+.p2 {
+  font-size: 14px;
+}
+.p2 a {
+  font-size: inherit;
+}
+.p2 span {
+  color: #c8fac8;
+  float: right;
+}
+.p2:after {
+  content: "&---after";
+}
+@media screen {
+  .p3 {
+    color: black;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p3 {
+    color: red;
+  }
+}
+@media screen and tv {
+  .p3 {
+    color: powderblue;
+  }
+}
+@media screen {
+  .p3 > span {
+    color: green;
+  }
+}
+@media screen and (min-width: 760px) {
+  .p3 > span {
+    color: blue;
+  }
+}
+@media tv {
+  .p3 > span {
+    color: red;
+  }
+}
+@media screen {
+  .p4 {
+    height: #ffd23f;
+    font-size: 0.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p4 {
+    height: #ffffff;
+  }
+}
+.p1 {
+  color: black;
+}
+.p1 span {
+  color: red;
+}
+.p5 {
+  color: #428bca;
+}
+.p5 a {
+  color: red;
+}
+.p5 a:hover {
+  color: #3071a9;
+}
+.p6 {
+  background: pink;
+}
+@media screen and (min-width: 768px) {
+  .p6 {
+    background: green;
+  }
+}
+@media screen and (min-width: 996px) {
+  .p6 {
+    background: blue;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p6 {
+    background: red;
+  }
+}
+@media screen {
+  .p7 {
+    color: green;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p7 {
+    color: orange;
+  }
+}
+@media screen and (min-width: 992px) {
+  .p7 {
+    color: pink;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p7 {
+    color: aliceblue;
+  }
+}
+@media tv {
+  .p7 {
+    color: black;
+  }
+}
+.p7 {
+  font-size: 20px;
+}
+.inline1,
+.p7 span {
+  color: #193c5a;
+}
+/*.e&:extend(.g){}
+.e&:extend(.b){}
+.e&:extend(.g,.b){}
+上面和下面做同样的事情
+*/
+.inline,
+.p7 {
+  background: red;
+}
+.big-division,
+.big-bag,
+.big-bucket {
+  background: red;
+}
+.bag,
+.bucket,
+.big-bag,
+.big-bucket {
+  background: pink;
+}
+.bucket tr,
+.some-class {
+  color: blue;
+}
+tr .bucket,
+.some2-class {
+  color: blue;
+}
+.some-class {
+  color: red;
+}
+.some2-class {
+  color: green;
+}
+span .p7,
+.som1e-class {
+  color: slateblue;
+}
+.som1e-class {
+  color: red;
+}
+*.p1 {
+  font-size: 40px;
+}
+.p7:hover:visited {
+  color: navajowhite;
+}
+.selector:exdend(link:visited:hover) {
+  color: navajowhite;
+}
+.p9 {
+  border-radius: 10px 0 0 0;
+  background: red;
+  color: #fff;
+  text-align: center;
+}
+.class {
+  width: 50%;
+  color: #f6430f;
+  background-color: #f8b38d;
+}
+/*杨哥教育*/
+.p8 {
+  height: calc(100%);
+  width: calc(30vw/2 - 2px);
+}
+@media (min-width:760px) {
+  .med {
+    color: red;
+  }
+}
+.p8 .span {
+  color: red;
+}
+.p9 {
+  color: red;
+}
+a,
+.link {
+  color: #428bca;
+}
+a:hover {
+  color: #3071a9;
+}
+.widget {
+  color: #fff;
+  background: #428bca;
+}
+.test {
+  color: red;
+  background-color: blue;
+}
+.tootstrap {
+  color: red;
+}
+nav ul {
+  background: red;
+}
+.in,
+nav ul {
+  color: green;
+}
+.a.b.test,
+.test.c {
+  color: orange;
+}
+.test:hover {
+  color: green;
+}
+@media print {
+  .selector,
+  .p9 {
+    color: black;
+  }
+}
+.p9 {
+  color: red;
+}
+@media screen {
+  .p9 {
+    color: orange;
+  }
+}
+.aaa {
+  font-size: 10px;
+}

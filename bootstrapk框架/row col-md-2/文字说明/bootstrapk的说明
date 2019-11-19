@@ -1,0 +1,92 @@
+CSS：twitter/推特 bootstrap  响应式布局  Font Awesome图像    Foundation
+JavaScript：AngularJS  Vue.js  React   TypeScript  jQuery-UI   jQuery-EasyUI   Node.js AJAX    JSON    Highcharts  Google
+
+navbar 
+starter-template启动器模板
+navbar-fixed-(top/bottom)
+    position:relative/absolute/fiexd/static
+静止类 navbar-static-top:
+    会创建一个跟页面等宽的导航条,会和页面的滚动消失
+    navbar-inverse反色导航 会呈现一种黑色改变之前的事件颜色
+    breadcrumb添加上下padding/背景色/下边距/圆角/before已经添加完成
+分页导航
+    Page navigation页面导航
+    pagination分页
+    active激活disabled禁用
+    pagination-(lg大/md正/sm小)
+    aria-label介绍他的用途的标签
+翻页
+    pager大的ul/ol
+    previous左next右--箭头/disabled  子元素书写/不写居中翻页
+    请书写提示语aria-hidden="ture"
+标签
+    Example heading 示例标题
+    子元素label label-default  
+    颜色default灰/primary蓝/Success绿/info浅蓝/warning黄色/Danger红色
+徽章
+    badge/徽章   消息提醒
+    也可以书写在列表组默认会去右面
+巨幕
+    jumboton/大本营----这是一个轻量、灵活的组件，它能延伸至整个浏览器视口来展示网站上的关键内容。
+页头
+    页头组件能够为 h1 标签增加适当的空间，并且与页面的其他部分形成一定的分隔。它支持 h1 标签内内嵌 small 元素的默认效果，还支持大部分其他组件（需要增加一些额外的样式）。
+缩略图
+    thumbnail/缩略图
+    添加一点点额外的标签，就可以把任何类型的 HTML 内容，例如标题、段落或按钮，加入缩略图组件内。
+警告框
+    alert-success/info/warning/danger
+    可关闭的提示框
+        alert-dismissble
+        按钮写 class="colse" data-dismiss="alert"
+        aria-label="Colse"👇
+        aria-hidden="true"下描述的文字
+进度条
+    大盒子progress👇
+    progress-bar rol="progressbar" aria-valuenow="60"aria-valuemin="0"aria-valuemax="100"style="width:60%";👇
+    sr-only (60% Complete)--提示文字    Complete(success)
+    颜色progress-bar-danger/info/warning/success
+    条纹progress-bar-striped/条纹
+    从右象左的一个动画active的一个类可以做切换
+                老师讲解
+    进度条盒子progress
+    进度条progress-bar
+    进度条最大/小值aria-valuemax/minaria-valuemax/min
+    识别进度条role="progress-bar"
+    百分比设定style="width:100%";
+    类名sr-only/aria-hidden="true"----在指定设备消失
+媒体插件
+    pull-left/right在媒体查询上就不建议使用了
+    media-right/left应该放在media-body后面
+    media-top/middle/bottom
+链接
+    用a标签也可以替换li标签进行列表样式设定
+    也可以是按钮他的父元素就不能是ul啦应该是div
+    禁用依然用disabled问题依然从在谨慎使用
+面板
+    panel为你书写的面板添加这样的属性
+        还可以为其添加边框颜色default/info/warning/danger/primary
+    panel-heading/body/footer-----头、中、下
+        panel-heading里面可以书写h1-h6,但默认会被改成panel-heading的样式
+        为了给链接设置合适的颜色，务必将链接放到带有 .panel-title 类的标题标签内。
+    可以在这里面书写表格可以起到更好的区分作用
+        scope范围==col/row/colgroup/rowgroup
+        col             规定单元格列的表头
+        row             规定单元格行的表头
+        colgroup        规定单元格列组的表头
+        rowgroup        规定单元格行组的表头
+具有响应式的嵌套
+    iframe框架/embed嵌入/video视频/object---.swf格式👇
+        embed-reponsive-item
+Well well-lg/md
+
+
+
+
+
+
+.text-muted：提示，使用浅灰色（#999）
+.text-primary：主要，使用蓝色（#428bca）
+.text-success：成功，使用浅绿色(#3c763d)
+.text-info：通知信息，使用浅蓝色（#31708f）
+.text-warning：警告，使用黄色（#8a6d3b）
+.text-danger：危险，使用褐色（#a94442）

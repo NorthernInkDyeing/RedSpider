@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			body {
+				cursor: pointer;
+			}
+			.img{
+				width:300px;
+				height:300px;
+				border-radius: 10px 10px;
+				float:left;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="img">
+			<img src="angulary/img/1.jpg"/>
+		</div>
+		<button onclick="add(this)" class="sss">只是一个点击事件</button>
+		<a href="https://developer.mozilla.org/en-US/" target="_blank">
+			<img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo" />
+		</a>
+		<map name="primary">
+        <area shape="circle" coords="75,75,75" href="left.html" alt="Click to go Left">
+        <area shape="circle" coords="275,75,75" href="right.html" alt="Click to go Right">
+    </map>
+		<img usemap="#primary" src="http://placehold.it/350x150" alt="350 x 150 pic">
+		<article class="film_review">
+			<header>
+				<h2>Jurassic Park</h2>
+			</header>
+			<section class="main_review">
+				<p>Dinos were great!</p>
+			</section>
+			<section class="user_reviews">
+				<article class="user_review">
+					<p>Way too scary for me.</p>
+					<footer>
+						<p>
+							Posted on
+							<time datetime="2015-05-16 19:00">May 16</time> by Lisa.
+						</p>
+					</footer>
+				</article>
+				<article class="user_review">
+					<p>I agree, dinos are my favorite.</p>
+					<footer>
+						<p>
+							Posted on
+							<time datetime="2015-05-17 19:00">May 17</time> by Tom.
+						</p>
+					</footer>
+				</article>
+			</section>
+			<footer>
+				<p>
+					Posted on
+					<time datetime="2015-05-15 19:00">May 15</time> by Staff.
+				</p>
+			</footer>
+		</article>
+		<!-- Simple audio playback -->
+		<audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" autoplay>
+			Your browser does not support the <code>audio</code> element.
+		</audio>
+		<!--------------------------------------->
+		<div class="form-group">
+			<label for="regcode">验证码</label>
+			<div>
+				<input type="text" class="form-control" placeholder="请输入验证码" id='regcode' ng-model='loguse.code'>
+				<a href="javascript:fun();"> <img src="" alt="验证码图片" id="code">看不清，换一张</a>
+				<script>
+					var fun1 = fun=function  () {
+//						$("#code").attr("src", "php/getcode.php?id=" + Math.random());
+						fun=function (){
+							console.log("bbbbbb");
+							return;
+						};
+						setTimeout(function(){
+							fun=	fun1;
+							console.log("aaaaa");
+						},5000);
+						//      setInterval(function(){
+						//               fun();
+						//      },5000);
+					}
+				</script>
+			</div>
+		</div>
+	</body>
+	<script>
+		var link = document.createElement('a');
+		link.textContent = 'download image';
+		link.addEventListener('click', function(ev) {
+			link.href = canvas.toDataURL();
+			link.download = "mypainting.png";
+		}, false);
+
+		document.body.appendChild(link);
+
+		function add(a) {
+			a.classList.add("active");
+			if(a.classList != "sss") {
+				a.classList.remove("sss");
+			}
+
+		}
+
+		//var pattern = /^.*(?=.{8,16})
+		//(?=.*\d)
+		//(?=.*[A-Z]{2,})
+		//(?=.*[a-z]{2,})
+		//(?=.*[!@#\$%\^&\*\?\(\),\.;:'"<>\{\}\[\]\\/\+-=\|_])
+		//.*$/;
+		var pattern = /^.*(?=.{8,16})(?=.*\d)(?=.*[A-Z]{2,})(?=.*[a-z]{2,})(?=.*[!@#\$%\^&\*\?\(\),\.;:'"<>\{\}\[\]\\/\+-=\|_]).*$/;
+		var padd = /.*(?=.{8,16})(?=.*\d)(?=.*[A-Z]{2,})(?=.*[a-z]{2,})(?=.*[!@#\$%\^&\*\?\(\),\.;:'"<>\{\}\[\]\\/\+-=\|_].*$)/;
+		//				.*				匹配所有字符
+		//				.*(?=.{8,16})			指定字符位数不限字符
+		//				.*(?=.{8,16})(?=.*\d) 		规定字符必须包含3中字符以上才可以
+		//.*(?=.{8,16})(?=.*\d)(?=.*[A-Z]{2,})	比配2个以上的大写字符
+		console.log(padd.test("Wsssss1_AAaaa@"));
+		//       var pattern = /^
+		//       .(?=.{6,200})
+		//       (?=.\d)
+		//       (?=.[A-Z]{2,})
+		//       (?=.[a-z]{2,})
+		//       (?=.[!@#$%_^&*?()])
+		//       .$
+		//       /;
+	</script>
+
+</html>

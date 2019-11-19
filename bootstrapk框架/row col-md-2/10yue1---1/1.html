@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7/dist/css/bootstrap.css">
+    <script src="../../jsa/min.1.1.js"></script>
+    <script src="../../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <style>
+        @media screen and (min-width:768px) {
+
+            /* 
+                @media 媒体查询
+                all 所有
+                screen  移动端设备
+                尺寸    百分比/em/rem/(vh/vw)
+                https://www.html.cn/book/css/values/length/in.htm  
+                px是固定值切记
+            */
+            .hader {
+                background: red;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-fixed-top">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default navbar-btn">Submit</button>
+            </form>
+            <p class="navbar-text">这是一个纯文本元素<a href="" class="navbar-link">navbar-link</a></p>
+        </div>
+        <p>测试文本1</p>
+        <p>测试文本2</p>
+        <p>测试文本3</p>
+        <p>测试文本4</p>
+        <p>测试文本5</p>
+        <p>测试文本6</p>
+        <p>测试文本7</p>
+        <p>测试文本8</p>
+        <p>测试文本9</p>
+        <p>测试文本10</p>
+    </div>
+    <nav class="navbar navbar-info navbar-fixed-buttom">
+        <!-- 表单一定不会缺少from -->
+        <div class="container">
+            <div class="navbar">
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <!-- 
+                        form-control控制器 
+                        vertical-align:middle;
+                        基线对齐    垂直对齐:中间;
+                    -->
+                        <input type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-default navbar-btn">Submit</button>
+                </form>
+                <!-- 
+                纯文本navbar-text
+                非导航类链接 navbar-link
+            -->
+                <p class="navbar-text">这是一个纯文本元素<a href="" class="navbar-link">navbar-link</a></p>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="">服装</a></li>
+            <li><a href="">衬衫</a></li>
+            <li class="active">品牌</li>
+        </ol>
+    </div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-lg">
+            <li>
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li>
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-md">
+            <li>
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li>
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm">
+            <li>
+                <a href="" aria-label="Next">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li>
+                <a href="" aria-label="Previous">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div><i>&#8672</i></div><br>
+    <nav aria-label="">
+        <ul class="pager">
+            <li><a href="">上Previous一个</a></li>
+            <li><a href="">下Next一个</a></li>
+        </ul>
+    </nav>
+    <nav aria-label="">
+        <ul class="pager">
+            <li class="previous">
+                <a href="">
+                    <span aria-hidden="true">&larr;</span>Older
+                </a>
+            </li>
+            <li class="next">
+                <a href="">Newer
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Example heading<span class="label label-default">New</span></h1>
+    <h2>Example heading<span class="label label-default">New</span>
+    </h2>
+    <h3>Example heading<span class="label label-default">New</span></h3>
+    <h4>Example heading<span class="label label-default">New</span></h4>
+    <h5>Example heading<span class="label label-default">New</span></h5>
+    <span class="lable label-default">default</span>
+    <span class="lable label-primary">default</span>
+    <span class="lable label-success">success</span>
+    <span class="lable label-info">info</span>
+    <span class="lable label-warning">waring</span>
+    <span class="lable label-danger">danger</span>
+    <br />
+    <a href="">Inbox<span class="badge">42</span></a>
+    <button class="btn btn-priamry" type="button">
+        Messages <span class="badge">2</span>
+    </button><br />
+    <div class="jumbotron">
+        <h1>Hello, world!</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+    <div class="page-header">
+        <h1>Example <small>Subtext for header</small></h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="xaizai.jpg" alt="...">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="xaizai.jpg" alt="...">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, est quae sit quo neque
+                            eveniet! Fuga, sit ipsum provident cum quaerat ratione eos magnam repellendus doloribus,
+                            quisquam illo, itaque similique.</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
+                                class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="h1 text-center">警告框</h1>
+    <div class="alert alert-success" role="alert">alert-success这是一个警告框</div>
+    <div class="alert alert-info" role="alert">alert-info这是一个警告框</div>
+    <div class="alert alert-warning" role="alert">alert-warning这是一个警告框</div>
+    <div class="alert alert-danger" role="alert">alert-danger这是一个警告框</div>
+    <br>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+    <div class="alert alert-success" role="alert">
+        这是个跟背景色相似的颜色
+        <a href="" class="alert-link">这是一个alert-link</a>
+    </div>
+    <h1 class="h1 text-center">进度条</h1>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+            style="width:60%">
+            60%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100" style="min-width:2rem;">
+            0%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="2" aria-valuemin="0"
+            aria-valuemax="100" style="min-width:2rem;width:2%">
+            2%
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+            aria-valuemax="100" style="min-width:2rem;width:40%">
+            <span class="sr-only">40% Complete(success)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100" style="min-width:2rem;width:50%">
+            <span class="sr-only">50% Complete(danger)</span>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-info progress-bar-striped" role="proggressbar" aria-valuenow="10"
+            aria-valuemin="0" aria-valuemax="100" style="min-width:2rem;width:10%">
+            <sapn class="sr-only">10% Complete(info)</sapn>
+        </div>
+        <div class="progress-bar progress-bar-warning progress-bar-striped" role="proggressbar" aria-valuenow="10"
+            aria-valuemin="0" aria-valuemax="100" style="min-width:2rem;width:10%">
+            <sapn class="sr-only">10% Complete(warning)</sapn>
+        </div>
+        <div class="progress-bar progress-bar-danger progress-bar-striped" role="proggressbar" aria-valuenow="10"
+            aria-valuemin="0" aria-valuemax="100" style="min-width:2rem;width:10%">
+            <sapn class="sr-only">10% Complete(danger)</sapn>
+            10%
+        </div>
+    </div>
+    <h1 class="h1 text-center">媒体查询media</h1>
+    <div class="container">
+        <div class="media">
+            <div class="media-left">
+                <a href="">
+                    <img src="xaizai.jpg" alt="" class="media-object">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    Media-heading
+                </h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras
+                purus odio,
+                vestibulum in vulputate at, tempus viverra turpis.
+            </div>
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item"><span class="badge">1</span> Cras justo odio</li>
+        <li class="list-group-item">
+            <sapn class="badge">2</sapn> Dapibus ac facilisis in
+        </li>
+        <li class="list-group-item"><span class="badge">3</span> Morbi leo risus</li>
+        <li class="list-group-item"><span class="badge">4</span> Porta ac consectetur ac</li>
+        <li class="list-group-item">
+            <sapn class="badge">5</sapn> Vestibulum at eros
+        </li>
+    </ul>
+    <h1 class="h1 text-center">panel</h1>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Basic panel example
+        </div>
+    </div>
+    <h1 class="h1 text-center">panel-heading panel-body</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">Panel-heading</div>
+        <div class="panel-body">Panel-body</div>
+    </div>
+    <h1 class="h1 text-center">panel panle-heading-----panle-title</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1 class="panel-title panel-warning">Panel-heading</h1>
+        </div>
+        <div class="panel-body panel-info">panel-body</div>
+    </div>
+    <h1 class="h1 text-center">panel-footer</h1>
+    <div class="panel panel-info">
+        <div class="panel-body panel-primary">Panel-body</div>
+        <div class="panel-footer panel-success">Panel-footer</div>
+    </div>
+    <div class="container">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel-primary</h3>
+            </div>
+            <div class="panel-body">
+                Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum
+                nulla sed
+                consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id
+                dolor id nibh
+                ultricies vehicula ut id elit.
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>sex</th>
+                        <th>age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>guo1</td>
+                        <td>nan</td>
+                        <td>175</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>join</td>
+                        <td>nv</td>
+                        <td>180</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="list-group">
+                <li class="list-group-item">list-group-item</li>
+                <li class="list-group-item">panel-body list-group</li>
+                <li class="list-group-item">panel</li>
+                <li class="list-group-item">list-group-item</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="h1 text-center">嵌套</h1>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="http://www.baidu.com" class="embed-reponsive-item">这是一iframe</iframe>
+        </div>
+        <div class="embed-responsive embed-responsive-16by9">
+            <embed class="embed-reponsive-item" src="http://www.taobao.com">
+        </div>
+        <div class="embed-reponsive embed-reponsive-16by9">
+            <video width="200" height="300" controls src="i.mp4" class="embed-reponsive-item">
+                <source src="i.mp4" type="video/mp4">
+                您的浏览器群不支持video
+            </video>
+        </div>
+        <div class="embed-repontive embed-repontive-16by9">
+            <object data="1.html" class="embed-repontive-item" type=""></object>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="h1 text-center">Well</h1>
+        <div class="well">这是一个well</div>
+        <div class="well well-lg">这是一个well-lg</div>
+        <div class="well well-sm">这是一个well-sm</div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="h1 text-center">基本列表组</h1>
+                <ul class="list-group">
+                    <li class="list-group-item active">
+                        <span class="badge">1</span>
+                        按钮列表组 list-group-item</li>
+                    <li class="list-group-item">
+                        <span class="badge">2</span>
+                        徽章列表组 list-group-item</li>
+                    <li class="list-group-item">
+                        <span class="badge">3</span>
+                        默认列表组 list-group-item</li>
+                    <li class="list-group-item">
+                        <span class="badge">4</span>
+                        被禁用的列表组 list-group-item</li>
+                    <li class="list-group-item">
+                        <span class="badge">5</span>
+                        激活的列表组active list-group-items
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

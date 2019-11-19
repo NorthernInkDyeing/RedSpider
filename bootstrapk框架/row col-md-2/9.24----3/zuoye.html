@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>白鹭科技 - Egret</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../jsa/min.1.1.js"></script>
+    <script src="../../../bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <script src=" ../../../bootstrap-3.3.7/js/button.js"> </script>
+    <style>
+        #log_nav {
+            width: 128px;
+            height: 46px;
+            float: left;
+            background: url(img/logo.png)no-repeat;
+            background-size: 100%;
+            margin-top: 5px;
+        }
+
+        #log_nav+div {
+            margin: 5px 0px;
+            font: 16px/55px"微软雅黑";
+            color: #fff;
+            float: left;
+            margin: 0px;
+        }
+
+        #log_nav+div>p {
+            margin: 0px;
+        }
+
+        #log_nav+div+ul {
+            line-height: 55px;
+            margin-bottom: 0px;
+        }
+
+        #log_nav+div+ul>li {
+            margin: 0px 4px;
+        }
+
+        #log_nav+div+ul>li>a {
+            color: #fff;
+            display: block;
+        }
+
+        #log_nav+div+ul+div+div>a {
+            float: left;
+            background: #487AF6;
+            border-radius: 50%;
+            width: 40px;
+            margin-top: 10px;
+            height: 38px;
+            color: #fff;
+            line-height: 38px;
+            text-align: center;
+        }
+
+        #log_nav+div+ul+div>ul {
+            background: black;
+            float: left;
+            margin-left: -20px;
+            position: fixed;
+            width: 105%;
+            left: 0;
+            top: 50px;
+            text-align: left;
+        }
+
+        #log_nav+div+ul+div>ul>li {
+            width: 100%;
+            padding-left: 10px;
+            float: left;
+        }
+
+        #log_nav+div+ul+div>ul>li>a {
+            color: #fff;
+            font: 14px/40px"微软雅黑";
+            padding: 0;
+            padding-left: 48px;
+        }
+
+        #log_nav+div+ul+div>ul>li>a:hover {
+            color: #1dafec;
+            background: none;
+        }
+
+        #log_nav+div+ul+div+div>a:hover {
+            text-decoration: none;
+        }
+
+        #log_nav+div+ul>li>a:hover {
+            color: #1dafec;
+            text-decoration: none;
+        }
+
+
+        .container-fluid>.nav-pills>.nav-tabs>li {
+            line-height: 55px;
+
+        }
+
+        #product {
+            position: relative;
+            left: 30%;
+            z-index: 10;
+            top: 20px;
+            width: 836px;
+            display: none;
+            background: #000;
+        }
+
+        #product>ul {
+            width: 100%;
+            height: 230px;
+        }
+
+        #product>tbody>tr>td {
+            height: 62px;
+            width: 23%;
+        }
+
+        #product>tbody>tr>td>a {
+            color: #959595;
+        }
+
+        #product>tbody>tr>td>a>img {
+            float: left;
+            width: 35px;
+            margin-top: 5px;
+            height: 35px;
+        }
+
+        #product>tbody>tr>td>a>p {
+            float: left;
+            margin: 10px 0px 0px 10px;
+        }
+
+        #product>tbody>tr>td:hover {
+            background: gray;
+        }
+
+        #product>tbody>tr>td:hover>a>p {
+            color: #fff;
+        }
+
+        .kv_3d {
+            width: 100%;
+            position: relative;
+            top: 0px;
+        }
+
+        .kv_3d>div {
+            position: relative;
+            background: #F6F6F6cc;
+        }
+
+        .kv_3d>div:first-child>div>img:first-child {
+            z-index: 2;
+        }
+
+        .kv_3d>div:first-child>div.col-xs-12 {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .kv_3d>div:first-child>div.col-xs-12>ul {
+            width: 300%;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .kv_3d>div:first-child>div.col-xs-12>ul>img {
+            display: block;
+            float: left;
+            width: 33.333%;
+        }
+
+        /* 定位 */
+        .kv_3d>div:first-child>div>div {
+            position: absolute;
+            bottom: 10px;
+            left: 0px;
+            width: 100%;
+            height: 15%;
+            z-index: 4;
+            background: rgba(0, 0, 0, .3);
+        }
+
+        .kv_3d>div:first-child>div>div>a {
+            width: 15%;
+            height: 100%;
+            display: block;
+            float: left;
+            color: #fff;
+            border-left: 1px solid;
+        }
+
+        .kv_3d>div:first-child>div>div>a:last-child {
+            border-right: 1px solid;
+        }
+
+        .kv_3d>div:first-child>div>div>a>div {
+            width: 100%;
+            height: 100%;
+        }
+
+        .kv_3d>div:first-child>div>div>a:first-child {
+            margin-left: 25%;
+        }
+
+        .kv_3d>div:first-child>div>div>a>div>img {
+            width: 25%;
+            height: 70%;
+            margin: 4% 10% 2% 2%;
+        }
+
+        .kv_3d>div:first-child>div>div>a:hover {
+            text-decoration: none;
+            background: rgba(0, 0, 0, .2);
+        }
+
+        /* @media screen and (min-width:760px) {
+            .kv_3d>div:first-child>div.col-xs-12>ul>img {
+                width: 120%;
+            }
+        } */
+        .Details>div>h1>img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color:black">
+        <nav class="col-xs-12 nav-pills">
+            <span id="log_nav" class="visible-lg col-md-offset-1  col-md-2"></span>
+            <div class="hidden-lg col-md-2">
+                <p>白鹭科技</p>
+            </div>
+            <ul class="list-group visible-lg list-unstyled col-md-7 col-md-offset-1 list-inline">
+                <li role="presentation" class=""><a href="">首页</a></li>
+                <li role="presentation" class=""><a href="#">产品</a></li>
+                <li role="presentation" class=""><a href="#">解决方案</a></li>
+                <li role="presentation" class=""><a href="#">开发者中心</a></li>
+                <li role="presentation" class=""><a href="#">案例</a></li>
+                <li role="presentation" class=""><a href="#">众包平台</a></li>
+                <li role="presentation" class=""><a href="#">教育</a></li>
+                <li role="presentation" class=""><a href="#">社区</a></li>
+                <li role="presentation" class=""><a href="#">关于我们</a></li>
+            </ul>
+            <div class="hidden-lg" style="float:right">
+                <span style="
+                                                    float:right;background:url(img/xia.png);width:20px;height:10px;margin-top:27px;cursor:
+                                                    pointer;" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品</a></li>
+                    <li><a href="#">解决方案</a></li>
+                    <li><a href="#">开发者中心</a></li>
+                    <li><a href="#">案列</a></li>
+                    <li><a href="#">众包平台</a></li>
+                    <li><a href="#">教育</a></li>
+                    <li><a href="#">社区</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-1" style="float:right">
+                <a href="">EN</a>
+            </div>
+
+        </nav>
+    </div>
+    <table id="product" class="table-bordered table">
+        <tr>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-1.jpg" alt="">
+                    <p>Egret Engine</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-2.png" alt="">
+                    <p>Egret Pro</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-3.jpg" alt="">
+                    <p>Egret Native</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-4.jpg" alt="">
+                    <p>Egret Wing</p>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-5.jpg" alt="">
+                    <p>DragonBones</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-6.jpg" alt="">
+                    <p>Egret Feather</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-7.jpg" alt="">
+                    <p>Texture Merger</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-8.jpg" alt="">
+                    <p>Res Depot</p>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-9.jpg" alt="">
+                    <p>Egret Inspector</p>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <i></i>
+                    <img src="img/q-10.jpg" alt="">
+                    <p>Lakeshore</p>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <div class="kv_3d">
+        <div>
+            <div class="col-xs-12">
+                <ul class="hidden-xs"><img src="img/kv1.jpg" alt="">
+                    <img src="img/kv2.jpg" alt="">
+                    <img src="img/kv3.jpg" alt=""></ul>
+                <ul class="visible-xs">
+                    <img src="img/kv1.png" alt="">
+                    <img src="img/kv2.png" alt="">
+                    <img src="img/kv3 (1).jpg" alt="">
+                </ul>
+                <div class="hidden-xs">
+                    <a href="">
+                        <div><img src="img/bottom1.png">白鹭科技优势</div>
+                    </a>
+                    <a href="">
+                        <div><img src="img/bottom2.png">白鹭引擎服务</div>
+                    </a>
+                    <a href="">
+                        <div><img src="img/bottom3.png">游戏案例精选</div>
+                    </a>
+                    <a href="">
+                        <div><img src="img/bottom4.png">开发者快速入门</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container Details">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h1 class="h3"><img src="img/pen.png" alt="">白鹭引擎</h1>
+            <div>
+                <h1 class="h1">效率至上的一站式完整开发工作流</h1>
+                <h3 class="small" style="color:#87888C">2D/3D双核心渲染，开发工具链闭环整合，全流程开发，由此开始</h3>
+            </div>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
